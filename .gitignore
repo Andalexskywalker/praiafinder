@@ -1,0 +1,36 @@
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pytest_cache/
+.venv/
+.coverage
+dist/
+build/
+
+# --- Node / Next.js ---
+node_modules/
+frontend/.next/
+frontend/.turbo/
+frontend/.vercel/
+frontend/out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Editor ---
+.vscode/
+.idea/
+
+# --- Data temp ---
+data/scores_demo.json

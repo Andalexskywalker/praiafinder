@@ -1,0 +1,39 @@
+[
+  {"id":"moledo","nome":"Praia de Moledo","lat":41.846,"lon":-8.866,"orientacao_graus":280,"zone_tags":["norte"]},
+  {"id":"afife","nome":"Praia de Afife","lat":41.779,"lon":-8.871,"orientacao_graus":285,"zone_tags":["norte"]},
+  {"id":"cabedelo-viana","nome":"Praia do Cabedelo (Viana)","lat":41.670,"lon":-8.834,"orientacao_graus":270,"zone_tags":["norte"]},
+  {"id":"matosinhos","nome":"Praia de Matosinhos","lat":41.180,"lon":-8.703,"orientacao_graus":270,"zone_tags":["norte"]},
+  {"id":"miramar","nome":"Praia de Miramar","lat":41.062,"lon":-8.656,"orientacao_graus":270,"zone_tags":["norte"]},
+  {"id":"espinho","nome":"Praia de Espinho","lat":41.005,"lon":-8.642,"orientacao_graus":270,"zone_tags":["norte"]},
+
+  {"id":"figueira-cabedelo","nome":"Praia do Cabedelo (Figueira)","lat":40.133,"lon":-8.872,"orientacao_graus":270,"zone_tags":["centro"]},
+  {"id":"buarcos","nome":"Praia de Buarcos","lat":40.160,"lon":-8.878,"orientacao_graus":300,"zone_tags":["centro"]},
+  {"id":"nazare","nome":"Praia da Nazaré","lat":39.602,"lon":-9.076,"orientacao_graus":280,"zone_tags":["centro"]},
+  {"id":"s-pedro-moel","nome":"São Pedro de Moel","lat":39.755,"lon":-9.030,"orientacao_graus":300,"zone_tags":["centro"]},
+
+  {"id":"carcavelos","nome":"Praia de Carcavelos","lat":38.679,"lon":-9.338,"orientacao_graus":240,"zone_tags":["lisboa"]},
+  {"id":"guincho","nome":"Praia do Guincho","lat":38.732,"lon":-9.472,"orientacao_graus":300,"zone_tags":["lisboa"]},
+  {"id":"caparica-sereia","nome":"Costa da Caparica — Sereia","lat":38.612,"lon":-9.229,"orientacao_graus":250,"zone_tags":["lisboa"]},
+  {"id":"magoito","nome":"Praia do Magoito","lat":38.856,"lon":-9.470,"orientacao_graus":300,"zone_tags":["lisboa"]},
+  {"id":"s-juliao","nome":"Praia de São Julião","lat":38.963,"lon":-9.420,"orientacao_graus":290,"zone_tags":["lisboa"]},
+
+  {"id":"s-torpes","nome":"Praia de São Torpes","lat":37.928,"lon":-8.799,"orientacao_graus":250,"zone_tags":["alentejo"]},
+  {"id":"malhao","nome":"Praia do Malhão","lat":37.785,"lon":-8.803,"orientacao_graus":275,"zone_tags":["alentejo"]},
+  {"id":"zambujeira","nome":"Praia da Zambujeira do Mar","lat":37.525,"lon":-8.790,"orientacao_graus":280,"zone_tags":["alentejo"]},
+  {"id":"odeceixe","nome":"Praia de Odeceixe","lat":37.435,"lon":-8.797,"orientacao_graus":270,"zone_tags":["alentejo"]},
+
+  {"id":"arrifana","nome":"Praia da Arrifana","lat":37.297,"lon":-8.864,"orientacao_graus":210,"zone_tags":["algarve"]},
+  {"id":"amado","nome":"Praia do Amado","lat":37.169,"lon":-8.900,"orientacao_graus":260,"zone_tags":["algarve"]},
+  {"id":"meia-praia","nome":"Meia Praia (Lagos)","lat":37.107,"lon":-8.648,"orientacao_graus":135,"zone_tags":["algarve"]},
+  {"id":"praia-rocha","nome":"Praia da Rocha","lat":37.119,"lon":-8.538,"orientacao_graus":180,"zone_tags":["algarve"]},
+  {"id":"falesia","nome":"Praia da Falésia","lat":37.085,"lon":-8.161,"orientacao_graus":110,"zone_tags":["algarve"]},
+  {"id":"ilha-tavira","nome":"Ilha de Tavira","lat":36.999,"lon":-7.641,"orientacao_graus":140,"zone_tags":["algarve"]},
+
+  {"id":"santa-barbara","nome":"Praia de Santa Bárbara (São Miguel)","lat":37.798,"lon":-25.536,"orientacao_graus":300,"zone_tags":["acores"]},
+  {"id":"formosa-santa-maria","nome":"Praia Formosa (Santa Maria)","lat":36.963,"lon":-25.128,"orientacao_graus":220,"zone_tags":["acores"]},
+  {"id":"porto-pim","nome":"Praia do Porto Pim (Faial)","lat":38.523,"lon":-28.629,"orientacao_graus":160,"zone_tags":["acores"]},
+
+  {"id":"formosa-madeira","nome":"Praia Formosa (Funchal)","lat":32.633,"lon":-16.960,"orientacao_graus":190,"zone_tags":["madeira"]},
+  {"id":"seixal","nome":"Praia do Porto do Seixal","lat":32.854,"lon":-17.109,"orientacao_graus":300,"zone_tags":["madeira"]},
+  {"id":"machico","nome":"Praia de Machico","lat":32.717,"lon":-16.759,"orientacao_graus":110,"zone_tags":["madeira"]}
+]
