@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { useEffect, useState } from "react";
 
 type TopItem = { beach_id: string; nome: string; score: number; distancia_km?: number | null };
@@ -13,11 +14,19 @@ export default function Page() {
   const [radius, setRadius] = useState(40);
   const [items, setItems] = useState<TopItem[]>([]);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
 
   async function fetchNearMe() {
     if (!navigator.geolocation) {
       setError("Geolocalização indisponível. Usa a aba 'Zonas'.");
+=======
+  const [radius, setRadius] = useState(40);
+
+  const loadNearMe = () => {
+    if (!navigator.geolocation) {
+      setError("Geolocalização não disponível. Usa o botão de zona em baixo.");
+>>>>>>> 9b005598a2011eafd13d171532e9ee54e35d27bf
       return;
     }
     setLoading(true);
@@ -26,6 +35,7 @@ export default function Page() {
       const { latitude, longitude } = pos.coords;
       try {
         const res = await fetch(`/api/top?lat=${latitude}&lon=${longitude}&radius_km=${radius}&mode=${mode}`);
+<<<<<<< HEAD
         setItems(await res.json());
       } catch {
         setError("Falha a carregar recomendações perto de ti.");
@@ -74,6 +84,27 @@ export default function Page() {
     if (tab === "zone") fetchByZone(zone);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode]);
+=======
+        setNearby(await res.json());
+        setError(null);
+      } catch {
+        setError("Falha a carregar recomendações.");
+      }
+    }, () => setError("Permite a localização para veres praias perto de ti."));
+  };
+
+  const loadZone = async (zone: string) => {
+    try {
+      const res = await fetch(`/api/top?zone=${zone}&mode=${mode}`);
+      setNearby(await res.json());
+      setError(null);
+    } catch {
+      setError("Falha a carregar recomendações por zona.");
+    }
+  };
+
+  useEffect(() => { loadNearMe(); }, [mode, radius]);
+>>>>>>> 9b005598a2011eafd13d171532e9ee54e35d27bf
 
   // Quando muda de zona
   useEffect(() => {
@@ -83,9 +114,12 @@ export default function Page() {
 
   return (
     <main className="max-w-3xl mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">PraiaFinder</h1>
+      <h1 className="text-2xl font-bold mb-4">PraiaFinder</h1>-
 
+<<<<<<< HEAD
       {/* Modo */}
+=======
+>>>>>>> 9b005598a2011eafd13d171532e9ee54e35d27bf
       <div className="flex gap-2 mb-3">
         {["familia", "surf", "snorkel"].map(m => (
           <button key={m} onClick={() => setMode(m as any)}
@@ -93,6 +127,7 @@ export default function Page() {
         ))}
       </div>
 
+<<<<<<< HEAD
       {/* Abas */}
       <div className="flex gap-2 mb-4">
         <button onClick={() => setTab("near")}
@@ -122,6 +157,18 @@ export default function Page() {
       <section>
         <h2 className="font-semibold mb-2">TOP recomendações {tab==="zone" ? `— ${zone}` : ""}</h2>
         {loading && <p className="text-sm text-gray-500 mb-2">A carregar…</p>}
+=======
+      <div className="flex items-center gap-2 mb-4">
+        <label>Raio:</label>
+        <input type="range" min={10} max={100} value={radius} onChange={e=>setRadius(parseInt(e.target.value))}/>
+        <span>{radius} km</span>
+        <button onClick={loadNearMe} className="px-3 py-1 rounded border">Usar localização</button>
+        <button onClick={()=>loadZone("lisboa")} className="px-3 py-1 rounded border">Usar zona: Lisboa</button>
+      </div>
+
+      <section>
+        <h2 className="font-semibold mb-2">TOP recomendações</h2>
+>>>>>>> 9b005598a2011eafd13d171532e9ee54e35d27bf
         {error && <p className="text-sm text-red-600 mb-2">{error}</p>}
         <ul className="space-y-2">
           {items.map((i) => (
@@ -131,8 +178,8 @@ export default function Page() {
             </li>
           ))}
         </ul>
+<<<<<<< HEAD
         <p className="text-sm text-gray-500 mt-3">(Demo: scores base; providers reais no próximo passo)</p>
-      </section>
-    </main>
-  );
-}
+=======
+        <p className="text-sm text-gray-500 mt-3">(Demo: scores base; ligaremos providers no batch)</p>
+>>>>>>> 9b005598a2011eafd13d171532e9ee54e35d27bf
