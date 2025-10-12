@@ -1,4 +1,4 @@
-﻿from fastapi import FastAPI, Query
+from fastapi import FastAPI, Query
 from fastapi.responses import JSONResponse
 from pathlib import Path
 import json, math, datetime as dt

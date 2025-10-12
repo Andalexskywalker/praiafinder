@@ -1,39 +1,5429 @@
 [
-  {"id":"moledo","nome":"Praia de Moledo","lat":41.846,"lon":-8.866,"orientacao_graus":280,"zone_tags":["norte"]},
-  {"id":"afife","nome":"Praia de Afife","lat":41.779,"lon":-8.871,"orientacao_graus":285,"zone_tags":["norte"]},
-  {"id":"cabedelo-viana","nome":"Praia do Cabedelo (Viana)","lat":41.670,"lon":-8.834,"orientacao_graus":270,"zone_tags":["norte"]},
-  {"id":"matosinhos","nome":"Praia de Matosinhos","lat":41.180,"lon":-8.703,"orientacao_graus":270,"zone_tags":["norte"]},
-  {"id":"miramar","nome":"Praia de Miramar","lat":41.062,"lon":-8.656,"orientacao_graus":270,"zone_tags":["norte"]},
-  {"id":"espinho","nome":"Praia de Espinho","lat":41.005,"lon":-8.642,"orientacao_graus":270,"zone_tags":["norte"]},
-
-  {"id":"figueira-cabedelo","nome":"Praia do Cabedelo (Figueira)","lat":40.133,"lon":-8.872,"orientacao_graus":270,"zone_tags":["centro"]},
-  {"id":"buarcos","nome":"Praia de Buarcos","lat":40.160,"lon":-8.878,"orientacao_graus":300,"zone_tags":["centro"]},
-  {"id":"nazare","nome":"Praia da Nazaré","lat":39.602,"lon":-9.076,"orientacao_graus":280,"zone_tags":["centro"]},
-  {"id":"s-pedro-moel","nome":"São Pedro de Moel","lat":39.755,"lon":-9.030,"orientacao_graus":300,"zone_tags":["centro"]},
-
-  {"id":"carcavelos","nome":"Praia de Carcavelos","lat":38.679,"lon":-9.338,"orientacao_graus":240,"zone_tags":["lisboa"]},
-  {"id":"guincho","nome":"Praia do Guincho","lat":38.732,"lon":-9.472,"orientacao_graus":300,"zone_tags":["lisboa"]},
-  {"id":"caparica-sereia","nome":"Costa da Caparica — Sereia","lat":38.612,"lon":-9.229,"orientacao_graus":250,"zone_tags":["lisboa"]},
-  {"id":"magoito","nome":"Praia do Magoito","lat":38.856,"lon":-9.470,"orientacao_graus":300,"zone_tags":["lisboa"]},
-  {"id":"s-juliao","nome":"Praia de São Julião","lat":38.963,"lon":-9.420,"orientacao_graus":290,"zone_tags":["lisboa"]},
-
-  {"id":"s-torpes","nome":"Praia de São Torpes","lat":37.928,"lon":-8.799,"orientacao_graus":250,"zone_tags":["alentejo"]},
-  {"id":"malhao","nome":"Praia do Malhão","lat":37.785,"lon":-8.803,"orientacao_graus":275,"zone_tags":["alentejo"]},
-  {"id":"zambujeira","nome":"Praia da Zambujeira do Mar","lat":37.525,"lon":-8.790,"orientacao_graus":280,"zone_tags":["alentejo"]},
-  {"id":"odeceixe","nome":"Praia de Odeceixe","lat":37.435,"lon":-8.797,"orientacao_graus":270,"zone_tags":["alentejo"]},
-
-  {"id":"arrifana","nome":"Praia da Arrifana","lat":37.297,"lon":-8.864,"orientacao_graus":210,"zone_tags":["algarve"]},
-  {"id":"amado","nome":"Praia do Amado","lat":37.169,"lon":-8.900,"orientacao_graus":260,"zone_tags":["algarve"]},
-  {"id":"meia-praia","nome":"Meia Praia (Lagos)","lat":37.107,"lon":-8.648,"orientacao_graus":135,"zone_tags":["algarve"]},
-  {"id":"praia-rocha","nome":"Praia da Rocha","lat":37.119,"lon":-8.538,"orientacao_graus":180,"zone_tags":["algarve"]},
-  {"id":"falesia","nome":"Praia da Falésia","lat":37.085,"lon":-8.161,"orientacao_graus":110,"zone_tags":["algarve"]},
-  {"id":"ilha-tavira","nome":"Ilha de Tavira","lat":36.999,"lon":-7.641,"orientacao_graus":140,"zone_tags":["algarve"]},
-
-  {"id":"santa-barbara","nome":"Praia de Santa Bárbara (São Miguel)","lat":37.798,"lon":-25.536,"orientacao_graus":300,"zone_tags":["acores"]},
-  {"id":"formosa-santa-maria","nome":"Praia Formosa (Santa Maria)","lat":36.963,"lon":-25.128,"orientacao_graus":220,"zone_tags":["acores"]},
-  {"id":"porto-pim","nome":"Praia do Porto Pim (Faial)","lat":38.523,"lon":-28.629,"orientacao_graus":160,"zone_tags":["acores"]},
-
-  {"id":"formosa-madeira","nome":"Praia Formosa (Funchal)","lat":32.633,"lon":-16.960,"orientacao_graus":190,"zone_tags":["madeira"]},
-  {"id":"seixal","nome":"Praia do Porto do Seixal","lat":32.854,"lon":-17.109,"orientacao_graus":300,"zone_tags":["madeira"]},
-  {"id":"machico","nome":"Praia de Machico","lat":32.717,"lon":-16.759,"orientacao_graus":110,"zone_tags":["madeira"]}
+  {
+    "id": "albarquel-38-51036-8-91487",
+    "nome": "ALBARQUEL",
+    "lat": 38.51036,
+    "lon": -8.91487,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "carvalhal-38-30553-8-78117",
+    "nome": "CARVALHAL",
+    "lat": 38.30553,
+    "lon": -8.78117,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "tr-ia-bico-das-lulas-38-48408-8-90547",
+    "nome": "TRÓIA-BICO DAS LULAS",
+    "lat": 38.48408,
+    "lon": -8.90547,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "gal-fontainhas-38-20412-8-77769",
+    "nome": "GALÉ-FONTAINHAS",
+    "lat": 38.20412,
+    "lon": -8.77769,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "atl-ntica-38-45207-8-86276",
+    "nome": "ATLÂNTICA",
+    "lat": 38.45207,
+    "lon": -8.86276,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "grande-de-porto-covo-37-85756-8-79453",
+    "nome": "GRANDE DE PORTO COVO",
+    "lat": 37.85756,
+    "lon": -8.79453,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "ilha-do-pessegueiro-37-83213-8-79322",
+    "nome": "ILHA DO PESSEGUEIRO",
+    "lat": 37.83213,
+    "lon": -8.79322,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "s-torpes-37-92596-8-80857",
+    "nome": "S. TORPES",
+    "lat": 37.92596,
+    "lon": -8.80857,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "morgavel-37-90779-8-80045",
+    "nome": "MORGAVEL",
+    "lat": 37.90779,
+    "lon": -8.80045,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "alemaes-37-08398-8-23791",
+    "nome": "ALEMAES",
+    "lat": 37.08398,
+    "lon": -8.23791,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "aveiros-37-08353-8-23114",
+    "nome": "AVEIROS",
+    "lat": 37.08353,
+    "lon": -8.23114,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "gal-leste-37-08014-8-31599",
+    "nome": "GALÉ-LESTE",
+    "lat": 37.08014,
+    "lon": -8.31599,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "maria-luisa-37-08897-8-20083",
+    "nome": "MARIA LUISA",
+    "lat": 37.08897,
+    "lon": -8.20083,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "oura-37-08589-8-22614",
+    "nome": "OURA",
+    "lat": 37.08589,
+    "lon": -8.22614,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "rocha-baixinha-nascente-37-07450-8-13062",
+    "nome": "ROCHA BAIXINHA-NASCENTE",
+    "lat": 37.0745,
+    "lon": -8.13062,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "s-rafael-37-07461-8-28079",
+    "nome": "S. RAFAEL",
+    "lat": 37.07461,
+    "lon": -8.28079,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "pescadores-37-08640-8-24907",
+    "nome": "PESCADORES",
+    "lat": 37.0864,
+    "lon": -8.24907,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "santa-eulalia-37-08777-8-21397",
+    "nome": "SANTA EULALIA",
+    "lat": 37.08777,
+    "lon": -8.21397,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "peneco-37-08642-8-25247",
+    "nome": "PENECO",
+    "lat": 37.08642,
+    "lon": -8.25247,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "inatel-albufeira-37-08548-8-24303",
+    "nome": "INATEL-ALBUFEIRA",
+    "lat": 37.08548,
+    "lon": -8.24303,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "gal-oeste-37-08335-8-32086",
+    "nome": "GALÉ-OESTE",
+    "lat": 37.08335,
+    "lon": -8.32086,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "coelha-37-07363-8-29353",
+    "nome": "COELHA",
+    "lat": 37.07363,
+    "lon": -8.29353,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "rocha-baixinha-poente-37-07831-8-14249",
+    "nome": "ROCHA BAIXINHA-POENTE",
+    "lat": 37.07831,
+    "lon": -8.14249,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "evaristo-37-07417-8-30317",
+    "nome": "EVARISTO",
+    "lat": 37.07417,
+    "lon": -8.30317,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "arrifes-37-07595-8-27733",
+    "nome": "ARRIFES",
+    "lat": 37.07595,
+    "lon": -8.27733,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "manuel-lourenco-37-07646-8-30966",
+    "nome": "MANUEL LOURENCO",
+    "lat": 37.07646,
+    "lon": -8.30966,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "monte-cl-rigo-37-34241-8-85382",
+    "nome": "MONTE CLÉRIGO",
+    "lat": 37.34241,
+    "lon": -8.85382,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "odeceixe-mar-37-44193-8-79957",
+    "nome": "ODECEIXE-MAR",
+    "lat": 37.44193,
+    "lon": -8.79957,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "praia-verde-37-17329-7-47962",
+    "nome": "PRAIA VERDE",
+    "lat": 37.17329,
+    "lon": -7.47962,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "cabe-o-37-17479-7-47198",
+    "nome": "CABEÇO",
+    "lat": 37.17479,
+    "lon": -7.47198,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "ilha-do-farol-mar-36-97396-7-86384",
+    "nome": "ILHA DO FAROL-MAR",
+    "lat": 36.97396,
+    "lon": -7.86384,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "barreta-36-96403-7-87271",
+    "nome": "BARRETA",
+    "lat": 36.96403,
+    "lon": -7.87271,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "benagil-37-08715-8-42636",
+    "nome": "BENAGIL",
+    "lat": 37.08715,
+    "lon": -8.42636,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "senhora-da-rocha-37-09687-8-38583",
+    "nome": "SENHORA DA ROCHA",
+    "lat": 37.09687,
+    "lon": -8.38583,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "carvoeiro-37-09617-8-47227",
+    "nome": "CARVOEIRO",
+    "lat": 37.09617,
+    "lon": -8.47227,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "caneiros-37-10486-8-51400",
+    "nome": "CANEIROS",
+    "lat": 37.10486,
+    "lon": -8.514,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "carvalho-37-08657-8-43158",
+    "nome": "CARVALHO",
+    "lat": 37.08657,
+    "lon": -8.43158,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "porto-de-m-s-37-08520-8-68868",
+    "nome": "PORTO DE MÓS",
+    "lat": 37.0852,
+    "lon": -8.68868,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "ancao-37-03215-8-03852",
+    "nome": "ANCAO",
+    "lat": 37.03215,
+    "lon": -8.03852,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "quarteira-37-06535-8-09999",
+    "nome": "QUARTEIRA",
+    "lat": 37.06535,
+    "lon": -8.09999,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "vale-do-lobo-37-04759-8-06476",
+    "nome": "VALE DO LOBO",
+    "lat": 37.04759,
+    "lon": -8.06476,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "vilamoura-37-07188-8-11896",
+    "nome": "VILAMOURA",
+    "lat": 37.07188,
+    "lon": -8.11896,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "garr-o-poente-37-04328-8-05713",
+    "nome": "GARRÃO-POENTE",
+    "lat": 37.04328,
+    "lon": -8.05713,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "armona-ria-37-02336-7-80635",
+    "nome": "ARMONA-RIA",
+    "lat": 37.02336,
+    "lon": -7.80635,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "alvor-poente-37-12218-8-59724",
+    "nome": "ALVOR-POENTE",
+    "lat": 37.12218,
+    "lon": -8.59724,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "rocha-37-11605-8-53737",
+    "nome": "ROCHA",
+    "lat": 37.11605,
+    "lon": -8.53737,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "carianos-37-11871-8-55499",
+    "nome": "CARIANOS",
+    "lat": 37.11871,
+    "lon": -8.55499,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "barcos-arma-o-de-p-ra-nascente-37-09981-8-35697",
+    "nome": "BARCOS/ARMAÇÃO DE PÊRA NASCENTE",
+    "lat": 37.09981,
+    "lon": -8.35697,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "praia-grande-poente-37-09685-8-34783",
+    "nome": "PRAIA GRANDE-POENTE",
+    "lat": 37.09685,
+    "lon": -8.34783,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "cabanas-mar-37-13345-7-58965",
+    "nome": "CABANAS-MAR",
+    "lat": 37.13345,
+    "lon": -7.58965,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "mareta-37-00503-8-93986",
+    "nome": "MARETA",
+    "lat": 37.00503,
+    "lon": -8.93986,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "ingrina-37-04616-8-87903",
+    "nome": "INGRINA",
+    "lat": 37.04616,
+    "lon": -8.87903,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "salema-37-06476-8-82482",
+    "nome": "SALEMA",
+    "lat": 37.06476,
+    "lon": -8.82482,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "boca-do-rio-37-06639-8-80833",
+    "nome": "BOCA DO RIO",
+    "lat": 37.06639,
+    "lon": -8.80833,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "monte-gordo-37-17694-7-45194",
+    "nome": "MONTE GORDO",
+    "lat": 37.17694,
+    "lon": -7.45194,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "f-brica-mar-37-14833-7-55111",
+    "nome": "FÁBRICA-MAR",
+    "lat": 37.14833,
+    "lon": -7.55111,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "praia-39-05028-27-96972",
+    "nome": "PRAIA",
+    "lat": 39.05028,
+    "lon": -27.96972,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "portinhos-faj-grande-38-60139-28-01056",
+    "nome": "PORTINHOS-FAJÃ GRANDE",
+    "lat": 38.60139,
+    "lon": -28.01056,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "pregui-a-velas-38-67806-28-21222",
+    "nome": "PREGUIÇA-VELAS",
+    "lat": 38.67806,
+    "lon": -28.21222,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "negrito-38-65472-27-28111",
+    "nome": "NEGRITO",
+    "lat": 38.65472,
+    "lon": -27.28111,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "salgueiros-a-ores-38-67056-27-07417",
+    "nome": "SALGUEIROS (AÇORES)",
+    "lat": 38.67056,
+    "lon": -27.07417,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "zona-balnear-dos-biscoitos-38-80167-27-25611",
+    "nome": "ZONA BALNEAR DOS BISCOITOS",
+    "lat": 38.80167,
+    "lon": -27.25611,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "grande-38-72861-27-05944",
+    "nome": "GRANDE",
+    "lat": 38.72861,
+    "lon": -27.05944,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "prainha-praia-da-vit-ria-38-73028-27-05389",
+    "nome": "PRAINHA (PRAIA DA VITÓRIA)",
+    "lat": 38.73028,
+    "lon": -27.05389,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "corvo-areia-39-66944-31-10972",
+    "nome": "CORVO/AREIA",
+    "lat": 39.66944,
+    "lon": -31.10972,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "concei-o-38-54222-28-62000",
+    "nome": "CONCEIÇÃO",
+    "lat": 38.54222,
+    "lon": -28.62,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "faj-38-61250-28-76306",
+    "nome": "FAJÃ",
+    "lat": 38.6125,
+    "lon": -28.76306,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "varadouro-38-56556-28-77222",
+    "nome": "VARADOURO",
+    "lat": 38.56556,
+    "lon": -28.77222,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "santa-cruz-das-flores-39-45800-31-12100",
+    "nome": "SANTA CRUZ DAS FLORES",
+    "lat": 39.458,
+    "lon": -31.121,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "zona-balnear-da-madalena-38-53417-28-53250",
+    "nome": "ZONA BALNEAR DA MADALENA",
+    "lat": 38.53417,
+    "lon": -28.5325,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "cais-do-pico-38-52778-28-31806",
+    "nome": "CAIS DO PICO",
+    "lat": 38.52778,
+    "lon": -28.31806,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "formosa-a-ores-36-99528-25-09694",
+    "nome": "FORMOSA (AÇORES)",
+    "lat": 36.99528,
+    "lon": -25.09694,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "mira-40-45583-8-80444",
+    "nome": "MIRA",
+    "lat": 40.45583,
+    "lon": -8.80444,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "nazar-39-60158-9-07548",
+    "nome": "NAZARÉ",
+    "lat": 39.60158,
+    "lon": -9.07548,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "azul-39-11436-9-39379",
+    "nome": "AZUL",
+    "lat": 39.11436,
+    "lon": -9.39379,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "albufeira-do-ermal-41-57554-8-12862",
+    "nome": "ALBUFEIRA DO ERMAL",
+    "lat": 41.57554,
+    "lon": -8.12862,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "caminha-41-86694-8-86417",
+    "nome": "CAMINHA",
+    "lat": 41.86694,
+    "lon": -8.86417,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "forte-do-c-o-41-80056-8-87111",
+    "nome": "FORTE DO CÃO",
+    "lat": 41.80056,
+    "lon": -8.87111,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "cabedelo-41-68000-8-83556",
+    "nome": "CABEDELO",
+    "lat": 41.68,
+    "lon": -8.83556,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "castelo-de-neiva-41-62528-8-81722",
+    "nome": "CASTELO DE NEIVA",
+    "lat": 41.62528,
+    "lon": -8.81722,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "pa-41-75972-8-87806",
+    "nome": "PAÇÔ",
+    "lat": 41.75972,
+    "lon": -8.87806,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "apulia-41-48361-8-77889",
+    "nome": "APULIA",
+    "lat": 41.48361,
+    "lon": -8.77889,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "aterro-41-20611-8-71667",
+    "nome": "ATERRO",
+    "lat": 41.20611,
+    "lon": -8.71667,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "angeiras-norte-41-26944-8-72778",
+    "nome": "ANGEIRAS NORTE",
+    "lat": 41.26944,
+    "lon": -8.72778,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "angeiras-sul-41-26528-8-72861",
+    "nome": "ANGEIRAS SUL",
+    "lat": 41.26528,
+    "lon": -8.72861,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "quebrada-41-23972-8-72611",
+    "nome": "QUEBRADA",
+    "lat": 41.23972,
+    "lon": -8.72611,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "agudela-41-24139-8-72778",
+    "nome": "AGUDELA",
+    "lat": 41.24139,
+    "lon": -8.72778,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "matosinhos-41-17722-8-69389",
+    "nome": "MATOSINHOS",
+    "lat": 41.17722,
+    "lon": -8.69389,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "quiao-41-41646-8-78853",
+    "nome": "QUIAO",
+    "lat": 41.41646,
+    "lon": -8.78853,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "zona-urbana-norte-41-38583-8-77389",
+    "nome": "ZONA URBANA NORTE",
+    "lat": 41.38583,
+    "lon": -8.77389,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "fragosa-41-39750-8-77944",
+    "nome": "FRAGOSA",
+    "lat": 41.3975,
+    "lon": -8.77944,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "codixeira-41-43806-8-78139",
+    "nome": "CODIXEIRA",
+    "lat": 41.43806,
+    "lon": -8.78139,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "barranha-41-44306-8-77972",
+    "nome": "BARRANHA",
+    "lat": 41.44306,
+    "lon": -8.77972,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "frente-urbana-sul-41-34667-8-75417",
+    "nome": "FRENTE URBANA SUL",
+    "lat": 41.34667,
+    "lon": -8.75417,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "frente-urbana-norte-41-35833-8-75694",
+    "nome": "FRENTE URBANA NORTE",
+    "lat": 41.35833,
+    "lon": -8.75694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "s-f-lix-da-marinha-41-03056-8-64639",
+    "nome": "S. FÉLIX DA MARINHA",
+    "lat": 41.03056,
+    "lon": -8.64639,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "marbelo-41-02556-8-64556",
+    "nome": "MARBELO",
+    "lat": 41.02556,
+    "lon": -8.64556,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "pedras-negras-marinha-grande-39-78021-9-02305",
+    "nome": "PEDRAS NEGRAS - MARINHA GRANDE",
+    "lat": 39.78021,
+    "lon": -9.02305,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-velha-39-77153-9-02823",
+    "nome": "PRAIA VELHA",
+    "lat": 39.77153,
+    "lon": -9.02823,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "osso-da-baleia-40-00306-8-91389",
+    "nome": "OSSO DA BALEIA",
+    "lat": 40.00306,
+    "lon": -8.91389,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "navio-39-14587-9-37540",
+    "nome": "NAVIO",
+    "lat": 39.14587,
+    "lon": -9.3754,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "santa-helena-39-13529-9-38364",
+    "nome": "SANTA HELENA",
+    "lat": 39.13529,
+    "lon": -9.38364,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "avencas-38-68775-9-35993",
+    "nome": "AVENCAS",
+    "lat": 38.68775,
+    "lon": -9.35993,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "duquesa-38-70077-9-41445",
+    "nome": "DUQUESA",
+    "lat": 38.70077,
+    "lon": -9.41445,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "cabana-do-pescador-38-60882-9-21506",
+    "nome": "CABANA DO PESCADOR",
+    "lat": 38.60882,
+    "lon": -9.21506,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "praia-nova-38-63724-9-23586",
+    "nome": "PRAIA NOVA",
+    "lat": 38.63724,
+    "lon": -9.23586,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "sereia-38-60137-9-21095",
+    "nome": "SEREIA",
+    "lat": 38.60137,
+    "lon": -9.21095,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "bela-vista-38-59562-9-20886",
+    "nome": "BELA VISTA",
+    "lat": 38.59562,
+    "lon": -9.20886,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "rainha-caparica-38-61555-9-21939",
+    "nome": "RAINHA (CAPARICA)",
+    "lat": 38.61555,
+    "lon": -9.21939,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "aberta-nova-38-17750-8-78175",
+    "nome": "ABERTA NOVA",
+    "lat": 38.1775,
+    "lon": -8.78175,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "pego-38-29212-8-77919",
+    "nome": "PEGO",
+    "lat": 38.29212,
+    "lon": -8.77919,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "vieirinha-vale-de-figueiros-37-89662-8-79897",
+    "nome": "VIEIRINHA - VALE DE FIGUEIROS",
+    "lat": 37.89662,
+    "lon": -8.79897,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "rocha-baixinha-37-07592-8-13506",
+    "nome": "ROCHA BAIXINHA",
+    "lat": 37.07592,
+    "lon": -8.13506,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "oura-leste-37-08512-8-22265",
+    "nome": "OURA-LESTE",
+    "lat": 37.08512,
+    "lon": -8.22265,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "prado-faial-41-59826-8-45847",
+    "nome": "PRADO FAIAL",
+    "lat": 41.59826,
+    "lon": -8.45847,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "ada-fe-41-61010-8-40605",
+    "nome": "ADAÚFE",
+    "lat": 41.6101,
+    "lon": -8.40605,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "cavez-41-51616-7-89003",
+    "nome": "CAVEZ",
+    "lat": 41.51616,
+    "lon": -7.89003,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "folgosa-40-89044-7-89793",
+    "nome": "FOLGOSA",
+    "lat": 40.89044,
+    "lon": -7.89793,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "s-jo-o-do-monte-40-59667-8-23694",
+    "nome": "S. JOÃO DO MONTE",
+    "lat": 40.59667,
+    "lon": -8.23694,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "valhelhas-40-40271-7-40298",
+    "nome": "VALHELHAS",
+    "lat": 40.40271,
+    "lon": -7.40298,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "fragas-de-s-sim-o-39-91592-8-31702",
+    "nome": "FRAGAS DE S. SIMÃO",
+    "lat": 39.91592,
+    "lon": -8.31702,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "froia-39-78996-7-83895",
+    "nome": "FROIA",
+    "lat": 39.78996,
+    "lon": -7.83895,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "aldeia-ruiva-39-76910-7-98226",
+    "nome": "ALDEIA RUIVA",
+    "lat": 39.7691,
+    "lon": -7.98226,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "malhadal-39-79703-7-95148",
+    "nome": "MALHADAL",
+    "lat": 39.79703,
+    "lon": -7.95148,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "montes-alb-castelo-bode-39-63019-8-25261",
+    "nome": "MONTES (ALB.CASTELO BODE)",
+    "lat": 39.63019,
+    "lon": -8.25261,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "quinta-do-alamal-alb-belver-39-48821-7-96823",
+    "nome": "QUINTA DO ALAMAL (ALB. BELVER)",
+    "lat": 39.48821,
+    "lon": -7.96823,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "grande-38-81335-9-47964",
+    "nome": "GRANDE",
+    "lat": 38.81335,
+    "lon": -9.47964,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "s-jo-o-da-caparica-38-65930-9-25541",
+    "nome": "S. JOÃO DA CAPARICA",
+    "lat": 38.6593,
+    "lon": -9.25541,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "castelo-38-61292-9-21721",
+    "nome": "CASTELO",
+    "lat": 38.61292,
+    "lon": -9.21721,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "infante-38-59969-9-21043",
+    "nome": "INFANTE",
+    "lat": 38.59969,
+    "lon": -9.21043,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "galapos-38-48439-8-96406",
+    "nome": "GALAPOS",
+    "lat": 38.48439,
+    "lon": -8.96406,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "almograve-37-65251-8-80239",
+    "nome": "ALMOGRAVE",
+    "lat": 37.65251,
+    "lon": -8.80239,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "vila-nova-de-milfontes-furnas-37-71769-8-78743",
+    "nome": "VILA NOVA DE MILFONTES-FURNAS",
+    "lat": 37.71769,
+    "lon": -8.78743,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "cabedelo-figueira-da-foz-40-14389-8-86611",
+    "nome": "CABEDELO (FIGUEIRA DA FOZ)",
+    "lat": 40.14389,
+    "lon": -8.86611,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cova-gala-40-12639-8-86389",
+    "nome": "COVA GALA",
+    "lat": 40.12639,
+    "lon": -8.86389,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "carcavelos-38-67798-9-33324",
+    "nome": "CARCAVELOS",
+    "lat": 38.67798,
+    "lon": -9.33324,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "guincho-38-73067-9-47490",
+    "nome": "GUINCHO",
+    "lat": 38.73067,
+    "lon": -9.4749,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "macas-38-82576-9-47050",
+    "nome": "MACAS",
+    "lat": 38.82576,
+    "lon": -9.4705,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "california-38-44221-9-09913",
+    "nome": "CALIFORNIA",
+    "lat": 38.44221,
+    "lon": -9.09913,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "figueirinha-38-48377-8-94406",
+    "nome": "FIGUEIRINHA",
+    "lat": 38.48377,
+    "lon": -8.94406,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "zambujeira-do-mar-37-52354-8-78794",
+    "nome": "ZAMBUJEIRA DO MAR",
+    "lat": 37.52354,
+    "lon": -8.78794,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "suave-mar-41-54583-8-79333",
+    "nome": "SUAVE MAR",
+    "lat": 41.54583,
+    "lon": -8.79333,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "espinho-baia-41-00889-8-64694",
+    "nome": "ESPINHO-BAIA",
+    "lat": 41.00889,
+    "lon": -8.64694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "espinho-rua-37-41-00139-8-64750",
+    "nome": "ESPINHO-RUA 37",
+    "lat": 41.00139,
+    "lon": -8.6475,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "castelo-do-queijo-41-16806-8-69028",
+    "nome": "CASTELO DO QUEIJO",
+    "lat": 41.16806,
+    "lon": -8.69028,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "paimo-41-43167-8-78417",
+    "nome": "PAIMO",
+    "lat": 41.43167,
+    "lon": -8.78417,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "labruge-41-27444-8-72861",
+    "nome": "LABRUGE",
+    "lat": 41.27444,
+    "lon": -8.72861,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "vila-ch-41-29000-8-73306",
+    "nome": "VILA CHÃ",
+    "lat": 41.29,
+    "lon": -8.73306,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "granja-41-04000-8-65028",
+    "nome": "GRANJA",
+    "lat": 41.04,
+    "lon": -8.65028,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "madalena-norte-41-10306-8-66222",
+    "nome": "MADALENA NORTE",
+    "lat": 41.10306,
+    "lon": -8.66222,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "s-o-jacinto-40-66944-8-74722",
+    "nome": "SÃO JACINTO",
+    "lat": 40.66944,
+    "lon": -8.74722,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "monte-branco-ria-aveiro-40-75389-8-70139",
+    "nome": "MONTE BRANCO (RIA AVEIRO)",
+    "lat": 40.75389,
+    "lon": -8.70139,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "esmoriz-40-95861-8-65639",
+    "nome": "ESMORIZ",
+    "lat": 40.95861,
+    "lon": -8.65639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "torr-o-do-lameiro-marreta-40-82889-8-69167",
+    "nome": "TORRÃO DO LAMEIRO/MARRETA",
+    "lat": 40.82889,
+    "lon": -8.69167,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "figueira-da-foz-40-15028-8-87167",
+    "nome": "FIGUEIRA DA FOZ",
+    "lat": 40.15028,
+    "lon": -8.87167,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "leirosa-40-05778-8-89194",
+    "nome": "LEIROSA",
+    "lat": 40.05778,
+    "lon": -8.89194,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "pedr-g-o-sul-39-91472-8-95500",
+    "nome": "PEDRÓGÃO SUL",
+    "lat": 39.91472,
+    "lon": -8.955,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "paredes-de-vit-ria-39-70168-9-05140",
+    "nome": "PAREDES DE VITÓRIA",
+    "lat": 39.70168,
+    "lon": -9.0514,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "polvoeira-39-71628-9-04990",
+    "nome": "POLVOEIRA",
+    "lat": 39.71628,
+    "lon": -9.0499,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "agua-de-madeiros-39-74012-9-04043",
+    "nome": "AGUA DE MADEIROS",
+    "lat": 39.74012,
+    "lon": -9.04043,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "vale-mit-o-39-20139-9-34752",
+    "nome": "VALE MITÃO",
+    "lat": 39.20139,
+    "lon": -9.34752,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "s-louren-o-39-01207-9-42202",
+    "nome": "S. LOURENÇO",
+    "lat": 39.01207,
+    "lon": -9.42202,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "cova-da-alfarroba-39-36099-9-36263",
+    "nome": "COVA DA ALFARROBA",
+    "lat": 39.36099,
+    "lon": -9.36263,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "santa-rita-norte-39-17449-9-35856",
+    "nome": "SANTA RITA-NORTE",
+    "lat": 39.17449,
+    "lon": -9.35856,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "mirante-santa-cruz-39-14290-9-37731",
+    "nome": "MIRANTE (SANTA CRUZ)",
+    "lat": 39.1429,
+    "lon": -9.37731,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "centro-santa-cruz-39-13786-9-38243",
+    "nome": "CENTRO (SANTA CRUZ)",
+    "lat": 39.13786,
+    "lon": -9.38243,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "conceicao-38-70005-9-41636",
+    "nome": "CONCEICAO",
+    "lat": 38.70005,
+    "lon": -9.41636,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "parede-38-68552-9-35362",
+    "nome": "PAREDE",
+    "lat": 38.68552,
+    "lon": -9.35362,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "poca-38-70193-9-39204",
+    "nome": "POCA",
+    "lat": 38.70193,
+    "lon": -9.39204,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "tamariz-38-70229-9-39883",
+    "nome": "TAMARIZ",
+    "lat": 38.70229,
+    "lon": -9.39883,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "adraga-38-80352-9-48569",
+    "nome": "ADRAGA",
+    "lat": 38.80352,
+    "lon": -9.48569,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "s-juli-o-38-93213-9-42016",
+    "nome": "S. JULIÃO",
+    "lat": 38.93213,
+    "lon": -9.42016,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "fonte-da-telha-38-57143-9-19748",
+    "nome": "FONTE DA TELHA",
+    "lat": 38.57143,
+    "lon": -9.19748,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "sa-de-38-62898-9-22904",
+    "nome": "SAÚDE",
+    "lat": 38.62898,
+    "lon": -9.22904,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "rei-38-60607-9-21336",
+    "nome": "REI",
+    "lat": 38.60607,
+    "lon": -9.21336,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "comporta-38-38063-8-80411",
+    "nome": "COMPORTA",
+    "lat": 38.38063,
+    "lon": -8.80411,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "tr-ia-mar-38-49115-8-90794",
+    "nome": "TRÓIA-MAR",
+    "lat": 38.49115,
+    "lon": -8.90794,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "melides-38-12921-8-79420",
+    "nome": "MELIDES",
+    "lat": 38.12921,
+    "lon": -8.7942,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "vila-nova-de-milfontes-farol-37-71966-8-78860",
+    "nome": "VILA NOVA DE MILFONTES-FAROL",
+    "lat": 37.71966,
+    "lon": -8.7886,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "fonte-do-corti-o-38-05612-8-82226",
+    "nome": "FONTE DO CORTIÇO",
+    "lat": 38.05612,
+    "lon": -8.82226,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "salgados-37-08845-8-32939",
+    "nome": "SALGADOS",
+    "lat": 37.08845,
+    "lon": -8.32939,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "castelo-37-07327-8-29875",
+    "nome": "CASTELO",
+    "lat": 37.07327,
+    "lon": -8.29875,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "arrifana-37-29455-8-86632",
+    "nome": "ARRIFANA",
+    "lat": 37.29455,
+    "lon": -8.86632,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "amoreira-mar-37-35213-8-84501",
+    "nome": "AMOREIRA-MAR",
+    "lat": 37.35213,
+    "lon": -8.84501,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "amoreira-rio-37-34395-8-84021",
+    "nome": "AMOREIRA-RIO",
+    "lat": 37.34395,
+    "lon": -8.84021,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "alagoa-altura-37-16906-7-49756",
+    "nome": "ALAGOA-ALTURA",
+    "lat": 37.16906,
+    "lon": -7.49756,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "faro-mar-37-00741-7-99563",
+    "nome": "FARO-MAR",
+    "lat": 37.00741,
+    "lon": -7.99563,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "culatra-mar-36-98545-7-83904",
+    "nome": "CULATRA-MAR",
+    "lat": 36.98545,
+    "lon": -7.83904,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "marinha-37-08958-8-41284",
+    "nome": "MARINHA",
+    "lat": 37.08958,
+    "lon": -8.41284,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "vale-centeanes-37-09122-8-45560",
+    "nome": "VALE CENTEANES",
+    "lat": 37.09122,
+    "lon": -8.4556,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "ferragudo-37-11728-8-52182",
+    "nome": "FERRAGUDO",
+    "lat": 37.11728,
+    "lon": -8.52182,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "cova-redonda-37-09858-8-37990",
+    "nome": "COVA REDONDA",
+    "lat": 37.09858,
+    "lon": -8.3799,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "d-ana-37-09160-8-66900",
+    "nome": "D. ANA",
+    "lat": 37.0916,
+    "lon": -8.669,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "meia-praia-37-10978-8-65972",
+    "nome": "MEIA PRAIA",
+    "lat": 37.10978,
+    "lon": -8.65972,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "batata-37-09797-8-66777",
+    "nome": "BATATA",
+    "lat": 37.09797,
+    "lon": -8.66777,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "garr-o-nascente-37-03992-8-05149",
+    "nome": "GARRÃO-NASCENTE",
+    "lat": 37.03992,
+    "lon": -8.05149,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "quinta-do-lago-37-02500-8-02580",
+    "nome": "QUINTA DO LAGO",
+    "lat": 37.025,
+    "lon": -8.0258,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "loul-velho-37-05554-8-07816",
+    "nome": "LOULÉ VELHO",
+    "lat": 37.05554,
+    "lon": -8.07816,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "armona-mar-37-01399-7-79384",
+    "nome": "ARMONA-MAR",
+    "lat": 37.01399,
+    "lon": -7.79384,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "cavacos-37-03825-7-79133",
+    "nome": "CAVACOS",
+    "lat": 37.03825,
+    "lon": -7.79133,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "fuseta-ria-37-05063-7-74356",
+    "nome": "FUSETA-RIA",
+    "lat": 37.05063,
+    "lon": -7.74356,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "barranco-das-canas-37-11938-8-56381",
+    "nome": "BARRANCO DAS CANAS",
+    "lat": 37.11938,
+    "lon": -8.56381,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "alvor-nascente-37-11997-8-58360",
+    "nome": "ALVOR-NASCENTE",
+    "lat": 37.11997,
+    "lon": -8.5836,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "vau-37-11941-8-55814",
+    "nome": "VAU",
+    "lat": 37.11941,
+    "lon": -8.55814,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "arma-o-de-p-ra-37-10146-8-36603",
+    "nome": "ARMAÇÃO DE PÊRA",
+    "lat": 37.10146,
+    "lon": -8.36603,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "barril-37-08582-7-66145",
+    "nome": "BARRIL",
+    "lat": 37.08582,
+    "lon": -7.66145,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "ilha-de-tavira-mar-37-10979-7-61985",
+    "nome": "ILHA DE TAVIRA-MAR",
+    "lat": 37.10979,
+    "lon": -7.61985,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "terra-estreita-37-09767-7-64062",
+    "nome": "TERRA ESTREITA",
+    "lat": 37.09767,
+    "lon": -7.64062,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "beliche-37-02529-8-96411",
+    "nome": "BELICHE",
+    "lat": 37.02529,
+    "lon": -8.96411,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "martinhal-37-01978-8-92467",
+    "nome": "MARTINHAL",
+    "lat": 37.01978,
+    "lon": -8.92467,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "cordoama-37-10942-8-93782",
+    "nome": "CORDOAMA",
+    "lat": 37.10942,
+    "lon": -8.93782,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "tonel-37-00703-8-94840",
+    "nome": "TONEL",
+    "lat": 37.00703,
+    "lon": -8.9484,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "almadena-cabanas-velhas-37-06278-8-79167",
+    "nome": "ALMADENA-CABANAS VELHAS",
+    "lat": 37.06278,
+    "lon": -8.79167,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "manta-rota-37-16333-7-51750",
+    "nome": "MANTA ROTA",
+    "lat": 37.16333,
+    "lon": -7.5175,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "santo-ant-nio-37-17417-7-42583",
+    "nome": "SANTO ANTÓNIO",
+    "lat": 37.17417,
+    "lon": -7.42583,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "lota-37-16528-7-51333",
+    "nome": "LOTA",
+    "lat": 37.16528,
+    "lon": -7.51333,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "piscina-do-carapacho-39-01200-27-96100",
+    "nome": "PISCINA DO CARAPACHO",
+    "lat": 39.012,
+    "lon": -27.961,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "barro-vermelho-39-09539-28-02796",
+    "nome": "BARRO VERMELHO",
+    "lat": 39.09539,
+    "lon": -28.02796,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "cinco-ribeiras-38-67472-27-32806",
+    "nome": "CINCO RIBEIRAS",
+    "lat": 38.67472,
+    "lon": -27.32806,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "salga-38-64750-27-09694",
+    "nome": "SALGA",
+    "lat": 38.6475,
+    "lon": -27.09694,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "silveira-38-65556-27-23500",
+    "nome": "SILVEIRA",
+    "lat": 38.65556,
+    "lon": -27.235,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "porto-martins-38-67972-27-05472",
+    "nome": "PORTO MARTINS",
+    "lat": 38.67972,
+    "lon": -27.05472,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "sargentos-38-72528-27-06056",
+    "nome": "SARGENTOS",
+    "lat": 38.72528,
+    "lon": -27.06056,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "almoxarife-38-55556-28-61028",
+    "nome": "ALMOXARIFE",
+    "lat": 38.55556,
+    "lon": -28.61028,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "porto-pim-38-52444-28-62806",
+    "nome": "PORTO PIM",
+    "lat": 38.52444,
+    "lon": -28.62806,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "faj-grande-39-45944-31-25972",
+    "nome": "FAJÃ GRANDE",
+    "lat": 39.45944,
+    "lon": -31.25972,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "zona-balnear-das-lajes-mar-38-39806-28-25694",
+    "nome": "ZONA BALNEAR DAS LAJES (MARÉ)",
+    "lat": 38.39806,
+    "lon": -28.25694,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "po-as-de-s-roque-38-52778-28-30222",
+    "nome": "POÇAS DE S. ROQUE",
+    "lat": 38.52778,
+    "lon": -28.30222,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "zona-balnear-da-lagoa-37-74167-25-57361",
+    "nome": "ZONA BALNEAR DA LAGOA",
+    "lat": 37.74167,
+    "lon": -25.57361,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "mil-cias-37-75000-25-62583",
+    "nome": "MILÍCIAS",
+    "lat": 37.75,
+    "lon": -25.62583,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "p-pulo-37-75000-25-61806",
+    "nome": "PÓPULO",
+    "lat": 37.75,
+    "lon": -25.61806,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "praia-dos-moinhos-37-82389-25-44528",
+    "nome": "PRAIA DOS MOINHOS",
+    "lat": 37.82389,
+    "lon": -25.44528,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "vinha-da-areia-37-71667-25-42528",
+    "nome": "VINHA DA AREIA",
+    "lat": 37.71667,
+    "lon": -25.42528,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "prainha-de-agua-d-alto-37-71667-25-48111",
+    "nome": "PRAINHA DE AGUA D'ALTO",
+    "lat": 37.71667,
+    "lon": -25.48111,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "lido-complexo-balnear-32-63556-16-93194",
+    "nome": "LIDO-COMPLEXO BALNEAR",
+    "lat": 32.63556,
+    "lon": -16.93194,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "porto-santo-ribeiro-cochino-33-04917-16-34472",
+    "nome": "PORTO SANTO - RIBEIRO COCHINO",
+    "lat": 33.04917,
+    "lon": -16.34472,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "porto-santo-calheta-33-02444-16-37667",
+    "nome": "PORTO SANTO - CALHETA",
+    "lat": 33.02444,
+    "lon": -16.37667,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "porto-santo-penedo-33-06222-16-31833",
+    "nome": "PORTO SANTO - PENEDO",
+    "lat": 33.06222,
+    "lon": -16.31833,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "agua-d-alto-37-71556-25-47250",
+    "nome": "AGUA D'ALTO",
+    "lat": 37.71556,
+    "lon": -25.4725,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "olhos-de-gua-37-08956-8-19033",
+    "nome": "OLHOS DE ÁGUA",
+    "lat": 37.08956,
+    "lon": -8.19033,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "legua-39-65357-9-06983",
+    "nome": "LEGUA",
+    "lat": 39.65357,
+    "lon": -9.06983,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "baleal-sul-39-37140-9-33902",
+    "nome": "BALEAL-SUL",
+    "lat": 39.3714,
+    "lon": -9.33902,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "vila-nova-serra-alb-castelo-bode-39-57487-8-26617",
+    "nome": "VILA NOVA-SERRA (ALB. CASTELO BODE)",
+    "lat": 39.57487,
+    "lon": -8.26617,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "castanheira-ou-lago-azul-alb-castelo-bode-39-67582-8-23071",
+    "nome": "CASTANHEIRA OU LAGO AZUL (ALB. CASTELO BODE)",
+    "lat": 39.67582,
+    "lon": -8.23071,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "agroal-39-67919-8-43631",
+    "nome": "AGROAL",
+    "lat": 39.67919,
+    "lon": -8.43631,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "le-a-da-palmeira-41-19083-8-70694",
+    "nome": "LEÇA DA PALMEIRA",
+    "lat": 41.19083,
+    "lon": -8.70694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "memoria-41-23056-8-72194",
+    "nome": "MEMORIA",
+    "lat": 41.23056,
+    "lon": -8.72194,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "pedras-do-corgo-41-24889-8-72583",
+    "nome": "PEDRAS DO CORGO",
+    "lat": 41.24889,
+    "lon": -8.72583,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "canide-norte-41-11694-8-66444",
+    "nome": "CANIDE NORTE",
+    "lat": 41.11694,
+    "lon": -8.66444,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "madalena-sul-41-09972-8-66083",
+    "nome": "MADALENA SUL",
+    "lat": 41.09972,
+    "lon": -8.66083,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "valadares-norte-41-09194-8-65806",
+    "nome": "VALADARES NORTE",
+    "lat": 41.09194,
+    "lon": -8.65806,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "francemar-41-07556-8-65750",
+    "nome": "FRANCEMAR",
+    "lat": 41.07556,
+    "lon": -8.6575,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "saozinha-41-07250-8-65833",
+    "nome": "SAOZINHA",
+    "lat": 41.0725,
+    "lon": -8.65833,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "senhor-da-pedra-41-06917-8-65861",
+    "nome": "SENHOR DA PEDRA",
+    "lat": 41.06917,
+    "lon": -8.65861,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "mar-e-sol-41-05833-8-65694",
+    "nome": "MAR E SOL",
+    "lat": 41.05833,
+    "lon": -8.65694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "canide-sul-41-11194-8-66361",
+    "nome": "CANIDE SUL",
+    "lat": 41.11194,
+    "lon": -8.66361,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "formosa-39-13178-9-38569",
+    "nome": "FORMOSA",
+    "lat": 39.13178,
+    "lon": -9.38569,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "porto-da-calada-39-03274-9-41900",
+    "nome": "PORTO DA CALADA",
+    "lat": 39.03274,
+    "lon": -9.419,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "abano-38-74161-9-47289",
+    "nome": "ABANO",
+    "lat": 38.74161,
+    "lon": -9.47289,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "bafureira-38-69222-9-36636",
+    "nome": "BAFUREIRA",
+    "lat": 38.69222,
+    "lon": -9.36636,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "vale-dos-homens-37-38351-8-82577",
+    "nome": "VALE DOS HOMENS",
+    "lat": 37.38351,
+    "lon": -8.82577,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "porto-santo-ribeiro-salgado-33-04500-16-34917",
+    "nome": "PORTO SANTO - RIBEIRO SALGADO",
+    "lat": 33.045,
+    "lon": -16.34917,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "insua-41-78556-8-87139",
+    "nome": "INSUA",
+    "lat": 41.78556,
+    "lon": -8.87139,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "tr-ia-gal-38-47976-8-90137",
+    "nome": "TRÓIA-GALÉ",
+    "lat": 38.47976,
+    "lon": -8.90137,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "cb-ponta-gorda-po-as-do-governador-32-63389-16-94000",
+    "nome": "CB PONTA GORDA-POÇAS DO GOVERNADOR",
+    "lat": 32.63389,
+    "lon": -16.94,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "lagoa-de-albufeira-mar-38-50647-9-18337",
+    "nome": "LAGOA DE ALBUFEIRA-MAR",
+    "lat": 38.50647,
+    "lon": -9.18337,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "verim-41-64382-8-31317",
+    "nome": "VERIM",
+    "lat": 41.64382,
+    "lon": -8.31317,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "areinho-40-95290-8-17854",
+    "nome": "AREINHO",
+    "lat": 40.9529,
+    "lon": -8.17854,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "anjos-37-00333-25-14500",
+    "nome": "ANJOS",
+    "lat": 37.00333,
+    "lon": -25.145,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "maia-36-92833-25-01667",
+    "nome": "MAIA",
+    "lat": 36.92833,
+    "lon": -25.01667,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "escaleiras-38-78722-27-13583",
+    "nome": "ESCALEIRAS",
+    "lat": 38.78722,
+    "lon": -27.13583,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "quatro-ribeiras-38-79194-27-22389",
+    "nome": "QUATRO RIBEIRAS",
+    "lat": 38.79194,
+    "lon": -27.22389,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "lenta-41-95682-8-74669",
+    "nome": "LENTA",
+    "lat": 41.95682,
+    "lon": -8.74669,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "burg-es-rio-caima-40-83437-8-38297",
+    "nome": "BURGÃES - RIO CAIMA",
+    "lat": 40.83437,
+    "lon": -8.38297,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "quinta-do-barco-40-70833-8-36111",
+    "nome": "QUINTA DO BARCO",
+    "lat": 40.70833,
+    "lon": -8.36111,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "olhos-de-ferven-a-40-34889-8-69639",
+    "nome": "OLHOS DE FERVENÇA",
+    "lat": 40.34889,
+    "lon": -8.69639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "pomares-40-26889-7-89750",
+    "nome": "POMARES",
+    "lat": 40.26889,
+    "lon": -7.8975,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "bogueira-40-15361-8-24167",
+    "nome": "BOGUEIRA",
+    "lat": 40.15361,
+    "lon": -8.24167,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "a-ude-do-pinto-39-92295-7-89413",
+    "nome": "AÇUDE DO PINTO",
+    "lat": 39.92295,
+    "lon": -7.89413,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "penedo-furado-39-62571-8-16262",
+    "nome": "PENEDO FURADO",
+    "lat": 39.62571,
+    "lon": -8.16262,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "janeiro-de-baixo-40-04623-7-80117",
+    "nome": "JANEIRO DE BAIXO",
+    "lat": 40.04623,
+    "lon": -7.80117,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "aldeia-do-mato-alb-castelo-bode-39-54515-8-27767",
+    "nome": "ALDEIA DO MATO (ALB. CASTELO BODE)",
+    "lat": 39.54515,
+    "lon": -8.27767,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "alverangel-alb-castelo-bode-39-54871-8-30180",
+    "nome": "ALVERANGEL (ALB. CASTELO BODE)",
+    "lat": 39.54871,
+    "lon": -8.3018,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "albufeira-da-tapada-grande-37-67143-7-50522",
+    "nome": "ALBUFEIRA DA TAPADA GRANDE",
+    "lat": 37.67143,
+    "lon": -7.50522,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "peralta-39-24562-9-34199",
+    "nome": "PERALTA",
+    "lat": 39.24562,
+    "lon": -9.34199,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "foz-do-lizandro-mar-38-94240-9-41646",
+    "nome": "FOZ DO LIZANDRO-MAR",
+    "lat": 38.9424,
+    "lon": -9.41646,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "baleia-38-95616-9-41616",
+    "nome": "BALEIA",
+    "lat": 38.95616,
+    "lon": -9.41616,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "galapinhos-38-48377-8-96799",
+    "nome": "GALAPINHOS",
+    "lat": 38.48377,
+    "lon": -8.96799,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "prainha-angra-do-heroismo-38-65000-27-21667",
+    "nome": "PRAINHA (ANGRA DO HEROISMO)",
+    "lat": 38.65,
+    "lon": -27.21667,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "ribeira-do-natal-32-73500-16-74500",
+    "nome": "RIBEIRA DO NATAL",
+    "lat": 32.735,
+    "lon": -16.745,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-da-laje-32-82667-17-11417",
+    "nome": "PRAIA DA LAJE",
+    "lat": 32.82667,
+    "lon": -17.11417,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "funtao-41-25944-8-72500",
+    "nome": "FUNTAO",
+    "lat": 41.25944,
+    "lon": -8.725,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "alqueir-o-41-67907-8-17846",
+    "nome": "ALQUEIRÃO",
+    "lat": 41.67907,
+    "lon": -8.17846,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "tocha-40-32944-8-84556",
+    "nome": "TOCHA",
+    "lat": 40.32944,
+    "lon": -8.84556,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-nova-32-64167-16-95750",
+    "nome": "PRAIA NOVA",
+    "lat": 32.64167,
+    "lon": -16.9575,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "ponta-do-sol-32-67917-17-10528",
+    "nome": "PONTA DO SOL",
+    "lat": 32.67917,
+    "lon": -17.10528,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "pontilh-o-da-valeta-41-84889-8-41866",
+    "nome": "PONTILHÃO DA VALETA",
+    "lat": 41.84889,
+    "lon": -8.41866,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "vila-praia-de-ncora-41-81393-8-86534",
+    "nome": "VILA PRAIA DE ÂNCORA",
+    "lat": 41.81393,
+    "lon": -8.86534,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "ponte-da-barca-rio-lima-41-80971-8-42074",
+    "nome": "PONTE DA BARCA-RIO LIMA",
+    "lat": 41.80971,
+    "lon": -8.42074,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "afife-41-78083-8-87139",
+    "nome": "AFIFE",
+    "lat": 41.78083,
+    "lon": -8.87139,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "amorosa-41-64694-8-82500",
+    "nome": "AMOROSA",
+    "lat": 41.64694,
+    "lon": -8.825,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "carre-o-41-74139-8-87722",
+    "nome": "CARREÇO",
+    "lat": 41.74139,
+    "lon": -8.87722,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "norte-41-69611-8-85028",
+    "nome": "NORTE",
+    "lat": 41.69611,
+    "lon": -8.85028,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "arda-41-77028-8-87417",
+    "nome": "ARDA",
+    "lat": 41.77028,
+    "lon": -8.87417,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "fao-ofir-41-51722-8-78778",
+    "nome": "FAO-OFIR",
+    "lat": 41.51722,
+    "lon": -8.78778,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "paramos-40-97722-8-64972",
+    "nome": "PARAMOS",
+    "lat": 40.97722,
+    "lon": -8.64972,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "silvalde-40-99028-8-64750",
+    "nome": "SILVALDE",
+    "lat": 40.99028,
+    "lon": -8.6475,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "frente-azul-41-01194-8-64694",
+    "nome": "FRENTE AZUL",
+    "lat": 41.01194,
+    "lon": -8.64694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "seca-41-01444-8-64611",
+    "nome": "SECA",
+    "lat": 41.01444,
+    "lon": -8.64611,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "gondarem-41-15639-8-68139",
+    "nome": "GONDAREM",
+    "lat": 41.15639,
+    "lon": -8.68139,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "lagoa-41-39028-8-77472",
+    "nome": "LAGOA",
+    "lat": 41.39028,
+    "lon": -8.77472,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "rvore-41-32998-8-73873",
+    "nome": "ÁRVORE",
+    "lat": 41.32998,
+    "lon": -8.73873,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "mindelo-41-31000-8-74111",
+    "nome": "MINDELO",
+    "lat": 41.31,
+    "lon": -8.74111,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "aguda-41-05083-8-65583",
+    "nome": "AGUDA",
+    "lat": 41.05083,
+    "lon": -8.65583,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "miramar-41-06667-8-65750",
+    "nome": "MIRAMAR",
+    "lat": 41.06667,
+    "lon": -8.6575,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "salgueiros-41-12083-8-66639",
+    "nome": "SALGUEIROS",
+    "lat": 41.12083,
+    "lon": -8.66639,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "francelos-41-08000-8-65722",
+    "nome": "FRANCELOS",
+    "lat": 41.08,
+    "lon": -8.65722,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "congida-alb-saucelhe-41-07598-6-77960",
+    "nome": "CONGIDA (ALB. SAUCELHE)",
+    "lat": 41.07598,
+    "lon": -6.7796,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "fraga-da-pegada-41-58167-6-90056",
+    "nome": "FRAGA DA PEGADA",
+    "lat": 41.58167,
+    "lon": -6.90056,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "maravilha-41-50487-7-19685",
+    "nome": "MARAVILHA",
+    "lat": 41.50487,
+    "lon": -7.19685,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "ponte-soeira-41-85355-6-93193",
+    "nome": "PONTE SOEIRA",
+    "lat": 41.85355,
+    "lon": -6.93193,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "ponte-da-ranca-41-81029-6-99441",
+    "nome": "PONTE DA RANCA",
+    "lat": 41.81029,
+    "lon": -6.99441,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "barra-40-63972-8-75056",
+    "nome": "BARRA",
+    "lat": 40.63972,
+    "lon": -8.75056,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "torreira-40-76194-8-71417",
+    "nome": "TORREIRA",
+    "lat": 40.76194,
+    "lon": -8.71417,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cortegaca-40-93958-8-65859",
+    "nome": "CORTEGACA",
+    "lat": 40.93958,
+    "lon": -8.65859,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "areinho-ria-aveiro-40-84583-8-66194",
+    "nome": "AREINHO (RIA AVEIRO)",
+    "lat": 40.84583,
+    "lon": -8.66194,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "vagueira-40-56417-8-76972",
+    "nome": "VAGUEIRA",
+    "lat": 40.56417,
+    "lon": -8.76972,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "palheiros-e-zorro-40-20278-8-36528",
+    "nome": "PALHEIROS E ZORRO",
+    "lat": 40.20278,
+    "lon": -8.36528,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "murtinheira-40-20500-8-90028",
+    "nome": "MURTINHEIRA",
+    "lat": 40.205,
+    "lon": -8.90028,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "pedr-g-o-centro-39-92194-8-95333",
+    "nome": "PEDRÓGÂO-CENTRO",
+    "lat": 39.92194,
+    "lon": -8.95333,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "s-pedro-de-moel-39-75574-9-03245",
+    "nome": "S. PEDRO DE MOEL",
+    "lat": 39.75574,
+    "lon": -9.03245,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "vieira-39-87528-8-97333",
+    "nome": "VIEIRA",
+    "lat": 39.87528,
+    "lon": -8.97333,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "corga-40-02459-8-18945",
+    "nome": "CORGA",
+    "lat": 40.02459,
+    "lon": -8.18945,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "ana-de-aviz-39-91857-8-28429",
+    "nome": "ANA DE AVIZ",
+    "lat": 39.91857,
+    "lon": -8.28429,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cambas-alb-cabril-40-01293-7-84646",
+    "nome": "CAMBAS (ALB. CABRIL)",
+    "lat": 40.01293,
+    "lon": -7.84646,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "ribeira-grande-39-80730-8-09634",
+    "nome": "RIBEIRA GRANDE",
+    "lat": 39.8073,
+    "lon": -8.09634,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "pego-das-cancelas-39-73490-8-05812",
+    "nome": "PEGO DAS CANCELAS",
+    "lat": 39.7349,
+    "lon": -8.05812,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "s-martinho-do-porto-39-51012-9-13550",
+    "nome": "S. MARTINHO DO PORTO",
+    "lat": 39.51012,
+    "lon": -9.1355,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "pedra-do-ouro-39-72597-9-04717",
+    "nome": "PEDRA DO OURO",
+    "lat": 39.72597,
+    "lon": -9.04717,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-do-mar-39-43491-9-22941",
+    "nome": "PRAIA DO MAR",
+    "lat": 39.43491,
+    "lon": -9.22941,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "foz-do-arelho-lagoa-39-42855-9-22350",
+    "nome": "FOZ DO ARELHO-LAGOA",
+    "lat": 39.42855,
+    "lon": -9.2235,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "areia-branca-39-26687-9-33684",
+    "nome": "AREIA BRANCA",
+    "lat": 39.26687,
+    "lon": -9.33684,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "porto-dinheiro-39-21413-9-34480",
+    "nome": "PORTO DINHEIRO",
+    "lat": 39.21413,
+    "lon": -9.3448,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "areia-sul-39-25931-9-33849",
+    "nome": "AREIA SUL",
+    "lat": 39.25931,
+    "lon": -9.33849,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "ribeira-de-ilhas-38-98746-9-41962",
+    "nome": "RIBEIRA DE ILHAS",
+    "lat": 38.98746,
+    "lon": -9.41962,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "salgado-39-54808-9-11192",
+    "nome": "SALGADO",
+    "lat": 39.54808,
+    "lon": -9.11192,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "consola-o-39-32696-9-35977",
+    "nome": "CONSOLAÇÃO",
+    "lat": 39.32696,
+    "lon": -9.35977,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "med-o-supertubos-39-34536-9-36441",
+    "nome": "MEDÃO-SUPERTUBOS",
+    "lat": 39.34536,
+    "lon": -9.36441,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "s-bernardino-39-31125-9-34690",
+    "nome": "S. BERNARDINO",
+    "lat": 39.31125,
+    "lon": -9.3469,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "f-sica-santa-cruz-39-13931-9-38084",
+    "nome": "FÍSICA (SANTA CRUZ)",
+    "lat": 39.13931,
+    "lon": -9.38084,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "pis-o-santa-cruz-39-14071-9-37964",
+    "nome": "PISÃO (SANTA CRUZ)",
+    "lat": 39.14071,
+    "lon": -9.37964,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "azarujinha-38-70063-9-38941",
+    "nome": "AZARUJINHA",
+    "lat": 38.70063,
+    "lon": -9.38941,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "rainha-cascais-38-69913-9-41794",
+    "nome": "RAINHA (CASCAIS)",
+    "lat": 38.69913,
+    "lon": -9.41794,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "crismina-38-72630-9-47699",
+    "nome": "CRISMINA",
+    "lat": 38.7263,
+    "lon": -9.47699,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "s-pedro-do-estoril-38-69317-9-36900",
+    "nome": "S. PEDRO DO ESTORIL",
+    "lat": 38.69317,
+    "lon": -9.369,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "torre-38-67549-9-32300",
+    "nome": "TORRE",
+    "lat": 38.67549,
+    "lon": -9.323,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "magoito-38-86361-9-44957",
+    "nome": "MAGOITO",
+    "lat": 38.86361,
+    "lon": -9.44957,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "morena-38-60300-9-21201",
+    "nome": "MORENA",
+    "lat": 38.603,
+    "lon": -9.21201,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "cova-do-vapor-38-66200-9-25974",
+    "nome": "COVA DO VAPOR",
+    "lat": 38.662,
+    "lon": -9.25974,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "mata-38-62311-9-22447",
+    "nome": "MATA",
+    "lat": 38.62311,
+    "lon": -9.22447,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "moinho-de-baixo-meco-38-48969-9-18458",
+    "nome": "MOINHO DE BAIXO-MECO",
+    "lat": 38.48969,
+    "lon": -9.18458,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "ouro-38-44229-9-10847",
+    "nome": "OURO",
+    "lat": 38.44229,
+    "lon": -9.10847,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "lavadores-41-12861-8-66833",
+    "nome": "LAVADORES",
+    "lat": 41.12861,
+    "lon": -8.66833,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "luz-37-08635-8-72638",
+    "nome": "LUZ",
+    "lat": 37.08635,
+    "lon": -8.72638,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "madalena-do-mar-32-70306-17-13861",
+    "nome": "MADALENA DO MAR",
+    "lat": 32.70306,
+    "lon": -17.13861,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-do-cds-38-64539-9-24231",
+    "nome": "PRAIA DO CDS",
+    "lat": 38.64539,
+    "lon": -9.24231,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "santa-rita-sul-39-17145-9-36011",
+    "nome": "SANTA RITA-SUL",
+    "lat": 39.17145,
+    "lon": -9.36011,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "amanh-santa-cruz-39-14908-9-37337",
+    "nome": "AMANHÃ (SANTA CRUZ)",
+    "lat": 39.14908,
+    "lon": -9.37337,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "marinhas-cepaes-41-55417-8-79389",
+    "nome": "MARINHAS-CEPAES",
+    "lat": 41.55417,
+    "lon": -8.79389,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "marreco-41-23500-8-72361",
+    "nome": "MARRECO",
+    "lat": 41.235,
+    "lon": -8.72361,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "moitas-38-70166-9-41000",
+    "nome": "MOITAS",
+    "lat": 38.70166,
+    "lon": -9.41,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "moledo-41-84889-8-86611",
+    "nome": "MOLEDO",
+    "lat": 41.84889,
+    "lon": -8.86611,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "pego-fundo-37-47199-7-47713",
+    "nome": "PEGO FUNDO",
+    "lat": 37.47199,
+    "lon": -7.47713,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "pintadinho-37-10779-8-51897",
+    "nome": "PINTADINHO",
+    "lat": 37.10779,
+    "lon": -8.51897,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "piod-o-40-22944-7-82639",
+    "nome": "PIODÃO",
+    "lat": 40.22944,
+    "lon": -7.82639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "po-as-do-gomes-doca-do-cavacas-32-63500-16-94778",
+    "nome": "POÇAS DO GOMES-DOCA DO CAVACAS",
+    "lat": 32.635,
+    "lon": -16.94778,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "ponte-frades-41-85875-7-12151",
+    "nome": "PONTE FRADES",
+    "lat": 41.85875,
+    "lon": -7.12151,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "raba-al-41-63200-7-24716",
+    "nome": "RABAÇAL",
+    "lat": 41.632,
+    "lon": -7.24716,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "roca-mar-32-64194-16-82972",
+    "nome": "ROCA MAR",
+    "lat": 32.64194,
+    "lon": -16.82972,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "valadares-sul-41-08917-8-65722",
+    "nome": "VALADARES SUL",
+    "lat": 41.08917,
+    "lon": -8.65722,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "vale-do-rossim-alb-vale-rossim-40-40056-7-58778",
+    "nome": "VALE DO ROSSIM (ALB. VALE ROSSIM)",
+    "lat": 40.40056,
+    "lon": -7.58778,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "zavial-37-04615-8-87158",
+    "nome": "ZAVIAL",
+    "lat": 37.04615,
+    "lon": -8.87158,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "prainha-32-74250-16-71556",
+    "nome": "PRAINHA",
+    "lat": 32.7425,
+    "lon": -16.71556,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "porto-santo-fontinha-33-05528-16-33694",
+    "nome": "PORTO SANTO - FONTINHA",
+    "lat": 33.05528,
+    "lon": -16.33694,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "loriga-40-32750-7-67833",
+    "nome": "LORIGA",
+    "lat": 40.3275,
+    "lon": -7.67833,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "aldeia-vi-osa-40-58000-7-30778",
+    "nome": "ALDEIA VIÇOSA",
+    "lat": 40.58,
+    "lon": -7.30778,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "furadouro-40-87667-8-67639",
+    "nome": "FURADOURO",
+    "lat": 40.87667,
+    "lon": -8.67639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "riviera-38-61872-9-22172",
+    "nome": "RIVIERA",
+    "lat": 38.61872,
+    "lon": -9.22172,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "portinho-da-arr-bida-38-48017-8-97689",
+    "nome": "PORTINHO DA ARRÁBIDA",
+    "lat": 38.48017,
+    "lon": -8.97689,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "tarqu-nio-para-so-38-64141-9-23944",
+    "nome": "TARQUÍNIO-PARAÍSO",
+    "lat": 38.64141,
+    "lon": -9.23944,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "costa-de-santo-andr-38-11452-8-79931",
+    "nome": "COSTA DE SANTO ANDRÉ",
+    "lat": 38.11452,
+    "lon": -8.79931,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "vasco-da-gama-37-95290-8-86527",
+    "nome": "VASCO DA GAMA",
+    "lat": 37.9529,
+    "lon": -8.86527,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "vila-nova-de-milfontes-franquia-37-72216-8-78719",
+    "nome": "VILA NOVA DE MILFONTES-FRANQUIA",
+    "lat": 37.72216,
+    "lon": -8.78719,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "senhora-da-piedade-40-10028-8-23444",
+    "nome": "SENHORA DA PIEDADE",
+    "lat": 40.10028,
+    "lon": -8.23444,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "calhetas-37-82556-25-60639",
+    "nome": "CALHETAS",
+    "lat": 37.82556,
+    "lon": -25.60639,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "areal-sta-barbara-37-81861-25-54639",
+    "nome": "AREAL STA. BARBARA",
+    "lat": 37.81861,
+    "lon": -25.54639,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "po-o-da-cruz-40-49028-8-79306",
+    "nome": "POÇO DA CRUZ",
+    "lat": 40.49028,
+    "lon": -8.79306,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "tamargueira-40-16583-8-88250",
+    "nome": "TAMARGUEIRA",
+    "lat": 40.16583,
+    "lon": -8.8825,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "carvoeiro-ma-o-39-63021-7-92298",
+    "nome": "CARVOEIRO (MAÇÃO)",
+    "lat": 39.63021,
+    "lon": -7.92298,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "lou-ainha-40-02611-8-30389",
+    "nome": "LOUÇAINHA",
+    "lat": 40.02611,
+    "lon": -8.30389,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "fernandaires-alb-castelo-bode-39-73435-8-20929",
+    "nome": "FERNANDAIRES (ALB. CASTELO BODE)",
+    "lat": 39.73435,
+    "lon": -8.20929,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "alv-co-das-v-rzeas-40-30083-7-83639",
+    "nome": "ALVÔCO DAS VÁRZEAS",
+    "lat": 40.30083,
+    "lon": -7.83639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "c-ja-40-26806-7-99472",
+    "nome": "CÔJA",
+    "lat": 40.26806,
+    "lon": -7.99472,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "camilo-37-08736-8-66839",
+    "nome": "CAMILO",
+    "lat": 37.08736,
+    "lon": -8.66839,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "fal-sia-alfamar-37-08335-8-15912",
+    "nome": "FALÉSIA ALFAMAR",
+    "lat": 37.08335,
+    "lon": -8.15912,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "parque-dr-jose-gama-41-48806-7-18722",
+    "nome": "PARQUE DR. JOSE GAMA",
+    "lat": 41.48806,
+    "lon": -7.18722,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "vale-juncal-41-53333-7-18417",
+    "nome": "VALE JUNCAL",
+    "lat": 41.53333,
+    "lon": -7.18417,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "garajau-32-63833-16-85278",
+    "nome": "GARAJAU",
+    "lat": 32.63833,
+    "lon": -16.85278,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "secarias-peneda-da-cascalheira-40-24944-8-03639",
+    "nome": "SECARIAS - PENEDA DA CASCALHEIRA",
+    "lat": 40.24944,
+    "lon": -8.03639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "senhora-da-gra-a-40-15722-8-19694",
+    "nome": "SENHORA DA GRAÇA",
+    "lat": 40.15722,
+    "lon": -8.19694,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "senhora-boa-nova-41-20173-8-71378",
+    "nome": "SENHORA - BOA NOVA",
+    "lat": 41.20173,
+    "lon": -8.71378,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "pedras-brancas-41-25333-8-72472",
+    "nome": "PEDRAS BRANCAS",
+    "lat": 41.25333,
+    "lon": -8.72472,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "ramalha-41-47389-8-77639",
+    "nome": "RAMALHA",
+    "lat": 41.47389,
+    "lon": -8.77639,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "rio-de-moinhos-41-56528-8-79833",
+    "nome": "RIO DE MOINHOS",
+    "lat": 41.56528,
+    "lon": -8.79833,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "ribeira-41-58611-6-90556",
+    "nome": "RIBEIRA",
+    "lat": 41.58611,
+    "lon": -6.90556,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "cavadinho-41-61653-8-35649",
+    "nome": "CAVADINHO",
+    "lat": 41.61653,
+    "lon": -8.35649,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "navarra-41-61335-8-38470",
+    "nome": "NAVARRA",
+    "lat": 41.61335,
+    "lon": -8.3847,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "quintas-41-59639-7-16417",
+    "nome": "QUINTAS",
+    "lat": 41.59639,
+    "lon": -7.16417,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "homem-do-leme-41-16056-8-68639",
+    "nome": "HOMEM DO LEME",
+    "lat": 41.16056,
+    "lon": -8.68639,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "foz-41-15000-8-67694",
+    "nome": "FOZ",
+    "lat": 41.15,
+    "lon": -8.67694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "zaboeira-alb-castelo-bode-39-70436-8-22268",
+    "nome": "ZABOEIRA (ALB. CASTELO BODE)",
+    "lat": 39.70436,
+    "lon": -8.22268,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "rei-do-corti-o-39-42070-9-24705",
+    "nome": "REI DO CORTIÇO",
+    "lat": 39.4207,
+    "lon": -9.24705,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-d-el-rei-39-40045-9-27762",
+    "nome": "PRAIA D'EL REI",
+    "lat": 39.40045,
+    "lon": -9.27762,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "porto-novo-39-17783-9-35685",
+    "nome": "PORTO NOVO",
+    "lat": 39.17783,
+    "lon": -9.35685,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "lomba-alb-crestuma-41-06994-8-41379",
+    "nome": "LOMBA (ALB. CRESTUMA)",
+    "lat": 41.06994,
+    "lon": -8.41379,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "fuzelhas-41-19604-8-71005",
+    "nome": "FUZELHAS",
+    "lat": 41.19604,
+    "lon": -8.71005,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "bitetos-41-07210-8-26047",
+    "nome": "BITETOS",
+    "lat": 41.0721,
+    "lon": -8.26047,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "porto-da-areia-sul-39-35350-9-38878",
+    "nome": "PORTO DA AREIA SUL",
+    "lat": 39.3535,
+    "lon": -9.38878,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cabo-mondego-40-17265-8-89387",
+    "nome": "CABO MONDEGO",
+    "lat": 40.17265,
+    "lon": -8.89387,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "reconquinho-40-26702-8-27953",
+    "nome": "RECONQUINHO",
+    "lat": 40.26702,
+    "lon": -8.27953,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "sandomil-40-35622-7-78147",
+    "nome": "SANDOMIL",
+    "lat": 40.35622,
+    "lon": -7.78147,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "ribeira-ou-dos-pescadores-38-96408-9-41889",
+    "nome": "RIBEIRA OU DOS PESCADORES",
+    "lat": 38.96408,
+    "lon": -9.41889,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "consola-o-norte-39-32934-9-35947",
+    "nome": "CONSOLAÇÃO NORTE",
+    "lat": 39.32934,
+    "lon": -9.35947,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "relva-da-reboleira-40-41200-7-46718",
+    "nome": "RELVA DA REBOLEIRA",
+    "lat": 40.412,
+    "lon": -7.46718,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "albufeira-da-meim-a-40-26690-7-14269",
+    "nome": "ALBUFEIRA DA MEIMÔA",
+    "lat": 40.2669,
+    "lon": -7.14269,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "troviscal-39-86019-8-00848",
+    "nome": "TROVISCAL",
+    "lat": 39.86019,
+    "lon": -8.00848,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "bostelim-39-72358-8-10796",
+    "nome": "BOSTELIM",
+    "lat": 39.72358,
+    "lon": -8.10796,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "zona-urbana-sul-ii-41-37942-8-76941",
+    "nome": "ZONA URBANA SUL II",
+    "lat": 41.37942,
+    "lon": -8.76941,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "zona-urbana-sul-i-41-38478-8-77277",
+    "nome": "ZONA URBANA SUL I",
+    "lat": 41.38478,
+    "lon": -8.77277,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "labrego-40-55187-8-77460",
+    "nome": "LABREGO",
+    "lat": 40.55187,
+    "lon": -8.7746,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "palheir-o-40-38802-8-82637",
+    "nome": "PALHEIRÃO",
+    "lat": 40.38802,
+    "lon": -8.82637,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "almargem-37-05838-8-08353",
+    "nome": "ALMARGEM",
+    "lat": 37.05838,
+    "lon": -8.08353,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "porto-santo-lagoa-33-03087-16-36739",
+    "nome": "PORTO SANTO - LAGOA",
+    "lat": 33.03087,
+    "lon": -16.36739,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "azul-conchinha-41-20778-8-71615",
+    "nome": "AZUL - CONCHINHA",
+    "lat": 41.20778,
+    "lon": -8.71615,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "piscina-natural-das-portas-do-mar-37-73972-25-66111",
+    "nome": "PISCINA NATURAL DAS PORTAS DO MAR",
+    "lat": 37.73972,
+    "lon": -25.66111,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "po-o-dos-frades-38-67780-28-20806",
+    "nome": "POÇO DOS FRADES",
+    "lat": 38.6778,
+    "lon": -28.20806,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "praia-da-riviera-38-71472-27-06083",
+    "nome": "PRAIA DA RIVIERA",
+    "lat": 38.71472,
+    "lon": -27.06083,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "vale-do-olival-37-10152-8-36953",
+    "nome": "VALE DO OLIVAL",
+    "lat": 37.10152,
+    "lon": -8.36953,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "formosa-madeira-32-64167-16-95528",
+    "nome": "FORMOSA (MADEIRA)",
+    "lat": 32.64167,
+    "lon": -16.95528,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "vale-figueiras-37-24770-8-86956",
+    "nome": "VALE FIGUEIRAS",
+    "lat": 37.2477,
+    "lon": -8.86956,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "furnas-37-05500-8-85444",
+    "nome": "FURNAS",
+    "lat": 37.055,
+    "lon": -8.85444,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "santa-luzia-alb-santa-luzia-40-09111-7-85322",
+    "nome": "SANTA LUZIA (ALB. SANTA LUZIA)",
+    "lat": 40.09111,
+    "lon": -7.85322,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "pessegueiro-40-05219-8-02389",
+    "nome": "PESSEGUEIRO",
+    "lat": 40.05219,
+    "lon": -8.02389,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "devesa-40-34877-7-09278",
+    "nome": "DEVESA",
+    "lat": 40.34877,
+    "lon": -7.09278,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "mosteiro-39-93574-8-18634",
+    "nome": "MOSTEIRO",
+    "lat": 39.93574,
+    "lon": -8.18634,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "av-40-29414-7-90564",
+    "nome": "AVÔ",
+    "lat": 40.29414,
+    "lon": -7.90564,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "are-o-40-52111-8-78222",
+    "nome": "AREÃO",
+    "lat": 40.52111,
+    "lon": -8.78222,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-grande-nascente-37-09255-8-33814",
+    "nome": "PRAIA GRANDE-NASCENTE",
+    "lat": 37.09255,
+    "lon": -8.33814,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "forte-novo-37-06203-8-09016",
+    "nome": "FORTE NOVO",
+    "lat": 37.06203,
+    "lon": -8.09016,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "peniche-de-cima-39-36228-9-36835",
+    "nome": "PENICHE DE CIMA",
+    "lat": 39.36228,
+    "lon": -9.36835,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "baleal-campismo-39-36752-9-34012",
+    "nome": "BALEAL-CAMPISMO",
+    "lat": 39.36752,
+    "lon": -9.34012,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "s-louren-o-a-ores-36-99028-25-05361",
+    "nome": "S. LOURENÇO (AÇORES)",
+    "lat": 36.99028,
+    "lon": -25.05361,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "caloura-37-71222-25-49583",
+    "nome": "CALOURA",
+    "lat": 37.71222,
+    "lon": -25.49583,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "mosteiros-37-89124-25-82267",
+    "nome": "MOSTEIROS",
+    "lat": 37.89124,
+    "lon": -25.82267,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "praia-do-fogo-37-72917-25-31000",
+    "nome": "PRAIA DO FOGO",
+    "lat": 37.72917,
+    "lon": -25.31,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "corpo-santo-37-71111-25-44250",
+    "nome": "CORPO SANTO",
+    "lat": 37.71111,
+    "lon": -25.4425,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "ilheu-de-vila-franca-do-campo-37-70556-25-44250",
+    "nome": "ILHEU DE VILA FRANCA DO CAMPO",
+    "lat": 37.70556,
+    "lon": -25.4425,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "calheta-32-71722-17-17056",
+    "nome": "CALHETA",
+    "lat": 32.71722,
+    "lon": -17.17056,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "clube-naval-do-funchal-32-63472-16-93889",
+    "nome": "CLUBE NAVAL DO FUNCHAL",
+    "lat": 32.63472,
+    "lon": -16.93889,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "barreirinha-32-64639-16-89722",
+    "nome": "BARREIRINHA",
+    "lat": 32.64639,
+    "lon": -16.89722,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "areeiro-32-64250-16-95889",
+    "nome": "AREEIRO",
+    "lat": 32.6425,
+    "lon": -16.95889,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "s-roque-32-71556-16-76472",
+    "nome": "S. ROQUE",
+    "lat": 32.71556,
+    "lon": -16.76472,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "porto-moniz-32-86889-17-17056",
+    "nome": "PORTO MONIZ",
+    "lat": 32.86889,
+    "lon": -17.17056,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "palmeiras-32-68806-16-78917",
+    "nome": "PALMEIRAS",
+    "lat": 32.68806,
+    "lon": -16.78917,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "galo-mar-32-64083-16-83278",
+    "nome": "GALO MAR",
+    "lat": 32.64083,
+    "lon": -16.83278,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "ponta-delgada-madeira-32-82750-16-98361",
+    "nome": "PONTA DELGADA (MADEIRA)",
+    "lat": 32.8275,
+    "lon": -16.98361,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "quiaios-40-21833-8-89389",
+    "nome": "QUIAIOS",
+    "lat": 40.21833,
+    "lon": -8.89389,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "carvalhal-odemira-37-50080-8-79301",
+    "nome": "CARVALHAL (ODEMIRA)",
+    "lat": 37.5008,
+    "lon": -8.79301,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "malhao-37-78559-8-80290",
+    "nome": "MALHAO",
+    "lat": 37.78559,
+    "lon": -8.8029,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "po-as-sul-dos-mosteiros-37-89833-25-82361",
+    "nome": "POÇAS SUL DOS MOSTEIROS",
+    "lat": 37.89833,
+    "lon": -25.82361,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "pocos-s-vicente-ferreira-37-83600-25-66900",
+    "nome": "POCOS S. VICENTE FERREIRA",
+    "lat": 37.836,
+    "lon": -25.669,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "bom-sucesso-lagoa-bidos-39-42537-9-23518",
+    "nome": "BOM SUCESSO (LAGOA ÓBIDOS)",
+    "lat": 39.42537,
+    "lon": -9.23518,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "ba-a-do-refugo-38-64583-27-11111",
+    "nome": "BAÍA DO REFUGO",
+    "lat": 38.64583,
+    "lon": -27.11111,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "algodio-38-96700-9-42027",
+    "nome": "ALGODIO",
+    "lat": 38.967,
+    "lon": -9.42027,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "baleal-norte-39-37380-9-33713",
+    "nome": "BALEAL-NORTE",
+    "lat": 39.3738,
+    "lon": -9.33713,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "bicas-38-46360-9-19353",
+    "nome": "BICAS",
+    "lat": 38.4636,
+    "lon": -9.19353,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "bordeira-37-19851-8-90459",
+    "nome": "BORDEIRA",
+    "lat": 37.19851,
+    "lon": -8.90459,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "buarcos-40-16167-8-87639",
+    "nome": "BUARCOS",
+    "lat": 40.16167,
+    "lon": -8.87639,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "burgau-37-07160-8-77521",
+    "nome": "BURGAU",
+    "lat": 37.0716,
+    "lon": -8.77521,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "costa-de-lavos-40-08889-8-87778",
+    "nome": "COSTA DE LAVOS",
+    "lat": 40.08889,
+    "lon": -8.87778,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "costa-nova-40-61833-8-75389",
+    "nome": "COSTA NOVA",
+    "lat": 40.61833,
+    "lon": -8.75389,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "dunas-mar-41-08250-8-65694",
+    "nome": "DUNAS MAR",
+    "lat": 41.0825,
+    "lon": -8.65694,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "fuseta-mar-37-04226-7-74434",
+    "nome": "FUSETA-MAR",
+    "lat": 37.04226,
+    "lon": -7.74434,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "gamboa-39-36465-9-37247",
+    "nome": "GAMBOA",
+    "lat": 39.36465,
+    "lon": -9.37247,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "ribeira-brava-32-67083-17-06722",
+    "nome": "RIBEIRA BRAVA",
+    "lat": 32.67083,
+    "lon": -17.06722,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "reis-magos-32-64722-16-82361",
+    "nome": "REIS MAGOS",
+    "lat": 32.64722,
+    "lon": -16.82361,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "ribeira-do-faial-32-79306-16-84889",
+    "nome": "RIBEIRA DO FAIAL",
+    "lat": 32.79306,
+    "lon": -16.84889,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "porto-santo-cabe-o-da-ponta-33-03528-16-36028",
+    "nome": "PORTO SANTO - CABEÇO DA PONTA",
+    "lat": 33.03528,
+    "lon": -16.36028,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "cabo-do-mundo-41-22306-8-71611",
+    "nome": "CABO DO MUNDO",
+    "lat": 41.22306,
+    "lon": -8.71611,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "amado-37-16698-8-90345",
+    "nome": "AMADO",
+    "lat": 37.16698,
+    "lon": -8.90345,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "castelejo-37-10015-8-94575",
+    "nome": "CASTELEJO",
+    "lat": 37.10015,
+    "lon": -8.94575,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "prainha-37-11804-8-57825",
+    "nome": "PRAINHA",
+    "lat": 37.11804,
+    "lon": -8.57825,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "tr-s-castelos-37-11760-8-54830",
+    "nome": "TRÊS CASTELOS",
+    "lat": 37.1176,
+    "lon": -8.5483,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "belharucas-37-09062-8-18341",
+    "nome": "BELHARUCAS",
+    "lat": 37.09062,
+    "lon": -8.18341,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "fal-sia-a-oteias-37-08589-8-16815",
+    "nome": "FALÉSIA AÇOTEIAS",
+    "lat": 37.08589,
+    "lon": -8.16815,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "canaveias-40-18472-8-15000",
+    "nome": "CANAVEIAS",
+    "lat": 40.18472,
+    "lon": -8.15,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "peneda-pego-escuro-40-15417-8-11194",
+    "nome": "PENEDA/PEGO ESCURO",
+    "lat": 40.15417,
+    "lon": -8.11194,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "zona-balnear-santa-cruz-calheta-39-08775-28-00856",
+    "nome": "ZONA BALNEAR SANTA CRUZ (CALHETA)",
+    "lat": 39.08775,
+    "lon": -28.00856,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "baixa-da-areia-37-71722-25-51883",
+    "nome": "BAIXA DA AREIA",
+    "lat": 37.71722,
+    "lon": -25.51883,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "zona-balnear-do-forno-da-cal-37-74456-25-64004",
+    "nome": "ZONA BALNEAR DO FORNO DA CAL",
+    "lat": 37.74456,
+    "lon": -25.64004,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "ponta-da-ferraria-37-85838-25-85226",
+    "nome": "PONTA DA FERRARIA",
+    "lat": 37.85838,
+    "lon": -25.85226,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "zona-balnear-das-po-as-da-ribeira-grande-37-82677-25-52218",
+    "nome": "ZONA BALNEAR DAS POÇAS DA RIBEIRA GRANDE",
+    "lat": 37.82677,
+    "lon": -25.52218,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "almaceda-40-00758-7-66117",
+    "nome": "ALMACEDA",
+    "lat": 40.00758,
+    "lon": -7.66117,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "santiago-32-64640-16-89850",
+    "nome": "SANTIAGO",
+    "lat": 32.6464,
+    "lon": -16.8985,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "gorgulho-32-63630-16-93470",
+    "nome": "GORGULHO",
+    "lat": 32.6363,
+    "lon": -16.9347,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "s-o-fernando-32-68570-16-79290",
+    "nome": "SÃO FERNANDO",
+    "lat": 32.6857,
+    "lon": -16.7929,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "banda-d-al-m-32-71840-16-76190",
+    "nome": "BANDA D'ALÉM",
+    "lat": 32.7184,
+    "lon": -16.7619,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "boaventura-32-68250-16-79550",
+    "nome": "BOAVENTURA",
+    "lat": 32.6825,
+    "lon": -16.7955,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-do-vig-rio-32-64830-16-97890",
+    "nome": "PRAIA DO VIGÁRIO",
+    "lat": 32.6483,
+    "lon": -16.9789,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "foz-do-sizandro-mar-39-10370-9-40125",
+    "nome": "FOZ DO SIZANDRO-MAR",
+    "lat": 39.1037,
+    "lon": -9.40125,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "foz-do-lizandro-rio-38-94044-9-41426",
+    "nome": "FOZ DO LIZANDRO-RIO",
+    "lat": 38.94044,
+    "lon": -9.41426,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "nsua-vale-das-guas-40-43549-7-02451",
+    "nome": "ÍNSUA-VALE DAS ÉGUAS",
+    "lat": 40.43549,
+    "lon": -7.02451,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "albufeira-de-vilar-40-96388-7-54372",
+    "nome": "ALBUFEIRA DE VILAR",
+    "lat": 40.96388,
+    "lon": -7.54372,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "albufeira-de-queimadela-41-50524-8-16276",
+    "nome": "ALBUFEIRA DE QUEIMADELA",
+    "lat": 41.50524,
+    "lon": -8.16276,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "lapa-dos-dinheiros-40-38539-7-69702",
+    "nome": "LAPA DOS DINHEIROS",
+    "lat": 40.38539,
+    "lon": -7.69702,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cabedelo-sul-40-13841-8-86276",
+    "nome": "CABEDELO SUL",
+    "lat": 40.13841,
+    "lon": -8.86276,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "vale-do-mondego-40-60830-7-29984",
+    "nome": "VALE DO MONDEGO",
+    "lat": 40.6083,
+    "lon": -7.29984,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "mamoa-40-92835-8-46721",
+    "nome": "MAMOA",
+    "lat": 40.92835,
+    "lon": -8.46721,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "molhe-leste-39-35001-9-36800",
+    "nome": "MOLHE LESTE",
+    "lat": 39.35001,
+    "lon": -9.368,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "vimieiro-40-27686-8-19821",
+    "nome": "VIMIEIRO",
+    "lat": 40.27686,
+    "lon": -8.19821,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "senhora-da-ribeira-40-34346-8-12401",
+    "nome": "SENHORA DA RIBEIRA",
+    "lat": 40.34346,
+    "lon": -8.12401,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "coxos-39-00442-9-42584",
+    "nome": "COXOS",
+    "lat": 39.00442,
+    "lon": -9.42584,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "caxias-38-69802-9-27383",
+    "nome": "CAXIAS",
+    "lat": 38.69802,
+    "lon": -9.27383,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "pa-o-d-arcos-38-68998-9-29708",
+    "nome": "PAÇO D'ARCOS",
+    "lat": 38.68998,
+    "lon": -9.29708,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "santo-amaro-38-68433-9-31195",
+    "nome": "SANTO AMARO",
+    "lat": 38.68433,
+    "lon": -9.31195,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "sesmo-39-85978-7-74267",
+    "nome": "SESMO",
+    "lat": 39.85978,
+    "lon": -7.74267,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "unhais-da-serra-40-25738-7-62294",
+    "nome": "UNHAIS DA SERRA",
+    "lat": 40.25738,
+    "lon": -7.62294,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-de-pampilhosa-da-serra-40-04717-7-94895",
+    "nome": "PRAIA DE PAMPILHOSA DA SERRA",
+    "lat": 40.04717,
+    "lon": -7.94895,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cabril-39-92241-8-13308",
+    "nome": "CABRIL",
+    "lat": 39.92241,
+    "lon": -8.13308,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "marina-de-portim-o-37-11504-8-52807",
+    "nome": "MARINA DE PORTIMÃO",
+    "lat": 37.11504,
+    "lon": -8.52807,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "morro-37-74623-25-24234",
+    "nome": "MORRO",
+    "lat": 37.74623,
+    "lon": -25.24234,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "ribeira-dos-pelames-37-74692-25-24925",
+    "nome": "RIBEIRA DOS PELAMES",
+    "lat": 37.74692,
+    "lon": -25.24925,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "castelo-branco-38-51840-28-72611",
+    "nome": "CASTELO BRANCO",
+    "lat": 38.5184,
+    "lon": -28.72611,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "furna-de-santo-ant-nio-38-53558-28-33561",
+    "nome": "FURNA DE SANTO ANTÓNIO",
+    "lat": 38.53558,
+    "lon": -28.33561,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "portinho-do-faial-da-terra-37-73928-25-19649",
+    "nome": "PORTINHO DO FAIAL DA TERRA",
+    "lat": 37.73928,
+    "lon": -25.19649,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "santa-clara-37-51511-8-44294",
+    "nome": "SANTA CLARA",
+    "lat": 37.51511,
+    "lon": -8.44294,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "vila-cova-coelheira-40-37857-7-73612",
+    "nome": "VILA COVA À COELHEIRA",
+    "lat": 40.37857,
+    "lon": -7.73612,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cascata-da-cabreia-40-75264-8-39037",
+    "nome": "CASCATA DA CABREIA",
+    "lat": 40.75264,
+    "lon": -8.39037,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cardigos-39-70905-8-01407",
+    "nome": "CARDIGOS",
+    "lat": 39.70905,
+    "lon": -8.01407,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "lvaro-39-97749-7-96163",
+    "nome": "ÁLVARO",
+    "lat": 39.97749,
+    "lon": -7.96163,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "complexo-balnear-das-salinas-32-64588-16-97321",
+    "nome": "COMPLEXO BALNEAR DAS SALINAS",
+    "lat": 32.64588,
+    "lon": -16.97321,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "alagoa-32-77483-16-82855",
+    "nome": "ALAGOA",
+    "lat": 32.77483,
+    "lon": -16.82855,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "lugar-de-baixo-32-67954-17-08688",
+    "nome": "LUGAR DE BAIXO",
+    "lat": 32.67954,
+    "lon": -17.08688,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "clube-naval-de-s-o-vicente-32-81315-17-03299",
+    "nome": "CLUBE NAVAL DE SÃO VICENTE",
+    "lat": 32.81315,
+    "lon": -17.03299,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "merelim-s-paio-41-59411-8-46458",
+    "nome": "MERELIM S.PAIO",
+    "lat": 41.59411,
+    "lon": -8.46458,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "pombal-41-57537-8-10829",
+    "nome": "POMBAL",
+    "lat": 41.57537,
+    "lon": -8.10829,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "porto-santo-porto-das-salemas-33-09320-16-34911",
+    "nome": "PORTO SANTO - PORTO DAS SALEMAS",
+    "lat": 33.0932,
+    "lon": -16.34911,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-da-ribeira-das-galinhas-32-76441-17-23506",
+    "nome": "PRAIA DA RIBEIRA DAS GALINHAS",
+    "lat": 32.76441,
+    "lon": -17.23506,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-do-porto-32-75230-17-22480",
+    "nome": "PRAIA DO PORTO",
+    "lat": 32.7523,
+    "lon": -17.2248,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-do-portinho-32-73479-17-20872",
+    "nome": "PRAIA DO PORTINHO",
+    "lat": 32.73479,
+    "lon": -17.20872,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "benfeita-40-27411-7-98421",
+    "nome": "BENFEITA",
+    "lat": 40.27411,
+    "lon": -7.98421,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "an-40-27251-8-52482",
+    "nome": "ANÇÃ",
+    "lat": 40.27251,
+    "lon": -8.52482,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-do-forte-40-14678-8-86782",
+    "nome": "PRAIA DO FORTE",
+    "lat": 40.14678,
+    "lon": -8.86782,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "clube-naval-do-seixal-32-82313-17-10252",
+    "nome": "CLUBE NAVAL DO SEIXAL",
+    "lat": 32.82313,
+    "lon": -17.10252,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "alvares-40-01662-8-10046",
+    "nome": "ALVARES",
+    "lat": 40.01662,
+    "lon": -8.10046,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "baixas-38-41855-28-38513",
+    "nome": "BAIXAS",
+    "lat": 38.41855,
+    "lon": -28.38513,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "barca-38-54345-28-52084",
+    "nome": "BARCA",
+    "lat": 38.54345,
+    "lon": -28.52084,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "cais-mourato-38-55867-28-48142",
+    "nome": "CAIS MOURATO",
+    "lat": 38.55867,
+    "lon": -28.48142,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "cria-o-velha-38-50501-28-54132",
+    "nome": "CRIAÇÃO VELHA",
+    "lat": 38.50501,
+    "lon": -28.54132,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "pocinho-38-49559-28-53960",
+    "nome": "POCINHO",
+    "lat": 38.49559,
+    "lon": -28.5396,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "s-o-mateus-38-43078-28-46103",
+    "nome": "SÃO MATEUS",
+    "lat": 38.43078,
+    "lon": -28.46103,
+    "zone_tags": [
+      "acores"
+    ]
+  },
+  {
+    "id": "clube-n-utico-de-avis-39-05668-7-91341",
+    "nome": "CLUBE NÁUTICO DE AVIS",
+    "lat": 39.05668,
+    "lon": -7.91341,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "zebreiros-41-07852-8-51732",
+    "nome": "ZEBREIROS",
+    "lat": 41.07852,
+    "lon": -8.51732,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "melres-41-06595-8-40373",
+    "nome": "MELRES",
+    "lat": 41.06595,
+    "lon": -8.40373,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "seg-es-40-86259-7-68160",
+    "nome": "SEGÕES",
+    "lat": 40.86259,
+    "lon": -7.6816,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "bico-40-72993-8-64999",
+    "nome": "BICO",
+    "lat": 40.72993,
+    "lon": -8.64999,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "lameira-quadrazais-40-31291-6-98684",
+    "nome": "LAMEIRA-QUADRAZAIS",
+    "lat": 40.31291,
+    "lon": -6.98684,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "po-o-do-lagar-40-28784-7-70788",
+    "nome": "POÇO DO LAGAR",
+    "lat": 40.28784,
+    "lon": -7.70788,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "praia-da-serra-de-gua-32-71643-17-16879",
+    "nome": "PRAIA DA SERRA DE ÁGUA",
+    "lat": 32.71643,
+    "lon": -17.16879,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "anjos-ponta-do-sol-32-69057-17-12048",
+    "nome": "ANJOS-PONTA DO SOL",
+    "lat": 32.69057,
+    "lon": -17.12048,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "lagoa-de-albufeira-38-50897-9-17670",
+    "nome": "LAGOA DE ALBUFEIRA",
+    "lat": 38.50897,
+    "lon": -9.1767,
+    "zone_tags": [
+      "lisboa"
+    ]
+  },
+  {
+    "id": "barranco-37-04208-8-89473",
+    "nome": "BARRANCO",
+    "lat": 37.04208,
+    "lon": -8.89473,
+    "zone_tags": [
+      "algarve"
+    ]
+  },
+  {
+    "id": "albufeira-de-alfaiates-40-38213-6-92679",
+    "nome": "ALBUFEIRA DE ALFAIATES",
+    "lat": 40.38213,
+    "lon": -6.92679,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "cabreira-40-14159-8-06619",
+    "nome": "CABREIRA",
+    "lat": 40.14159,
+    "lon": -8.06619,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "colmeal-40-13941-7-99830",
+    "nome": "COLMEAL",
+    "lat": 40.13941,
+    "lon": -7.9983,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "ereira-40-14938-8-71236",
+    "nome": "EREIRA",
+    "lat": 40.14938,
+    "lon": -8.71236,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "carri-a-40-78804-8-25758",
+    "nome": "CARRIÇA",
+    "lat": 40.78804,
+    "lon": -8.25758,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "s-sebasti-o-da-feira-40-31472-7-86583",
+    "nome": "S. SEBASTIÃO DA FEIRA",
+    "lat": 40.31472,
+    "lon": -7.86583,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "trabulo-40-77241-7-65212",
+    "nome": "TRABULO",
+    "lat": 40.77241,
+    "lon": -7.65212,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "alteirinhos-37-51835-8-78953",
+    "nome": "ALTEIRINHOS",
+    "lat": 37.51835,
+    "lon": -8.78953,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "s-o-pedro-da-maceda-40-92042-8-66329",
+    "nome": "SÃO PEDRO DA MACEDA",
+    "lat": 40.92042,
+    "lon": -8.66329,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "souto-do-rio-40-56137-8-42416",
+    "nome": "SOUTO DO RIO",
+    "lat": 40.56137,
+    "lon": -8.42416,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "sete-fontes-40-35704-8-53766",
+    "nome": "SETE FONTES",
+    "lat": 40.35704,
+    "lon": -8.53766,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "jardim-de-oudinot-40-64049-8-72773",
+    "nome": "JARDIM DE OUDINOT",
+    "lat": 40.64049,
+    "lon": -8.72773,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "sabugueiro-40-40032-7-63952",
+    "nome": "SABUGUEIRO",
+    "lat": 40.40032,
+    "lon": -7.63952,
+    "zone_tags": [
+      "centro"
+    ]
+  },
+  {
+    "id": "azenhas-vilar-de-mouros-41-88889-8-78362",
+    "nome": "AZENHAS - VILAR DE MOUROS",
+    "lat": 41.88889,
+    "lon": -8.78362,
+    "zone_tags": [
+      "norte"
+    ]
+  },
+  {
+    "id": "baixa-32-67966-17-10650",
+    "nome": "BAIXA",
+    "lat": 32.67966,
+    "lon": -17.1065,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-do-porto-do-seixal-32-82216-17-10280",
+    "nome": "PRAIA DO PORTO DO SEIXAL",
+    "lat": 32.82216,
+    "lon": -17.1028,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-da-t-bua-32-67693-17-07962",
+    "nome": "PRAIA DA TÁBUA",
+    "lat": 32.67693,
+    "lon": -17.07962,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-do-calhau-da-lapa-32-66167-17-03732",
+    "nome": "PRAIA DO CALHAU DA LAPA",
+    "lat": 32.66167,
+    "lon": -17.03732,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "praia-da-faj-dos-padres-32-65428-17-02240",
+    "nome": "PRAIA DA FAJÃ DOS PADRES",
+    "lat": 32.65428,
+    "lon": -17.0224,
+    "zone_tags": [
+      "madeira"
+    ]
+  },
+  {
+    "id": "mour-o-38-36789-7-35465",
+    "nome": "MOURÃO",
+    "lat": 38.36789,
+    "lon": -7.35465,
+    "zone_tags": [
+      "alentejo"
+    ]
+  },
+  {
+    "id": "praia-fluvial-de-monsaraz-38-43608-7-35100",
+    "nome": "PRAIA FLUVIAL DE MONSARAZ",
+    "lat": 38.43608,
+    "lon": -7.351,
+    "zone_tags": [
+      "alentejo"
+    ]
+  }
 ]
