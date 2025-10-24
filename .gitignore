@@ -34,3 +34,15 @@ yarn-error.log*
 
 # --- Data temp ---
 data/scores_demo.json
+
+# Geodados grandes
+*.shp
+*.shx
+*.dbf
+*.prj
+*.cpg
+*.qix
+*.gpkg
+*.tif
+*.tiff
+data/
