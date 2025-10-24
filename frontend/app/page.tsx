@@ -174,7 +174,9 @@ export default function Page(){
     try{
       const pos=await getPosition(); const when=currentWhenISO();
       const params=new URLSearchParams({lat:String(pos.coords.latitude),lon:String(pos.coords.longitude),radius_km:String(radius),mode,when,limit:"16"});
-      const {data,availableUntil}=await doFetch(`/api/top?${params.toString()}`,ctrl);
+      const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
+      const res = await fetch(`${API}/top?${params.toString()}`);
+      const {data,availableUntil}=await res.json();
       setItems(data); setAvailableUntil(availableUntil);
     }catch(e:any){ if(e?.name!=="AbortError") setError("Falha a carregar recomendações perto de ti."); }
     finally{ setLoading(false); }
@@ -191,7 +193,9 @@ export default function Page(){
           params = new URLSearchParams({zone:z,mode,when,limit:"16",lat:String(pos.coords.latitude),lon:String(pos.coords.longitude),radius_km:"10000"});
         }catch{}
       }
-      const {data,availableUntil}=await doFetch(`/api/top?${params.toString()}`,ctrl);
+      const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
+      const res = await fetch(`${API}/top?${params.toString()}`);
+      const {data,availableUntil}=await res.json();
       setItems(data); setAvailableUntil(availableUntil);
     }catch(e:any){ if(e?.name!=="AbortError") setError("Falha a carregar recomendações por zona."); }
     finally{ setLoading(false); }
@@ -201,8 +205,10 @@ export default function Page(){
     try{
       const when=currentWhenISO();
       const params=new URLSearchParams({lat:String(b.lat),lon:String(b.lon),radius_km:"2",limit:"1",mode,when});
-      const res=await fetch(`/api/top?${params.toString()}`); const arr=await res.json() as TopItem[];
-      setCheck(arr[0]??null);
+      const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
+      const res = await fetch(`${API}/top?${params.toString()}`);
+      const {data}=await res.json();
+      if(data.length>0){ setCheck(data[0]); } else { setCheck(null); }
     }catch{ setCheck(null); } finally{ setChecking(false); }
   }
 

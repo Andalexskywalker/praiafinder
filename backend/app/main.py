@@ -2,31 +2,35 @@ from __future__ import annotations
 
 from fastapi import FastAPI, Query, Response
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
 from collections import defaultdict
 from bisect import bisect_left
-import json, math, datetime as dt
-from typing import Dict, List, Tuple, Optional
+from typing import Dict, List, Tuple
+import os, json, math, datetime as dt
+import boto3
+from botocore.exceptions import BotoCoreError, ClientError
 
 from .scoring import Beach, Conditions, score_family, score_surf, score_snorkel
 
 app = FastAPI(title="PraiaFinder API", version="0.4.0")
 
+# --- paths & S3 ---
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 BEACHES_PATH = DATA_DIR / "beaches.json"
-SCORES_PATH = DATA_DIR / "scores_demo.json"
+SCORES_PATH = DATA_DIR / "scores_demo.json"  # fallback local
+
+S3_BUCKET = os.getenv("SCORES_S3_BUCKET")              # ex: praiafinder-prod
+S3_KEY    = os.getenv("SCORES_S3_KEY", "scores/scores.json")
+
+# --- CORS ---
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[os.getenv("ALLOWED_ORIGIN", "*")],  # ex: https://app.teu-dominio
+    allow_methods=["*"], allow_headers=["*"], allow_credentials=True,
+)
 
 # ----------------- utils -----------------
-
-SCORE_MAX_BY_MODE: Dict[str, float] = {"familia": 40.0, "surf": 40.0, "snorkel": 40.0}
-
-def cap_score(mode: str, v: float) -> float:
-    m = SCORE_MAX_BY_MODE.get(mode, 40.0)
-    try:
-        x = float(v)
-    except Exception:
-        x = 0.0
-    return max(0.0, min(x, m))
 
 def load_json(path: Path, default):
     try:
@@ -35,7 +39,6 @@ def load_json(path: Path, default):
         return default
 
 def parse_ts(s: str) -> dt.datetime:
-    # aceita "...Z" ou ISO com offset
     return dt.datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(dt.timezone.utc)
 
 def to_iso_z(t: dt.datetime) -> str:
@@ -47,6 +50,19 @@ def haversine_km(lat1, lon1, lat2, lon2):
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
+# ---- carregar scores (S3 → fallback local) ----
+def load_scores():
+    if S3_BUCKET:
+        try:
+            s3 = boto3.client("s3")
+            obj = s3.get_object(Bucket=S3_BUCKET, Key=S3_KEY)
+            return json.loads(obj["Body"].read().decode("utf-8"))
+        except (BotoCoreError, ClientError, Exception):
+            pass
+    return load_json(SCORES_PATH, [])
+
+SCORES_CACHE = load_scores()
+
 # ---- índice para buscar previsões rapidamente por (beach, mode) ----
 IndexType = Dict[Tuple[str, str], List[Tuple[dt.datetime, dict]]]
 
@@ -54,14 +70,13 @@ def build_index(scores: List[dict]) -> IndexType:
     idx: IndexType = defaultdict(list)
     for it in scores:
         b = it.get("beach_id"); m = it.get("mode"); ts = it.get("ts")
-        if not (b and m and ts): 
+        if not (b and m and ts):
             continue
         try:
             tt = parse_ts(ts)
         except Exception:
             continue
         idx[(b, m)].append((tt, it))
-    # mantém ordenado por timestamp para usar bisect
     for k in idx:
         idx[k].sort(key=lambda x: x[0])
     return idx
@@ -72,10 +87,9 @@ def nearest_from_index(idx: IndexType, beach_id: str, mode: str, target: dt.date
         return None, None
     times = [ts for ts, _ in arr]
     i = bisect_left(times, target)
-    if i < len(arr):         # preferência por previsão à frente do alvo
+    if i < len(arr):
         ts, it = arr[i]
         return it, ts
-    # senão, devolve a última disponível (para trás)
     ts, it = arr[-1]
     return it, ts
 
@@ -89,7 +103,11 @@ def health():
 def beaches():
     return load_json(BEACHES_PATH, [])
 
-# ... imports e helpers que já te dei ...
+@app.get("/reload")
+def reload():
+    global SCORES_CACHE
+    SCORES_CACHE = load_scores()
+    return {"status": "reloaded", "items": len(SCORES_CACHE)}
 
 @app.get("/top")
 def top(
@@ -97,31 +115,37 @@ def top(
     lat: float | None = None, lon: float | None = None, radius_km: int = 40,
     zone: str | None = None, when: str | None = None,
     mode: str = Query("familia", pattern="^(familia|surf|snorkel)$"),
-    order: str = Query("score", pattern="^(score|dist)$"),  # 'score' = nota
+    order: str = Query("score", pattern="^(score|dist)$"),  # 'score' = ordena por nota
     limit: int = 5,
 ):
     beaches = load_json(BEACHES_PATH, [])
-    scores  = load_json(SCORES_PATH, [])
+    scores  = SCORES_CACHE  # <— USA CACHE (S3 ou local)
 
+    # cabeçalho de horizonte
     try:
         last_ts = max(parse_ts(it["ts"]) for it in scores) if scores else None
-        if last_ts: response.headers["x-available-until"] = to_iso_z(last_ts)
-    except Exception: pass
+        if last_ts:
+            response.headers["x-available-until"] = to_iso_z(last_ts)
+    except Exception:
+        pass
 
     scores_idx = build_index(scores) if scores else {}
     target_ts = parse_ts(when) if when else dt.datetime.utcnow().replace(tzinfo=dt.timezone.utc)
 
+    # filtro base
     cand = beaches
     if zone:
         z = zone.lower()
         cand = [b for b in cand if z in [t.lower() for t in b.get("zone_tags", [])]]
 
     if lat is not None and lon is not None:
-        for b in cand: b["dist_km"] = round(haversine_km(lat, lon, b["lat"], b["lon"]), 1)
+        for b in cand:
+            b["dist_km"] = round(haversine_km(lat, lon, b["lat"], b["lon"]), 1)
         if radius_km and radius_km > 0:
             cand = [b for b in cand if b["dist_km"] <= radius_km]
     else:
-        for b in cand: b["dist_km"] = None
+        for b in cand:
+            b["dist_km"] = None
 
     out = []
     for b in cand:
@@ -130,11 +154,11 @@ def top(
             item, used_dt = nearest_from_index(scores_idx, b["id"], mode, target_ts)
 
         if item:
-            score40 = float(item.get("score", 0.0))
-            nota10  = float(item.get("nota", round(score40/4.0, 1)))
+            score40   = float(item.get("score", 0.0))
+            nota10    = float(item.get("nota", round(score40/4.0, 1)))
             breakdown = item.get("breakdown", {})
             water_type = item.get("water_type") or "mar"
-            used_ts = to_iso_z(used_dt)
+            used_ts   = used_dt and to_iso_z(used_dt) or to_iso_z(target_ts)
         else:
             # fallback simples (sem batch)
             beach = Beach(orientation_deg=b.get("orientacao_graus", 270), shelter=b.get("abrigo", 0.0))
@@ -163,4 +187,3 @@ def top(
         out.sort(key=lambda x: x["nota"], reverse=True)
 
     return JSONResponse(out[: max(1, min(limit, 50))])
-
