@@ -31,22 +31,29 @@ def haversine_km(lat1, lon1, lat2, lon2):
     a = math.sin(dlat / 2) ** 2 + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.sin(dlon / 2) ** 2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
 
-def is_interior_beach(b: dict) -> bool:
-    hint = (b.get("water_body") or b.get("tipo_agua") or "").lower()
-    if hint and hint != "mar":
-        return True
+def classify_water_type(b: dict) -> str:
+    for key in ("water_type", "tipo", "tipo_agua", "water_body"):
+        v = (b.get(key) or "").strip().lower()
+        if v in ("mar", "oceano", "ocean", "sea"): return "mar"
+        if v in ("rio", "ribeira", "albufeira", "lago", "fluvial", "interior", "fresh", "freshwater"): return "fluvial"
     name = (b.get("nome") or "").lower()
     tags = [t.lower() for t in b.get("zone_tags", [])]
-    kw = ["rio", "ribeira", "albufeira", "barragem", "lago", "interior", "fluvial"]
-    return any(k in name for k in kw) or any(k in tags for k in kw)
+    kw_fluv = ["praia fluvial", "fluvial", "rio", "ribeira", "albufeira", "barragem", "lago", "interior"]
+    if any(k in name for k in kw_fluv) or any(k in tags for k in kw_fluv):
+        return "fluvial"
+    return "mar"
 
 # ---------- Componentes ----------
 def wave_component(beach: Beach, hs: float | None, tp: float | None, wave_from: float | None, mode: str, is_interior: bool):
-    if is_interior or hs is None:
+    if is_interior:
         return None  # sem ondas para fluvial
+    if hs is None:
+        return None
+
     shelter = max(0.0, min(1.0, getattr(beach, "shelter", 0.0)))
     eff_hs = hs * (1 - 0.6 * shelter)
 
+    # orientação relativa das ondas
     ang_fac = 0.85
     if wave_from is not None:
         wave_to = (wave_from + 180) % 360
@@ -54,6 +61,7 @@ def wave_component(beach: Beach, hs: float | None, tp: float | None, wave_from: 
         ang_fac = 1.00 if diff <= 20 else 0.90 if diff <= 45 else 0.75 if diff <= 70 else 0.55 if diff <= 90 else 0.40
 
     if mode == "surf":
+        # mapa simples hs → score (0..10), reforçado por tp
         if eff_hs < 0.4:
             hs_score = 0 + (eff_hs / 0.4) * 2
         elif eff_hs < 0.8:
@@ -120,7 +128,7 @@ def combine_0_40(mode: str, br: dict, water_type: str) -> float:
     if not vals:
         return 0.0
     wsum = sum(weights.values()) or 1.0
-    # média geométrica ponderada
+    # média geométrica ponderada (evita um único 0 destruir tudo)
     g = 1.0
     for k, v in vals.items():
         x = max(1e-3, v / 10.0)
@@ -150,6 +158,7 @@ async def process_cell(
 ) -> list[dict]:
     items: list[dict] = []
 
+    # Weather
     wx = await fetch_json(client, WX, {
         "latitude": clat, "longitude": clon, "timezone": "UTC",
         "hourly": ["windspeed_10m", "winddirection_10m", "cloudcover", "precipitation"],
@@ -162,6 +171,7 @@ async def process_cell(
     if not valid_idx:
         return items
 
+    # Marine
     mrh = {}
     sea_ok = False
     if not skip_marine:
@@ -181,6 +191,7 @@ async def process_cell(
         except Exception as e:
             print(f"[warn] Marine falhou {clat:.2f},{clon:.2f}: {e}")
 
+    # cache de Conditions por índice
     conds: dict[int, Conditions] = {}
     for i in valid_idx:
         conds[i] = Conditions(
@@ -194,16 +205,32 @@ async def process_cell(
         )
 
     for b in group:
-        beach = Beach(orientation_deg=b.get("orientacao_graus", 270), shelter=b.get("abrigo", 0))
-        interior = is_interior_beach(b)
-        water_type = "fluvial" if interior or not sea_ok else "mar"
+        beach = Beach(orientation_deg=b.get("orientacao_graus", 270) or 270, shelter=b.get("abrigo", 0) or 0)
+        # tipo fixo por praia (nunca pelo marine)
+        water_type = classify_water_type(b)
+        has_waves_data = bool(sea_ok and water_type == "mar")  # só indica se há dados do marine
 
         for i in valid_idx:
             t = times[i]
             cond = conds[i]
-            hs = cond.wave_hs_m
-            tp = cond.wave_tp_s
-            wdir = (mrh.get("wave_direction") or [None] * len(times))[i] if mrh else None
+
+            # waves safe-get
+            if has_waves_data:
+                hs_list   = mrh.get("wave_height") or []
+                tp_list   = mrh.get("wave_period") or []
+                wdir_list = mrh.get("wave_direction") or []
+                hs   = hs_list[i]   if i < len(hs_list)   else None
+                tp   = tp_list[i]   if i < len(tp_list)   else None
+                wdir = wdir_list[i] if i < len(wdir_list) else None
+            else:
+                hs = tp = wdir = None
+
+            # Fallback simples para mar: estima ondas por vento se o marine falhou
+            if water_type == "mar" and hs is None:
+                ws = max(0.0, float(cond.wind_speed_ms))
+                hs = round(0.06 * (ws ** 1.2), 2) if ws > 1.0 else 0.0  # metros
+                tp = 6.0 + min(6.0, ws * 0.6)                            # segundos
+                wdir = cond.wind_from_deg
 
             for mode, fn in (("familia", score_family), ("surf", score_surf), ("snorkel", score_snorkel)):
                 _, br = fn(beach, cond)
@@ -212,22 +239,23 @@ async def process_cell(
                 ondas = wave_component(beach, hs, tp, wdir, mode, water_type == "fluvial")
                 if ondas is not None:
                     br["ondas"] = ondas
+
                 if water_type == "fluvial":
                     corr = corrente_component(cond.wind_speed_ms, mode)
                     if corr is not None:
                         br["corrente"] = corr
 
-                score_40 = combine_0_40(mode, br, water_type)
-                nota_10 = round(score_40 / 4.0, 1)
+                score_40 = combine_0_40(mode, br, water_type)  # 0..40
+                nota_10 = round(score_40 / 4.0, 1)             # 0..10
 
                 items.append({
                     "beach_id": b["id"],
                     "ts": t.isoformat().replace("+00:00", "Z"),
                     "mode": mode,
-                    "score": score_40,   # 0..40 (compat)
-                    "nota": nota_10,     # 0..10 (UI)
+                    "score": score_40,
+                    "nota": nota_10,
                     "water_type": water_type,
-                    "breakdown": br
+                    "breakdown": br,
                 })
 
     return items
@@ -260,7 +288,6 @@ async def main_async(args):
     async with httpx.AsyncClient(limits=limits, timeout=timeout, http2=False) as client:
 
         async def worker(cell_idx: int, clat: float, clon: float, group: list[dict]):
-            # pequeno jitter por tarefa
             if args.sleep_ms > 0:
                 await asyncio.sleep(random.uniform(0, args.sleep_ms / 1000.0))
             async with sem:
@@ -306,7 +333,7 @@ def main():
     ap.add_argument("--sleep-ms", type=int, default=150, help="Jitter entre tarefas (ms).")
     ap.add_argument("--limit-cells", type=int, default=0, help="Limite nº de células (debug). 0 = sem limite.")
     ap.add_argument("--skip-marine", action="store_true", help="Ignorar API de ondas (marine).")
-    ap.add_argument("--ua", default="PraiaFinder/0.2 (+https://example.local)", help="User-Agent HTTP.")
+    ap.add_argument("--ua", default="PraiaFinder/0.3 (+https://example.local)", help="User-Agent HTTP.")
     ap.add_argument("--out", default="", help="Ficheiro de saída (default: data/scores_demo.json).")
     ap.add_argument("--minify", action="store_true", help="Escrever JSON minificado.")
     ap.add_argument("--concurrency", type=int, default=8, help="Concorrência de células (HTTP).")

@@ -4,9 +4,9 @@ const nextConfig = {
     return [
       {
         source: "/api/:path*",
-        destination: process.env.API_BASE ?? "http://localhost:8000/:path*",
+        destination: "http://localhost:8000/:path*", // FastAPI
       },
     ];
   },
 };
-export default nextConfig;  // <- ESM export
+export default nextConfig;

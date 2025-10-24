@@ -8,12 +8,18 @@ from collections import defaultdict
 from bisect import bisect_left
 from typing import Dict, List, Tuple
 import os, json, math, datetime as dt
-import boto3
-from botocore.exceptions import BotoCoreError, ClientError
+
+# boto3 é opcional; só usado se tiveres variáveis S3 definidas
+try:
+    import boto3
+    from botocore.exceptions import BotoCoreError, ClientError
+except Exception:  # ambiente local sem boto3
+    boto3 = None
+    BotoCoreError = ClientError = Exception  # type: ignore
 
 from .scoring import Beach, Conditions, score_family, score_surf, score_snorkel
 
-app = FastAPI(title="PraiaFinder API", version="0.4.0")
+app = FastAPI(title="PraiaFinder API", version="0.5.0")
 
 # --- paths & S3 ---
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
@@ -26,7 +32,7 @@ S3_KEY    = os.getenv("SCORES_S3_KEY", "scores/scores.json")
 # --- CORS ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[os.getenv("ALLOWED_ORIGIN", "*")],  # ex: https://app.teu-dominio
+    allow_origins=[os.getenv("ALLOWED_ORIGIN", "*")],
     allow_methods=["*"], allow_headers=["*"], allow_credentials=True,
 )
 
@@ -50,9 +56,23 @@ def haversine_km(lat1, lon1, lat2, lon2):
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
+def classify_water_type(b: dict) -> str:
+    # prioridade a campos explícitos
+    for key in ("water_type", "tipo", "tipo_agua", "water_body"):
+        v = (b.get(key) or "").strip().lower()
+        if v in ("mar", "oceano", "ocean", "sea"): return "mar"
+        if v in ("rio", "ribeira", "albufeira", "lago", "fluvial", "interior", "fresh", "freshwater"): return "fluvial"
+    # por nome/tags
+    name = (b.get("nome") or "").lower()
+    tags = [t.lower() for t in b.get("zone_tags", [])]
+    kw_fluv = ["praia fluvial", "fluvial", "rio", "ribeira", "albufeira", "barragem", "lago", "interior"]
+    if any(k in name for k in kw_fluv) or any(k in tags for k in kw_fluv):
+        return "fluvial"
+    return "mar"
+
 # ---- carregar scores (S3 → fallback local) ----
 def load_scores():
-    if S3_BUCKET:
+    if S3_BUCKET and boto3 is not None:
         try:
             s3 = boto3.client("s3")
             obj = s3.get_object(Bucket=S3_BUCKET, Key=S3_KEY)
@@ -115,13 +135,14 @@ def top(
     lat: float | None = None, lon: float | None = None, radius_km: int = 40,
     zone: str | None = None, when: str | None = None,
     mode: str = Query("familia", pattern="^(familia|surf|snorkel)$"),
-    order: str = Query("score", pattern="^(score|dist)$"),  # 'score' = ordena por nota
+    water: str = Query("all", pattern="^(all|mar|fluvial)$"),
+    order: str = Query("nota", pattern="^(nota|dist)$"),
     limit: int = 5,
 ):
     beaches = load_json(BEACHES_PATH, [])
-    scores  = SCORES_CACHE  # <— USA CACHE (S3 ou local)
+    scores  = SCORES_CACHE  # cache (S3 ou local)
 
-    # cabeçalho de horizonte
+    # Cabeçalho: horizonte disponível
     try:
         last_ts = max(parse_ts(it["ts"]) for it in scores) if scores else None
         if last_ts:
@@ -138,6 +159,7 @@ def top(
         z = zone.lower()
         cand = [b for b in cand if z in [t.lower() for t in b.get("zone_tags", [])]]
 
+    # distância (opcional)
     if lat is not None and lon is not None:
         for b in cand:
             b["dist_km"] = round(haversine_km(lat, lon, b["lat"], b["lon"]), 1)
@@ -149,41 +171,53 @@ def top(
 
     out = []
     for b in cand:
+        wt = classify_water_type(b)
+        if water != "all" and wt != water:
+            continue
+
         item, used_dt = (None, None)
         if scores_idx:
             item, used_dt = nearest_from_index(scores_idx, b["id"], mode, target_ts)
 
-        if item:
-            score40   = float(item.get("score", 0.0))
-            nota10    = float(item.get("nota", round(score40/4.0, 1)))
+        if item:  # batch
+            score_compat = item.get("score")  # 0..40
+            nota = item.get("nota")
+            if nota is None and score_compat is not None:
+                try:
+                    nota = round(float(score_compat) / 4.0, 1)
+                except Exception:
+                    nota = None
             breakdown = item.get("breakdown", {})
-            water_type = item.get("water_type") or "mar"
-            used_ts   = used_dt and to_iso_z(used_dt) or to_iso_z(target_ts)
-        else:
-            # fallback simples (sem batch)
-            beach = Beach(orientation_deg=b.get("orientacao_graus", 270), shelter=b.get("abrigo", 0.0))
-            cond = Conditions(3.0, (beach.orientation_deg+180)%360, 0.6, 10.0, 30.0, 0.0, 19.0)
+            used_ts = to_iso_z(used_dt) if used_dt else None
+            reasons = ["batch"]
+        else:      # fallback leve
+            beach_obj = Beach(orientation_deg=b.get("orientacao_graus", 270), shelter=b.get("abrigo", 0.0))
+            # condições neutras
+            cond = Conditions(3.0, (beach_obj.orientation_deg + 180) % 360, 0.6, 10.0, 30.0, 0.0, 19.0)
             fn = {"familia": score_family, "surf": score_surf, "snorkel": score_snorkel}[mode]
-            raw, breakdown = fn(beach, cond)
-            score40 = float(raw)
-            nota10  = round(score40/4.0, 1)
-            water_type = "mar"
+            score100, breakdown = fn(beach_obj, cond)  # 0..100
+            nota = round(float(score100) / 10.0, 1)
+            score_compat = None
             used_ts = to_iso_z(target_ts)
+            reasons = ["fallback"]
 
         out.append({
             "beach_id": b["id"],
             "nome": b["nome"],
-            "nota": max(0.0, min(10.0, nota10)),
-            "score": max(0.0, min(40.0, score40)),  # compat
-            "distancia_km": b["dist_km"],
+            "nota": nota,                    # 0..10
+            "score": score_compat,           # 0..40 (compat, se batch)
+            "distancia_km": b.get("dist_km"),
             "breakdown": breakdown,
             "used_timestamp": used_ts,
-            "water_type": water_type,
+            "reasons": reasons,
+            "water_type": wt,
         })
 
+    # ordenação
     if order == "dist":
-        out.sort(key=lambda x: (x["distancia_km"] is None, x["distancia_km"] if x["distancia_km"] is not None else 0.0))
-    else:
-        out.sort(key=lambda x: x["nota"], reverse=True)
+        out.sort(key=lambda x: (x["distancia_km"] is None,
+                                x["distancia_km"] if x["distancia_km"] is not None else 0.0))
+    else:  # "nota"
+        out.sort(key=lambda x: (x.get("nota") is None, x.get("nota", 0.0)), reverse=True)
 
     return JSONResponse(out[: max(1, min(limit, 50))])

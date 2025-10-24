@@ -7,12 +7,13 @@ type Mode = "familia" | "surf" | "snorkel";
 type Tab = "near" | "zone";
 type OrderBy = "nota" | "dist";
 type WaterType = "mar" | "fluvial";
+type WaterFilter = "all" | "mar" | "fluvial";
 
 type TopItem = {
   beach_id: string;
   nome: string;
-  nota?: number;          // 0..10  (preferido)
-  score?: number;         // 0..40  (compat)
+  nota?: number;          // 0..10
+  score?: number;         // 0..40 (compat)
   distancia_km?: number | null;
   used_timestamp?: string;
   breakdown?: Record<string, number>;
@@ -40,7 +41,7 @@ const SLOTS = [
 ] as const;
 type SlotId = (typeof SLOTS)[number]["id"];
 
-function addDays(d: Date, days: number){const x=new Date(d); x.setDate(x.getDate()+days); return x;}
+function addDays(d: Date, days: number){ const x=new Date(d); x.setDate(x.getDate()+days); return x; }
 function toIsoUtcFromLocal(y:number,m0:number,d:number,h:number){
   const local=new Date(y,m0,d,h,0,0,0);
   return new Date(local.getTime()-local.getTimezoneOffset()*60000).toISOString().replace(/\.\d{3}Z$/,"Z");
@@ -59,10 +60,10 @@ function getNota(i:TopItem){
   return Math.max(0,Math.min(10, Math.round((s/4)*10)/10));
 }
 function notaClasses(n:number){
-  if(n<4.5)  return {chip:"bg-red-100 text-red-800",       bar:"bg-red-500"};
-  if(n<6.5)  return {chip:"bg-amber-100 text-amber-800",   bar:"bg-amber-500"};
+  if(n<4.5)  return {chip:"bg-red-100 text-red-800",         bar:"bg-red-500"};
+  if(n<6.5)  return {chip:"bg-amber-100 text-amber-800",     bar:"bg-amber-500"};
   if(n<8.5)  return {chip:"bg-emerald-100 text-emerald-800", bar:"bg-emerald-500"};
-  return       {chip:"bg-green-200 text-green-900",        bar:"bg-green-600"};
+  return       {chip:"bg-green-200 text-green-900",          bar:"bg-green-600"};
 }
 function NotaBar({nota}:{nota:number}){
   const pct=Math.round((nota/10)*100);
@@ -81,7 +82,7 @@ function normalizeKey(k:string){
   if(/agua|água|sst|sea.*temp/.test(s)) return {id:"agua",label:"Temp. água",emoji:"🌡️"};
   return {id:s.replace(/\W+/g,"_"),label:k.replace(/_/g," "),emoji:"•"};
 }
-/** compacta + impõe regras fluvial/mar e remove duplicados */
+/** Compacta + força regra fluvial/mar e remove duplicados */
 function useCompactBreakdown(raw:Record<string,number>|undefined, water:WaterType){
   return useMemo(()=>{
     if(!raw) return [] as {id:string;label:string;emoji:string;val:number}[];
@@ -93,6 +94,7 @@ function useCompactBreakdown(raw:Record<string,number>|undefined, water:WaterTyp
       if(!prev || Math.abs(v)>Math.abs(prev.val)) best.set(info.id,{...info,val:Math.max(-10,Math.min(10,v))});
     }
     let arr = Array.from(best.values());
+    // regra: MAR → sem "corrente"; FLUVIAL → sem "ondas"
     arr = arr.filter(x => water==="fluvial" ? x.id!=="ondas" : x.id!=="corrente");
     arr.sort((a,b)=>Math.abs(b.val)-Math.abs(a.val));
     return arr.slice(0,4);
@@ -121,12 +123,15 @@ function Breakdown({data,water}:{data?:Record<string,number>;water:WaterType}){
 }
 
 /** ======================= Fetch helpers ======================= */
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "/api";
+
 async function doFetch(url:string, ctrl:AbortController){
   const res=await fetch(url,{signal:ctrl.signal});
   if(!res.ok) throw new Error(String(res.status));
-  const data=await res.json() as TopItem[];
-  const availableUntil=res.headers.get("x-available-until");
-  return {data,availableUntil};
+  const json = await res.json();
+  const data: TopItem[] = Array.isArray(json) ? json : (json.data ?? []);
+  const availableUntil = res.headers.get("x-available-until") ?? (json.availableUntil ?? null);
+  return { data, availableUntil };
 }
 function getPosition():Promise<GeolocationPosition>{
   return new Promise((resolve,reject)=>navigator.geolocation.getCurrentPosition(resolve,reject));
@@ -139,6 +144,7 @@ export default function Page(){
   const [zone,setZone]=useState<Zona>("lisboa");
   const [radius,setRadius]=useState(50);
   const [order,setOrder]=useState<OrderBy>("nota");
+  const [waterFilter,setWaterFilter]=useState<WaterFilter>("all"); // <-- NOVO
 
   const days=next7DaysLabels();
   const [dayIdx,setDayIdx]=useState(0);
@@ -165,7 +171,8 @@ export default function Page(){
     return toIsoUtcFromLocal(target.y,target.m0,target.d,s.hour);
   }
 
-  useEffect(()=>{ (async()=>{try{const r=await fetch("/api/beaches"); setBeaches(await r.json());}catch{}})(); },[]);
+  // praias para pesquisa
+  useEffect(()=>{ (async()=>{try{const r=await fetch(`${API_BASE}/beaches`); setBeaches(await r.json());}catch{}})(); },[]);
 
   async function fetchNearMe(){
     if(!navigator.geolocation){ setError("Geolocalização indisponível. Usa a aba 'Zonas'."); return; }
@@ -173,10 +180,13 @@ export default function Page(){
     abortRef.current?.abort(); const ctrl=new AbortController(); abortRef.current=ctrl;
     try{
       const pos=await getPosition(); const when=currentWhenISO();
-      const params=new URLSearchParams({lat:String(pos.coords.latitude),lon:String(pos.coords.longitude),radius_km:String(radius),mode,when,limit:"16"});
-      const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
-      const res = await fetch(`${API}/top?${params.toString()}`);
-      const {data,availableUntil}=await res.json();
+      const params=new URLSearchParams({
+        lat:String(pos.coords.latitude),
+        lon:String(pos.coords.longitude),
+        radius_km:String(radius),
+        mode, when, limit:"16"
+      });
+      const {data,availableUntil}=await doFetch(`${API_BASE}/top?${params.toString()}`, ctrl);
       setItems(data); setAvailableUntil(availableUntil);
     }catch(e:any){ if(e?.name!=="AbortError") setError("Falha a carregar recomendações perto de ti."); }
     finally{ setLoading(false); }
@@ -187,15 +197,17 @@ export default function Page(){
     try{
       const when=currentWhenISO();
       let params=new URLSearchParams({zone:z,mode,when,limit:"16"});
+      // tenta adicionar localização para mostrar distância também em "Zonas"
       if(typeof navigator!=="undefined" && navigator.geolocation){
         try{
           const pos=await getPosition();
-          params = new URLSearchParams({zone:z,mode,when,limit:"16",lat:String(pos.coords.latitude),lon:String(pos.coords.longitude),radius_km:"10000"});
+          params = new URLSearchParams({
+            zone:z, mode, when, limit:"16",
+            lat:String(pos.coords.latitude), lon:String(pos.coords.longitude), radius_km:"10000"
+          });
         }catch{}
       }
-      const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
-      const res = await fetch(`${API}/top?${params.toString()}`);
-      const {data,availableUntil}=await res.json();
+      const {data,availableUntil}=await doFetch(`${API_BASE}/top?${params.toString()}`, ctrl);
       setItems(data); setAvailableUntil(availableUntil);
     }catch(e:any){ if(e?.name!=="AbortError") setError("Falha a carregar recomendações por zona."); }
     finally{ setLoading(false); }
@@ -205,34 +217,43 @@ export default function Page(){
     try{
       const when=currentWhenISO();
       const params=new URLSearchParams({lat:String(b.lat),lon:String(b.lon),radius_km:"2",limit:"1",mode,when});
-      const API = process.env.NEXT_PUBLIC_API_BASE ?? "";
-      const res = await fetch(`${API}/top?${params.toString()}`);
-      const {data}=await res.json();
-      if(data.length>0){ setCheck(data[0]); } else { setCheck(null); }
+      const {data}=await doFetch(`${API_BASE}/top?${params.toString()}`, new AbortController());
+      setCheck(data[0] ?? null);
     }catch{ setCheck(null); } finally{ setChecking(false); }
   }
 
+  // arranque
   useEffect(()=>{ fetchByZone(zone); /* eslint-disable-next-line */ },[]);
+  // reload quando mudam controlos
   useEffect(()=>{ if(tab==="near") fetchNearMe(); if(tab==="zone") fetchByZone(zone); /* eslint-disable-next-line */ },[mode,dayIdx,slot,radius,tab]);
   useEffect(()=>{ if(tab==="zone") fetchByZone(zone); /* eslint-disable-next-line */ },[zone]);
+  // cleanup
   useEffect(()=>()=>abortRef.current?.abort(),[]);
 
   const hasDistance=useMemo(()=>items.some(i=>i.distancia_km!=null),[items]);
   useEffect(()=>{ if(tab==="near" && hasDistance) setOrder("dist"); else setOrder("nota"); },[tab,hasDistance]);
 
-  const sortedItems=useMemo(()=>{
-    const arr=items.slice();
-    if(order==="dist"){
-      return arr.sort((a,b)=>{
-        const da=a.distancia_km??Number.POSITIVE_INFINITY;
-        const db=b.distancia_km??Number.POSITIVE_INFINITY;
-        return da-db;
-      });
-    }
-    return arr.sort((a,b)=>getNota(b)-getNota(a));
-  },[items,order]);
+  // Filtro por tipo de praia
+  const filteredItems = useMemo(()=>{
+    if(waterFilter==="all") return items;
+    return items.filter(i => (i.water_type ?? "mar") === waterFilter);
+  },[items,waterFilter]);
 
-  const whenLabel = `${next7DaysLabels()[dayIdx].label} ${SLOTS.find(s=>s.id===slot)?.label ?? ""}`;
+  const sortedItems=useMemo(()=>{
+    const arr=filteredItems.slice();
+    return (order==="dist")
+      ? arr.sort((a,b)=>((a.distancia_km??Infinity)-(b.distancia_km??Infinity)))
+      : arr.sort((a,b)=>getNota(b)-getNota(a));
+  },[filteredItems,order]);
+
+  const whenLabel = `${days[dayIdx].label} ${SLOTS.find(s=>s.id===slot)?.label ?? ""}`;
+
+  const WATER_FILTERS: ReadonlyArray<{ value: WaterFilter; label: string; title: string }> = [
+  { value: "all",     label: "Todas",   title: "Mostrar todas as praias" },
+  { value: "mar",     label: "Mar",     title: "Mostra só praias costeiras" },
+  { value: "fluvial", label: "Fluvial", title: "Mostra só praias fluviais" },
+];
+
 
   /* ======= UI ======= */
   const Legend = () => !legendOpen ? null : (
@@ -247,7 +268,7 @@ export default function Page(){
           <ul className="text-sm space-y-2">
             <li>• <b>Nota</b> 0–10 com cores: vermelho &lt;4.5, amarelo 4.5–6.5, verde-claro 6.5–8.5, verde-escuro 8.5–10.</li>
             <li>• <b>Praia fluvial</b> mostra <b>Corrente</b> (sem Ondas). <b>Mar</b> mostra <b>Ondas</b>.</li>
-            <li>• Distância também em “Zonas” se autorizar localização.</li>
+            <li>• Em <b>Zonas</b>, se autorizares localização, mostramos também a <b>distância</b>.</li>
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@ export default function Page(){
 
   return (
     <div className="w-full">
-      {/* Grid full-width: sem max-w; ocupa o ecrã todo */}
+      {/* Full-width grid a ocupar o ecrã; sem max-w para não ficar tudo centrado */}
       <div className="w-full px-4 lg:px-6 2xl:px-10 py-6 grid gap-6 lg:grid-cols-[minmax(300px,380px)_minmax(0,1fr)] 2xl:grid-cols-[minmax(320px,420px)_minmax(0,1fr)]">
         {/* ===== Sidebar ===== */}
         <aside>
@@ -275,7 +296,7 @@ export default function Page(){
             <section className="space-y-3">
               <h3 className="text-sm font-semibold tracking-tight">Janela</h3>
               <div className="flex flex-wrap gap-2">
-                {next7DaysLabels().map((d,i)=>(
+                {days.map((d,i)=>(
                   <button key={i} onClick={()=>setDayIdx(i)} className={`px-3 py-1 rounded border ${dayIdx===i?"bg-black text-white":"bg-white"}`}>{d.label}</button>
                 ))}
               </div>
@@ -298,28 +319,49 @@ export default function Page(){
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm text-slate-700"><span>Raio</span><strong>{radius} km</strong></div>
                   <input type="range" min={10} max={120} value={radius} onChange={e=>setRadius(parseInt(e.target.value))} className="w-full accent-black"/>
-                  <button onClick={fetchNearMe} className="w-full px-3 py-2 rounded border">Atualizar</button>
+                  <button onClick={fetchNearMe} className="w-full px-3 py-2 rounded border" disabled={loading}>{loading?"A carregar…":"Atualizar"}</button>
                 </div>
               ) : (
                 <div className="grid grid-cols-2 gap-2">
                   {ZONAS.map(z=>(
                     <button key={z} onClick={()=>setZone(z)} className={`px-3 py-1 rounded border capitalize ${zone===z?"bg-black text-white":"bg-white"}`}>{z}</button>
                   ))}
-                  <button onClick={()=>fetchByZone(zone)} className="col-span-2 px-3 py-2 rounded border">Atualizar</button>
+                  <button onClick={()=>fetchByZone(zone)} className="col-span-2 px-3 py-2 rounded border" disabled={loading}>{loading?"A carregar…":"Atualizar"}</button>
                 </div>
               )}
             </section>
+              
+                {/* Tipo de praia (Filtro) */}
+            <section className="space-y-2">
+              <h3 className="text-sm font-semibold tracking-tight">Tipo de praia</h3>
+              <div className="flex flex-wrap gap-2">
+                {WATER_FILTERS.map(({ value, label, title }) => (
+                  <button
+                    key={value}
+                    onClick={() => setWaterFilter(value)}
+                    className={`px-3 py-1 rounded border ${waterFilter === value ? "bg-black text-white" : "bg-white"}`}
+                    title={title}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+            </section>
+
 
             {/* Pesquisa */}
             <section className="space-y-2">
               <h3 className="text-sm font-semibold tracking-tight">Pesquisar praia</h3>
-              <input
-                value={q}
-                onChange={(e)=>setQ(e.target.value)}
-                onKeyDown={(e)=>{ if(e.key==="Enter"){ const s=q.trim().toLowerCase(); const b=beaches.find(x=>x.nome.toLowerCase()===s)||beaches.find(x=>x.nome.toLowerCase().includes(s)); if(b){ setPicked(b); checkOne(b);} } }}
-                placeholder="Escreve o nome…"
-                className="w-full rounded-lg border border-slate-300 bg-white/80 px-3 py-2"
-              />
+              <div className="flex gap-2">
+                <input
+                  value={q}
+                  onChange={(e)=>setQ(e.target.value)}
+                  onKeyDown={(e)=>{ if(e.key==="Enter"){ const s=q.trim().toLowerCase(); const b=beaches.find(x=>x.nome.toLowerCase()===s)||beaches.find(x=>x.nome.toLowerCase().includes(s)); if(b){ setPicked(b); checkOne(b);} } }}
+                  placeholder="Escreve o nome…"
+                  className="w-full rounded-lg border border-slate-300 bg-white/80 px-3 py-2"
+                />
+                {q && <button onClick={()=>setQ("")} className="px-3 py-2 rounded border">Limpar</button>}
+              </div>
               {q && (
                 <ul className="max-h-56 overflow-auto rounded-lg border border-slate-200 bg-white shadow-sm">
                   {beaches.filter(b=>b.nome.toLowerCase().includes(q.trim().toLowerCase())).slice(0,8).map(b=>(
@@ -337,8 +379,8 @@ export default function Page(){
 
         {/* ===== Conteúdo ===== */}
         <section className="space-y-6">
-          {/* Contexto */}
-          <div className="rounded-2xl border bg-white/80 backdrop-blur p-4 shadow-sm">
+          {/* Contexto (sticky) */}
+          <div className="sticky top-4 z-10 rounded-2xl border bg-white/80 backdrop-blur p-4 shadow-sm">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="text-sm text-slate-700">
                 Janela: <strong>{whenLabel}</strong>
@@ -373,18 +415,18 @@ export default function Page(){
             <h2 className="text-lg font-semibold tracking-tight">Recomendações {tab==="zone" ? <span className="lowercase">— {zone}</span> : null}</h2>
 
             {loading ? (
-              <div className="space-y-3">
-                <div className="h-24 rounded-2xl border bg-white/60 animate-pulse"/>
-                <div className="h-24 rounded-2xl border bg-white/60 animate-pulse"/>
-                <div className="h-24 rounded-2xl border bg-white/60 animate-pulse"/>
+              <div className="grid gap-3 2xl:grid-cols-2">
+                {[...Array(4)].map((_,i)=> <div key={i} className="h-24 rounded-2xl border bg-white/60 animate-pulse"/>)}
               </div>
             ) : sortedItems.length===0 ? (
               <p className="text-sm text-slate-500">Sem dados para esta janela.</p>
             ) : (
-              <ul className="grid gap-3 2xl:grid-cols-2"> {/* em 2XL mostramos 2 cards por linha para usar ainda mais largura */}
+              <ul className="grid gap-3 2xl:grid-cols-2">
                 {sortedItems.map(i=>{
-                  const n=getNota(i); const {chip}=notaClasses(n);
-                  const open=openId===i.beach_id; const water:WaterType=i.water_type ?? "mar";
+                  const n=getNota(i);
+                  const {chip}=notaClasses(n);
+                  const open=openId===i.beach_id;
+                  const water:WaterType=i.water_type ?? "mar";
                   return (
                     <li key={i.beach_id} className="rounded-2xl border bg-white/80 backdrop-blur p-4 shadow-sm">
                       <button className="w-full text-left" onClick={()=>setOpenId(open?null:i.beach_id)} aria-expanded={open}>
@@ -393,7 +435,9 @@ export default function Page(){
                             <div className="text-base font-semibold tracking-tight flex items-center gap-2 flex-wrap">
                               <span>{i.nome}</span>
                               {typeof i.distancia_km==="number" && (<span className="text-xs text-slate-500">• {i.distancia_km} km</span>)}
-                              {water==="fluvial" && <span className="text-xs px-2 py-0.5 rounded bg-sky-100 text-sky-800">Praia fluvial</span>}
+                              <span className={`text-xs px-2 py-0.5 rounded ${water==="fluvial"?"bg-sky-100 text-sky-800":"bg-cyan-100 text-cyan-800"}`}>
+                                {water==="fluvial"?"Praia fluvial":"Praia de mar"}
+                              </span>
                             </div>
                             {i.used_timestamp && <p className="text-xs text-slate-500 mt-1">Previsão: {fmt(i.used_timestamp)}</p>}
                           </div>
