@@ -36,6 +36,7 @@ yarn-error.log*
 data/scores_demo.json
 
 # Geodados grandes
+data/osm_coastlines/
 *.shp
 *.shx
 *.dbf
@@ -45,4 +46,5 @@ data/scores_demo.json
 *.gpkg
 *.tif
 *.tiff
-data/
+*.zip
+
