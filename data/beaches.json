@@ -7,9 +7,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carvalhal-38-30553-8-78117",
@@ -19,9 +20,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tr-ia-bico-das-lulas-38-48408-8-90547",
@@ -31,9 +33,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.13,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "gal-fontainhas-38-20412-8-77769",
@@ -43,9 +46,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "atl-ntica-38-45207-8-86276",
@@ -55,9 +59,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "grande-de-porto-covo-37-85756-8-79453",
@@ -67,9 +72,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ilha-do-pessegueiro-37-83213-8-79322",
@@ -79,9 +85,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-torpes-37-92596-8-80857",
@@ -91,9 +98,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "morgavel-37-90779-8-80045",
@@ -103,9 +111,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alemaes-37-08398-8-23791",
@@ -115,9 +124,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "aveiros-37-08353-8-23114",
@@ -127,9 +137,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "gal-leste-37-08014-8-31599",
@@ -139,9 +150,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "maria-luisa-37-08897-8-20083",
@@ -151,9 +163,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "oura-37-08589-8-22614",
@@ -163,9 +176,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rocha-baixinha-nascente-37-07450-8-13062",
@@ -175,9 +189,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-rafael-37-07461-8-28079",
@@ -187,9 +202,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pescadores-37-08640-8-24907",
@@ -199,9 +215,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-eulalia-37-08777-8-21397",
@@ -211,9 +228,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "peneco-37-08642-8-25247",
@@ -223,9 +241,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "inatel-albufeira-37-08548-8-24303",
@@ -235,9 +254,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "gal-oeste-37-08335-8-32086",
@@ -247,9 +267,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "coelha-37-07363-8-29353",
@@ -259,9 +280,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rocha-baixinha-poente-37-07831-8-14249",
@@ -271,9 +293,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "evaristo-37-07417-8-30317",
@@ -283,9 +306,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "arrifes-37-07595-8-27733",
@@ -295,9 +319,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "manuel-lourenco-37-07646-8-30966",
@@ -307,9 +332,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "monte-cl-rigo-37-34241-8-85382",
@@ -319,9 +345,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "odeceixe-mar-37-44193-8-79957",
@@ -331,9 +358,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-verde-37-17329-7-47962",
@@ -343,9 +371,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabe-o-37-17479-7-47198",
@@ -355,9 +384,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ilha-do-farol-mar-36-97396-7-86384",
@@ -367,9 +397,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barreta-36-96403-7-87271",
@@ -379,9 +410,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "benagil-37-08715-8-42636",
@@ -391,9 +423,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "senhora-da-rocha-37-09687-8-38583",
@@ -403,9 +436,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carvoeiro-37-09617-8-47227",
@@ -415,9 +449,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "caneiros-37-10486-8-51400",
@@ -427,9 +462,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carvalho-37-08657-8-43158",
@@ -439,9 +475,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-de-m-s-37-08520-8-68868",
@@ -451,9 +488,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ancao-37-03215-8-03852",
@@ -463,9 +501,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "quarteira-37-06535-8-09999",
@@ -475,9 +514,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-do-lobo-37-04759-8-06476",
@@ -487,9 +527,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vilamoura-37-07188-8-11896",
@@ -499,9 +540,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "garr-o-poente-37-04328-8-05713",
@@ -511,9 +553,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "armona-ria-37-02336-7-80635",
@@ -523,9 +566,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alvor-poente-37-12218-8-59724",
@@ -535,9 +579,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rocha-37-11605-8-53737",
@@ -547,9 +592,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carianos-37-11871-8-55499",
@@ -559,9 +605,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barcos-arma-o-de-p-ra-nascente-37-09981-8-35697",
@@ -571,9 +618,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-grande-poente-37-09685-8-34783",
@@ -583,9 +631,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabanas-mar-37-13345-7-58965",
@@ -595,9 +644,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mareta-37-00503-8-93986",
@@ -607,9 +657,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ingrina-37-04616-8-87903",
@@ -619,9 +670,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "salema-37-06476-8-82482",
@@ -631,9 +683,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "boca-do-rio-37-06639-8-80833",
@@ -643,9 +696,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "monte-gordo-37-17694-7-45194",
@@ -655,9 +709,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "f-brica-mar-37-14833-7-55111",
@@ -667,9 +722,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.16,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-39-05028-27-96972",
@@ -679,9 +735,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "portinhos-faj-grande-38-60139-28-01056",
@@ -691,9 +748,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pregui-a-velas-38-67806-28-21222",
@@ -703,9 +761,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "negrito-38-65472-27-28111",
@@ -715,9 +774,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "salgueiros-a-ores-38-67056-27-07417",
@@ -727,9 +787,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-balnear-dos-biscoitos-38-80167-27-25611",
@@ -739,9 +800,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "grande-38-72861-27-05944",
@@ -751,9 +813,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.11,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "prainha-praia-da-vit-ria-38-73028-27-05389",
@@ -763,9 +826,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "corvo-areia-39-66944-31-10972",
@@ -775,9 +839,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.18,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "concei-o-38-54222-28-62000",
@@ -787,9 +852,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "faj-38-61250-28-76306",
@@ -799,9 +865,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "varadouro-38-56556-28-77222",
@@ -811,9 +878,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-cruz-das-flores-39-45800-31-12100",
@@ -823,9 +891,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.29,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-balnear-da-madalena-38-53417-28-53250",
@@ -835,9 +904,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cais-do-pico-38-52778-28-31806",
@@ -847,9 +917,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "formosa-a-ores-36-99528-25-09694",
@@ -859,9 +930,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 1.74,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mira-40-45583-8-80444",
@@ -871,9 +943,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "nazar-39-60158-9-07548",
@@ -883,9 +956,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "azul-39-11436-9-39379",
@@ -895,9 +969,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "albufeira-do-ermal-41-57554-8-12862",
@@ -907,9 +982,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 55.05,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "caminha-41-86694-8-86417",
@@ -919,9 +995,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.59,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "forte-do-c-o-41-80056-8-87111",
@@ -931,9 +1008,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabedelo-41-68000-8-83556",
@@ -943,9 +1021,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "castelo-de-neiva-41-62528-8-81722",
@@ -955,9 +1034,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pa-41-75972-8-87806",
@@ -967,9 +1047,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "apulia-41-48361-8-77889",
@@ -979,9 +1060,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "aterro-41-20611-8-71667",
@@ -991,9 +1073,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "angeiras-norte-41-26944-8-72778",
@@ -1003,9 +1086,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "angeiras-sul-41-26528-8-72861",
@@ -1015,9 +1099,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "quebrada-41-23972-8-72611",
@@ -1027,9 +1112,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "agudela-41-24139-8-72778",
@@ -1039,9 +1125,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "matosinhos-41-17722-8-69389",
@@ -1051,9 +1138,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "quiao-41-41646-8-78853",
@@ -1063,9 +1151,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-urbana-norte-41-38583-8-77389",
@@ -1075,9 +1164,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fragosa-41-39750-8-77944",
@@ -1087,9 +1177,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "codixeira-41-43806-8-78139",
@@ -1099,9 +1190,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barranha-41-44306-8-77972",
@@ -1111,9 +1203,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "frente-urbana-sul-41-34667-8-75417",
@@ -1123,9 +1216,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "frente-urbana-norte-41-35833-8-75694",
@@ -1135,9 +1229,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-f-lix-da-marinha-41-03056-8-64639",
@@ -1147,9 +1242,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "marbelo-41-02556-8-64556",
@@ -1159,9 +1255,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pedras-negras-marinha-grande-39-78021-9-02305",
@@ -1171,9 +1268,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-velha-39-77153-9-02823",
@@ -1183,9 +1281,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "osso-da-baleia-40-00306-8-91389",
@@ -1195,9 +1294,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "navio-39-14587-9-37540",
@@ -1207,9 +1307,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-helena-39-13529-9-38364",
@@ -1219,9 +1320,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "avencas-38-68775-9-35993",
@@ -1231,9 +1333,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "duquesa-38-70077-9-41445",
@@ -1243,9 +1346,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabana-do-pescador-38-60882-9-21506",
@@ -1255,9 +1359,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-nova-38-63724-9-23586",
@@ -1267,9 +1372,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "sereia-38-60137-9-21095",
@@ -1279,9 +1385,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "bela-vista-38-59562-9-20886",
@@ -1291,9 +1398,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rainha-caparica-38-61555-9-21939",
@@ -1303,9 +1411,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "aberta-nova-38-17750-8-78175",
@@ -1315,9 +1424,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pego-38-29212-8-77919",
@@ -1327,9 +1437,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vieirinha-vale-de-figueiros-37-89662-8-79897",
@@ -1339,9 +1450,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rocha-baixinha-37-07592-8-13506",
@@ -1351,9 +1463,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "oura-leste-37-08512-8-22265",
@@ -1363,9 +1476,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "prado-faial-41-59826-8-45847",
@@ -1375,9 +1489,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 28.31,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ada-fe-41-61010-8-40605",
@@ -1387,9 +1502,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 32.85,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cavez-41-51616-7-89003",
@@ -1399,9 +1515,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 73.9,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "folgosa-40-89044-7-89793",
@@ -1411,9 +1528,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 63.86,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "s-jo-o-do-monte-40-59667-8-23694",
@@ -1423,9 +1541,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 43.79,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "valhelhas-40-40271-7-40298",
@@ -1435,9 +1554,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 116.52,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "fragas-de-s-sim-o-39-91592-8-31702",
@@ -1447,9 +1567,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 69.63,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "froia-39-78996-7-83895",
@@ -1459,9 +1580,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 94.38,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "aldeia-ruiva-39-76910-7-98226",
@@ -1471,9 +1593,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 83.6,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "malhadal-39-79703-7-95148",
@@ -1483,9 +1606,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 85.02,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "montes-alb-castelo-bode-39-63019-8-25261",
@@ -1495,9 +1619,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 67.25,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "quinta-do-alamal-alb-belver-39-48821-7-96823",
@@ -1507,9 +1632,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 95.26,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "grande-38-81335-9-47964",
@@ -1519,9 +1645,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-jo-o-da-caparica-38-65930-9-25541",
@@ -1531,9 +1658,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "castelo-38-61292-9-21721",
@@ -1543,9 +1671,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "infante-38-59969-9-21043",
@@ -1555,9 +1684,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "galapos-38-48439-8-96406",
@@ -1567,9 +1697,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "almograve-37-65251-8-80239",
@@ -1579,9 +1710,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vila-nova-de-milfontes-furnas-37-71769-8-78743",
@@ -1591,9 +1723,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabedelo-figueira-da-foz-40-14389-8-86611",
@@ -1603,9 +1736,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.31,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cova-gala-40-12639-8-86389",
@@ -1615,9 +1749,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carcavelos-38-67798-9-33324",
@@ -1627,9 +1762,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "guincho-38-73067-9-47490",
@@ -1639,9 +1775,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "macas-38-82576-9-47050",
@@ -1651,9 +1788,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "california-38-44221-9-09913",
@@ -1663,9 +1801,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "figueirinha-38-48377-8-94406",
@@ -1675,9 +1814,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zambujeira-do-mar-37-52354-8-78794",
@@ -1687,9 +1827,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "suave-mar-41-54583-8-79333",
@@ -1699,9 +1840,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "espinho-baia-41-00889-8-64694",
@@ -1711,9 +1853,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "espinho-rua-37-41-00139-8-64750",
@@ -1723,9 +1866,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "castelo-do-queijo-41-16806-8-69028",
@@ -1735,9 +1879,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "paimo-41-43167-8-78417",
@@ -1747,9 +1892,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "labruge-41-27444-8-72861",
@@ -1759,9 +1905,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vila-ch-41-29000-8-73306",
@@ -1771,9 +1918,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "granja-41-04000-8-65028",
@@ -1783,9 +1931,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "madalena-norte-41-10306-8-66222",
@@ -1795,9 +1944,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-o-jacinto-40-66944-8-74722",
@@ -1807,9 +1957,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "monte-branco-ria-aveiro-40-75389-8-70139",
@@ -1819,9 +1970,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 1.26,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "esmoriz-40-95861-8-65639",
@@ -1831,9 +1983,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "torr-o-do-lameiro-marreta-40-82889-8-69167",
@@ -1843,9 +1996,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "figueira-da-foz-40-15028-8-87167",
@@ -1855,9 +2009,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.2,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "leirosa-40-05778-8-89194",
@@ -1867,9 +2022,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pedr-g-o-sul-39-91472-8-95500",
@@ -1879,9 +2035,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "paredes-de-vit-ria-39-70168-9-05140",
@@ -1891,9 +2048,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "polvoeira-39-71628-9-04990",
@@ -1903,9 +2061,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "agua-de-madeiros-39-74012-9-04043",
@@ -1915,9 +2074,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-mit-o-39-20139-9-34752",
@@ -1927,9 +2087,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-louren-o-39-01207-9-42202",
@@ -1939,9 +2100,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cova-da-alfarroba-39-36099-9-36263",
@@ -1951,9 +2113,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-rita-norte-39-17449-9-35856",
@@ -1963,9 +2126,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mirante-santa-cruz-39-14290-9-37731",
@@ -1975,9 +2139,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "centro-santa-cruz-39-13786-9-38243",
@@ -1987,9 +2152,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "conceicao-38-70005-9-41636",
@@ -1999,9 +2165,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "parede-38-68552-9-35362",
@@ -2011,9 +2178,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "poca-38-70193-9-39204",
@@ -2023,9 +2191,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tamariz-38-70229-9-39883",
@@ -2035,9 +2204,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "adraga-38-80352-9-48569",
@@ -2047,9 +2217,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-juli-o-38-93213-9-42016",
@@ -2059,9 +2230,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fonte-da-telha-38-57143-9-19748",
@@ -2071,9 +2243,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "sa-de-38-62898-9-22904",
@@ -2083,9 +2256,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rei-38-60607-9-21336",
@@ -2095,9 +2269,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "comporta-38-38063-8-80411",
@@ -2107,9 +2282,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tr-ia-mar-38-49115-8-90794",
@@ -2119,9 +2295,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "melides-38-12921-8-79420",
@@ -2131,9 +2308,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vila-nova-de-milfontes-farol-37-71966-8-78860",
@@ -2143,9 +2321,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fonte-do-corti-o-38-05612-8-82226",
@@ -2155,9 +2334,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "salgados-37-08845-8-32939",
@@ -2167,9 +2347,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "castelo-37-07327-8-29875",
@@ -2179,9 +2360,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "arrifana-37-29455-8-86632",
@@ -2191,9 +2373,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "amoreira-mar-37-35213-8-84501",
@@ -2203,9 +2386,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "amoreira-rio-37-34395-8-84021",
@@ -2215,9 +2399,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.66,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alagoa-altura-37-16906-7-49756",
@@ -2227,9 +2412,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "faro-mar-37-00741-7-99563",
@@ -2239,9 +2425,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "culatra-mar-36-98545-7-83904",
@@ -2251,9 +2438,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "marinha-37-08958-8-41284",
@@ -2263,9 +2451,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-centeanes-37-09122-8-45560",
@@ -2275,9 +2464,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ferragudo-37-11728-8-52182",
@@ -2287,9 +2477,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.82,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cova-redonda-37-09858-8-37990",
@@ -2299,9 +2490,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "d-ana-37-09160-8-66900",
@@ -2311,9 +2503,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "meia-praia-37-10978-8-65972",
@@ -2323,9 +2516,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "batata-37-09797-8-66777",
@@ -2335,9 +2529,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "garr-o-nascente-37-03992-8-05149",
@@ -2347,9 +2542,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "quinta-do-lago-37-02500-8-02580",
@@ -2359,9 +2555,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "loul-velho-37-05554-8-07816",
@@ -2371,9 +2568,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "armona-mar-37-01399-7-79384",
@@ -2383,9 +2581,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.13,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cavacos-37-03825-7-79133",
@@ -2395,9 +2594,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fuseta-ria-37-05063-7-74356",
@@ -2407,9 +2607,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barranco-das-canas-37-11938-8-56381",
@@ -2419,9 +2620,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alvor-nascente-37-11997-8-58360",
@@ -2431,9 +2633,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vau-37-11941-8-55814",
@@ -2443,9 +2646,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "arma-o-de-p-ra-37-10146-8-36603",
@@ -2455,9 +2659,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barril-37-08582-7-66145",
@@ -2467,9 +2672,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ilha-de-tavira-mar-37-10979-7-61985",
@@ -2479,9 +2685,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "terra-estreita-37-09767-7-64062",
@@ -2491,9 +2698,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "beliche-37-02529-8-96411",
@@ -2503,9 +2711,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "martinhal-37-01978-8-92467",
@@ -2515,9 +2724,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cordoama-37-10942-8-93782",
@@ -2527,9 +2737,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tonel-37-00703-8-94840",
@@ -2539,9 +2750,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "almadena-cabanas-velhas-37-06278-8-79167",
@@ -2551,9 +2763,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "manta-rota-37-16333-7-51750",
@@ -2563,9 +2776,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santo-ant-nio-37-17417-7-42583",
@@ -2575,9 +2789,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lota-37-16528-7-51333",
@@ -2587,9 +2802,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "piscina-do-carapacho-39-01200-27-96100",
@@ -2599,9 +2815,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barro-vermelho-39-09539-28-02796",
@@ -2611,9 +2828,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cinco-ribeiras-38-67472-27-32806",
@@ -2623,9 +2841,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "salga-38-64750-27-09694",
@@ -2635,9 +2854,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "silveira-38-65556-27-23500",
@@ -2647,9 +2867,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-martins-38-67972-27-05472",
@@ -2659,9 +2880,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "sargentos-38-72528-27-06056",
@@ -2671,9 +2893,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "almoxarife-38-55556-28-61028",
@@ -2683,9 +2906,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-pim-38-52444-28-62806",
@@ -2695,9 +2919,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "faj-grande-39-45944-31-25972",
@@ -2707,9 +2932,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-balnear-das-lajes-mar-38-39806-28-25694",
@@ -2719,9 +2945,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "po-as-de-s-roque-38-52778-28-30222",
@@ -2731,9 +2958,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.78,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-balnear-da-lagoa-37-74167-25-57361",
@@ -2743,9 +2971,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mil-cias-37-75000-25-62583",
@@ -2755,9 +2984,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "p-pulo-37-75000-25-61806",
@@ -2767,9 +2997,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-dos-moinhos-37-82389-25-44528",
@@ -2779,9 +3010,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vinha-da-areia-37-71667-25-42528",
@@ -2791,9 +3023,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "prainha-de-agua-d-alto-37-71667-25-48111",
@@ -2803,9 +3036,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lido-complexo-balnear-32-63556-16-93194",
@@ -2815,9 +3049,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-ribeiro-cochino-33-04917-16-34472",
@@ -2827,9 +3062,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 6.45,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-calheta-33-02444-16-37667",
@@ -2839,9 +3075,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 2.75,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-penedo-33-06222-16-31833",
@@ -2851,9 +3088,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": 9.08,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "agua-d-alto-37-71556-25-47250",
@@ -2863,9 +3101,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "olhos-de-gua-37-08956-8-19033",
@@ -2875,9 +3114,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "legua-39-65357-9-06983",
@@ -2887,9 +3127,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "baleal-sul-39-37140-9-33902",
@@ -2899,9 +3140,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vila-nova-serra-alb-castelo-bode-39-57487-8-26617",
@@ -2911,9 +3153,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 68.44,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "castanheira-ou-lago-azul-alb-castelo-bode-39-67582-8-23071",
@@ -2923,9 +3166,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 67.16,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "agroal-39-67919-8-43631",
@@ -2935,9 +3179,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 52.59,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "le-a-da-palmeira-41-19083-8-70694",
@@ -2947,9 +3192,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "memoria-41-23056-8-72194",
@@ -2959,9 +3205,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pedras-do-corgo-41-24889-8-72583",
@@ -2971,9 +3218,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "canide-norte-41-11694-8-66444",
@@ -2983,9 +3231,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "madalena-sul-41-09972-8-66083",
@@ -2995,9 +3244,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "valadares-norte-41-09194-8-65806",
@@ -3007,9 +3257,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "francemar-41-07556-8-65750",
@@ -3019,9 +3270,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "saozinha-41-07250-8-65833",
@@ -3031,9 +3283,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "senhor-da-pedra-41-06917-8-65861",
@@ -3043,9 +3296,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mar-e-sol-41-05833-8-65694",
@@ -3055,9 +3309,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "canide-sul-41-11194-8-66361",
@@ -3067,9 +3322,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "formosa-39-13178-9-38569",
@@ -3079,9 +3335,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-da-calada-39-03274-9-41900",
@@ -3091,9 +3348,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "abano-38-74161-9-47289",
@@ -3103,9 +3361,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "bafureira-38-69222-9-36636",
@@ -3115,9 +3374,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-dos-homens-37-38351-8-82577",
@@ -3127,9 +3387,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-ribeiro-salgado-33-04500-16-34917",
@@ -3139,9 +3400,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 5.83,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "insua-41-78556-8-87139",
@@ -3151,9 +3413,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tr-ia-gal-38-47976-8-90137",
@@ -3163,9 +3426,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cb-ponta-gorda-po-as-do-governador-32-63389-16-94000",
@@ -3175,9 +3439,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lagoa-de-albufeira-mar-38-50647-9-18337",
@@ -3187,9 +3452,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "verim-41-64382-8-31317",
@@ -3199,9 +3465,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 41.16,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "areinho-40-95290-8-17854",
@@ -3211,9 +3478,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 39.55,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "anjos-37-00333-25-14500",
@@ -3223,9 +3491,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.32,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "maia-36-92833-25-01667",
@@ -3235,9 +3504,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "escaleiras-38-78722-27-13583",
@@ -3247,9 +3517,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "quatro-ribeiras-38-79194-27-22389",
@@ -3259,9 +3530,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.11,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lenta-41-95682-8-74669",
@@ -3271,9 +3543,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 11.39,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "burg-es-rio-caima-40-83437-8-38297",
@@ -3283,9 +3556,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 24.98,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "quinta-do-barco-40-70833-8-36111",
@@ -3295,9 +3569,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 30.29,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "olhos-de-ferven-a-40-34889-8-69639",
@@ -3307,9 +3582,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 11.62,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "pomares-40-26889-7-89750",
@@ -3319,9 +3595,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 79.45,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "bogueira-40-15361-8-24167",
@@ -3331,9 +3608,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 52.88,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "a-ude-do-pinto-39-92295-7-89413",
@@ -3343,9 +3621,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 85.46,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "penedo-furado-39-62571-8-16262",
@@ -3355,9 +3634,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 74.57,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "janeiro-de-baixo-40-04623-7-80117",
@@ -3367,9 +3647,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 90.84,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "aldeia-do-mato-alb-castelo-bode-39-54515-8-27767",
@@ -3379,9 +3660,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 68.25,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "alverangel-alb-castelo-bode-39-54871-8-30180",
@@ -3391,9 +3673,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 66.16,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "albufeira-da-tapada-grande-37-67143-7-50522",
@@ -3403,9 +3686,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 55.24,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "peralta-39-24562-9-34199",
@@ -3415,9 +3699,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "foz-do-lizandro-mar-38-94240-9-41646",
@@ -3427,9 +3712,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "baleia-38-95616-9-41616",
@@ -3439,9 +3725,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "galapinhos-38-48377-8-96799",
@@ -3451,9 +3738,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "prainha-angra-do-heroismo-38-65000-27-21667",
@@ -3463,9 +3751,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ribeira-do-natal-32-73500-16-74500",
@@ -3475,9 +3764,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-da-laje-32-82667-17-11417",
@@ -3487,9 +3777,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "funtao-41-25944-8-72500",
@@ -3499,9 +3790,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alqueir-o-41-67907-8-17846",
@@ -3511,9 +3803,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 52.96,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "tocha-40-32944-8-84556",
@@ -3523,9 +3816,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-nova-32-64167-16-95750",
@@ -3535,9 +3829,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ponta-do-sol-32-67917-17-10528",
@@ -3547,9 +3842,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pontilh-o-da-valeta-41-84889-8-41866",
@@ -3559,9 +3855,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 37.13,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "vila-praia-de-ncora-41-81393-8-86534",
@@ -3571,9 +3868,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ponte-da-barca-rio-lima-41-80971-8-42074",
@@ -3583,9 +3881,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 36.86,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "afife-41-78083-8-87139",
@@ -3595,9 +3894,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "amorosa-41-64694-8-82500",
@@ -3607,9 +3907,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carre-o-41-74139-8-87722",
@@ -3619,9 +3920,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "norte-41-69611-8-85028",
@@ -3631,9 +3933,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "arda-41-77028-8-87417",
@@ -3643,9 +3946,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fao-ofir-41-51722-8-78778",
@@ -3655,9 +3959,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "paramos-40-97722-8-64972",
@@ -3667,9 +3972,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "silvalde-40-99028-8-64750",
@@ -3679,9 +3985,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "frente-azul-41-01194-8-64694",
@@ -3691,9 +3998,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "seca-41-01444-8-64611",
@@ -3703,9 +4011,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "gondarem-41-15639-8-68139",
@@ -3715,9 +4024,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lagoa-41-39028-8-77472",
@@ -3727,9 +4037,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rvore-41-32998-8-73873",
@@ -3739,9 +4050,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mindelo-41-31000-8-74111",
@@ -3751,9 +4063,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "aguda-41-05083-8-65583",
@@ -3763,9 +4076,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "miramar-41-06667-8-65750",
@@ -3775,9 +4089,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "salgueiros-41-12083-8-66639",
@@ -3787,9 +4102,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "francelos-41-08000-8-65722",
@@ -3799,9 +4115,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "congida-alb-saucelhe-41-07598-6-77960",
@@ -3811,9 +4128,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 156.74,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "fraga-da-pegada-41-58167-6-90056",
@@ -3823,9 +4141,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 156.11,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "maravilha-41-50487-7-19685",
@@ -3835,9 +4154,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 129.84,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ponte-soeira-41-85355-6-93193",
@@ -3847,9 +4167,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 156.91,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ponte-da-ranca-41-81029-6-99441",
@@ -3859,9 +4180,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 152.53,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "barra-40-63972-8-75056",
@@ -3871,9 +4193,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "torreira-40-76194-8-71417",
@@ -3883,9 +4206,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cortegaca-40-93958-8-65859",
@@ -3895,9 +4219,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "areinho-ria-aveiro-40-84583-8-66194",
@@ -3907,9 +4232,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 1.9,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vagueira-40-56417-8-76972",
@@ -3919,9 +4245,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "palheiros-e-zorro-40-20278-8-36528",
@@ -3931,9 +4258,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 42.92,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "murtinheira-40-20500-8-90028",
@@ -3943,9 +4271,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pedr-g-o-centro-39-92194-8-95333",
@@ -3955,9 +4284,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-pedro-de-moel-39-75574-9-03245",
@@ -3967,9 +4297,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vieira-39-87528-8-97333",
@@ -3979,9 +4310,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "corga-40-02459-8-18945",
@@ -3991,9 +4323,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 58.42,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ana-de-aviz-39-91857-8-28429",
@@ -4003,9 +4336,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 53.86,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cambas-alb-cabril-40-01293-7-84646",
@@ -4015,9 +4349,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 87.44,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ribeira-grande-39-80730-8-09634",
@@ -4027,9 +4362,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 73.0,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "pego-das-cancelas-39-73490-8-05812",
@@ -4039,9 +4375,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 78.8,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "s-martinho-do-porto-39-51012-9-13550",
@@ -4051,9 +4388,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pedra-do-ouro-39-72597-9-04717",
@@ -4063,9 +4401,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-mar-39-43491-9-22941",
@@ -4075,9 +4414,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "foz-do-arelho-lagoa-39-42855-9-22350",
@@ -4087,9 +4427,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.8,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "areia-branca-39-26687-9-33684",
@@ -4099,9 +4440,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-dinheiro-39-21413-9-34480",
@@ -4111,9 +4453,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "areia-sul-39-25931-9-33849",
@@ -4123,9 +4466,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ribeira-de-ilhas-38-98746-9-41962",
@@ -4135,9 +4479,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "salgado-39-54808-9-11192",
@@ -4147,9 +4492,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "consola-o-39-32696-9-35977",
@@ -4159,9 +4505,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "med-o-supertubos-39-34536-9-36441",
@@ -4171,9 +4518,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-bernardino-39-31125-9-34690",
@@ -4183,9 +4531,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "f-sica-santa-cruz-39-13931-9-38084",
@@ -4195,9 +4544,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pis-o-santa-cruz-39-14071-9-37964",
@@ -4207,9 +4557,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "azarujinha-38-70063-9-38941",
@@ -4219,9 +4570,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rainha-cascais-38-69913-9-41794",
@@ -4231,9 +4583,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "crismina-38-72630-9-47699",
@@ -4243,9 +4596,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-pedro-do-estoril-38-69317-9-36900",
@@ -4255,9 +4609,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "torre-38-67549-9-32300",
@@ -4267,9 +4622,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "magoito-38-86361-9-44957",
@@ -4279,9 +4635,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "morena-38-60300-9-21201",
@@ -4291,9 +4648,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cova-do-vapor-38-66200-9-25974",
@@ -4303,9 +4661,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mata-38-62311-9-22447",
@@ -4315,9 +4674,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "moinho-de-baixo-meco-38-48969-9-18458",
@@ -4327,9 +4687,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ouro-38-44229-9-10847",
@@ -4339,9 +4700,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lavadores-41-12861-8-66833",
@@ -4351,9 +4713,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "luz-37-08635-8-72638",
@@ -4363,9 +4726,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "madalena-do-mar-32-70306-17-13861",
@@ -4375,9 +4739,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-cds-38-64539-9-24231",
@@ -4387,9 +4752,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-rita-sul-39-17145-9-36011",
@@ -4399,9 +4765,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "amanh-santa-cruz-39-14908-9-37337",
@@ -4411,9 +4778,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "marinhas-cepaes-41-55417-8-79389",
@@ -4423,9 +4791,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "marreco-41-23500-8-72361",
@@ -4435,9 +4804,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "moitas-38-70166-9-41000",
@@ -4447,9 +4817,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "moledo-41-84889-8-86611",
@@ -4459,9 +4830,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pego-fundo-37-47199-7-47713",
@@ -4471,9 +4843,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 32.92,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "pintadinho-37-10779-8-51897",
@@ -4483,9 +4856,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "piod-o-40-22944-7-82639",
@@ -4495,9 +4869,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 86.37,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "po-as-do-gomes-doca-do-cavacas-32-63500-16-94778",
@@ -4507,9 +4882,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ponte-frades-41-85875-7-12151",
@@ -4519,9 +4895,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 141.44,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "raba-al-41-63200-7-24716",
@@ -4531,9 +4908,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 128.64,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "roca-mar-32-64194-16-82972",
@@ -4543,9 +4921,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "valadares-sul-41-08917-8-65722",
@@ -4555,9 +4934,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-do-rossim-alb-vale-rossim-40-40056-7-58778",
@@ -4567,9 +4947,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 101.25,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "zavial-37-04615-8-87158",
@@ -4579,9 +4960,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "prainha-32-74250-16-71556",
@@ -4591,9 +4973,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-fontinha-33-05528-16-33694",
@@ -4603,9 +4986,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 7.41,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "loriga-40-32750-7-67833",
@@ -4615,9 +4999,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 95.76,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "aldeia-vi-osa-40-58000-7-30778",
@@ -4627,9 +5012,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 119.66,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "furadouro-40-87667-8-67639",
@@ -4639,9 +5025,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "riviera-38-61872-9-22172",
@@ -4651,9 +5038,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.11,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "portinho-da-arr-bida-38-48017-8-97689",
@@ -4663,9 +5051,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tarqu-nio-para-so-38-64141-9-23944",
@@ -4675,9 +5064,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "costa-de-santo-andr-38-11452-8-79931",
@@ -4687,9 +5077,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vasco-da-gama-37-95290-8-86527",
@@ -4699,9 +5090,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vila-nova-de-milfontes-franquia-37-72216-8-78719",
@@ -4711,9 +5103,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "senhora-da-piedade-40-10028-8-23444",
@@ -4723,9 +5116,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 53.61,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "calhetas-37-82556-25-60639",
@@ -4735,9 +5129,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.13,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "areal-sta-barbara-37-81861-25-54639",
@@ -4747,9 +5142,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "po-o-da-cruz-40-49028-8-79306",
@@ -4759,9 +5155,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tamargueira-40-16583-8-88250",
@@ -4771,9 +5168,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carvoeiro-ma-o-39-63021-7-92298",
@@ -4783,9 +5181,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 93.59,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "lou-ainha-40-02611-8-30389",
@@ -4795,9 +5194,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 64.07,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "fernandaires-alb-castelo-bode-39-73435-8-20929",
@@ -4807,9 +5207,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 66.66,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "alv-co-das-v-rzeas-40-30083-7-83639",
@@ -4819,9 +5220,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 83.55,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "c-ja-40-26806-7-99472",
@@ -4831,9 +5233,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 71.48,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "camilo-37-08736-8-66839",
@@ -4843,9 +5246,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fal-sia-alfamar-37-08335-8-15912",
@@ -4855,9 +5259,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "parque-dr-jose-gama-41-48806-7-18722",
@@ -4867,9 +5272,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 130.04,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "vale-juncal-41-53333-7-18417",
@@ -4879,9 +5285,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 131.87,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "garajau-32-63833-16-85278",
@@ -4891,9 +5298,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "secarias-peneda-da-cascalheira-40-24944-8-03639",
@@ -4903,9 +5311,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 68.58,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "senhora-da-gra-a-40-15722-8-19694",
@@ -4915,9 +5324,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 56.7,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "senhora-boa-nova-41-20173-8-71378",
@@ -4927,9 +5337,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pedras-brancas-41-25333-8-72472",
@@ -4939,9 +5350,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ramalha-41-47389-8-77639",
@@ -4951,9 +5363,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "rio-de-moinhos-41-56528-8-79833",
@@ -4963,9 +5376,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.11,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ribeira-41-58611-6-90556",
@@ -4975,9 +5389,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 155.87,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cavadinho-41-61653-8-35649",
@@ -4987,9 +5402,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 37.04,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "navarra-41-61335-8-38470",
@@ -4999,9 +5415,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 34.66,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "quintas-41-59639-7-16417",
@@ -5011,9 +5428,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 134.93,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "homem-do-leme-41-16056-8-68639",
@@ -5023,9 +5441,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "foz-41-15000-8-67694",
@@ -5035,9 +5454,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zaboeira-alb-castelo-bode-39-70436-8-22268",
@@ -5047,9 +5467,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 66.7,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "rei-do-corti-o-39-42070-9-24705",
@@ -5059,9 +5480,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-d-el-rei-39-40045-9-27762",
@@ -5071,9 +5493,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.06,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-novo-39-17783-9-35685",
@@ -5083,9 +5506,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lomba-alb-crestuma-41-06994-8-41379",
@@ -5095,9 +5519,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 19.95,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "fuzelhas-41-19604-8-71005",
@@ -5107,9 +5532,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "bitetos-41-07210-8-26047",
@@ -5119,9 +5545,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 32.68,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "porto-da-areia-sul-39-35350-9-38878",
@@ -5131,9 +5558,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabo-mondego-40-17265-8-89387",
@@ -5143,9 +5571,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "reconquinho-40-26702-8-27953",
@@ -5155,9 +5584,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 51.34,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "sandomil-40-35622-7-78147",
@@ -5167,9 +5597,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 86.52,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ribeira-ou-dos-pescadores-38-96408-9-41889",
@@ -5179,9 +5610,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "consola-o-norte-39-32934-9-35947",
@@ -5191,9 +5623,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "relva-da-reboleira-40-41200-7-46718",
@@ -5203,9 +5636,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 110.99,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "albufeira-da-meim-a-40-26690-7-14269",
@@ -5215,9 +5649,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 141.33,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "troviscal-39-86019-8-00848",
@@ -5227,9 +5662,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 78.18,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "bostelim-39-72358-8-10796",
@@ -5239,9 +5675,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 75.2,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "zona-urbana-sul-ii-41-37942-8-76941",
@@ -5251,9 +5688,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-urbana-sul-i-41-38478-8-77277",
@@ -5263,9 +5701,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "labrego-40-55187-8-77460",
@@ -5275,9 +5714,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.08,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "palheir-o-40-38802-8-82637",
@@ -5287,9 +5727,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.13,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "almargem-37-05838-8-08353",
@@ -5299,9 +5740,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-lagoa-33-03087-16-36739",
@@ -5311,9 +5753,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 3.67,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "azul-conchinha-41-20778-8-71615",
@@ -5323,9 +5766,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "piscina-natural-das-portas-do-mar-37-73972-25-66111",
@@ -5335,9 +5779,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "po-o-dos-frades-38-67780-28-20806",
@@ -5347,9 +5792,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-da-riviera-38-71472-27-06083",
@@ -5359,9 +5805,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-do-olival-37-10152-8-36953",
@@ -5371,9 +5818,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "formosa-madeira-32-64167-16-95528",
@@ -5383,9 +5831,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-figueiras-37-24770-8-86956",
@@ -5395,9 +5844,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "furnas-37-05500-8-85444",
@@ -5407,9 +5857,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-luzia-alb-santa-luzia-40-09111-7-85322",
@@ -5419,9 +5870,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 86.08,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "pessegueiro-40-05219-8-02389",
@@ -5431,9 +5883,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 71.91,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "devesa-40-34877-7-09278",
@@ -5443,9 +5896,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 143.4,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "mosteiro-39-93574-8-18634",
@@ -5455,9 +5909,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 61.18,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "av-40-29414-7-90564",
@@ -5467,9 +5922,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 78.08,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "are-o-40-52111-8-78222",
@@ -5479,9 +5935,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-grande-nascente-37-09255-8-33814",
@@ -5491,9 +5948,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "forte-novo-37-06203-8-09016",
@@ -5503,9 +5961,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "peniche-de-cima-39-36228-9-36835",
@@ -5515,9 +5974,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "baleal-campismo-39-36752-9-34012",
@@ -5527,9 +5987,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-louren-o-a-ores-36-99028-25-05361",
@@ -5539,9 +6000,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.17,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "caloura-37-71222-25-49583",
@@ -5551,9 +6013,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mosteiros-37-89124-25-82267",
@@ -5563,9 +6026,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-fogo-37-72917-25-31000",
@@ -5575,9 +6039,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.12,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "corpo-santo-37-71111-25-44250",
@@ -5587,9 +6052,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ilheu-de-vila-franca-do-campo-37-70556-25-44250",
@@ -5599,9 +6065,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "calheta-32-71722-17-17056",
@@ -5611,9 +6078,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.04,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "clube-naval-do-funchal-32-63472-16-93889",
@@ -5623,9 +6091,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barreirinha-32-64639-16-89722",
@@ -5635,9 +6104,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "areeiro-32-64250-16-95889",
@@ -5647,9 +6117,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-roque-32-71556-16-76472",
@@ -5659,9 +6130,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-moniz-32-86889-17-17056",
@@ -5671,9 +6143,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "palmeiras-32-68806-16-78917",
@@ -5683,9 +6156,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "galo-mar-32-64083-16-83278",
@@ -5695,9 +6169,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ponta-delgada-madeira-32-82750-16-98361",
@@ -5707,9 +6182,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.04,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "quiaios-40-21833-8-89389",
@@ -5719,9 +6195,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "carvalhal-odemira-37-50080-8-79301",
@@ -5731,9 +6208,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "malhao-37-78559-8-80290",
@@ -5743,9 +6221,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "po-as-sul-dos-mosteiros-37-89833-25-82361",
@@ -5755,9 +6234,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pocos-s-vicente-ferreira-37-83600-25-66900",
@@ -5767,9 +6247,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "bom-sucesso-lagoa-bidos-39-42537-9-23518",
@@ -5779,9 +6260,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.35,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ba-a-do-refugo-38-64583-27-11111",
@@ -5791,9 +6273,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "algodio-38-96700-9-42027",
@@ -5803,9 +6286,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "baleal-norte-39-37380-9-33713",
@@ -5815,9 +6299,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "bicas-38-46360-9-19353",
@@ -5827,9 +6312,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "bordeira-37-19851-8-90459",
@@ -5839,9 +6325,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "buarcos-40-16167-8-87639",
@@ -5851,9 +6338,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "burgau-37-07160-8-77521",
@@ -5863,9 +6351,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "costa-de-lavos-40-08889-8-87778",
@@ -5875,9 +6364,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.09,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "costa-nova-40-61833-8-75389",
@@ -5887,9 +6377,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "dunas-mar-41-08250-8-65694",
@@ -5899,9 +6390,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fuseta-mar-37-04226-7-74434",
@@ -5911,9 +6403,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "gamboa-39-36465-9-37247",
@@ -5923,9 +6416,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ribeira-brava-32-67083-17-06722",
@@ -5935,9 +6429,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "reis-magos-32-64722-16-82361",
@@ -5947,9 +6442,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ribeira-do-faial-32-79306-16-84889",
@@ -5959,9 +6455,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "porto-santo-cabe-o-da-ponta-33-03528-16-36028",
@@ -5971,9 +6468,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 4.39,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.1,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cabo-do-mundo-41-22306-8-71611",
@@ -5983,9 +6481,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "amado-37-16698-8-90345",
@@ -5995,9 +6494,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.05,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "castelejo-37-10015-8-94575",
@@ -6007,9 +6507,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "prainha-37-11804-8-57825",
@@ -6019,9 +6520,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "tr-s-castelos-37-11760-8-54830",
@@ -6031,9 +6533,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "belharucas-37-09062-8-18341",
@@ -6043,9 +6546,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "fal-sia-a-oteias-37-08589-8-16815",
@@ -6055,9 +6559,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "canaveias-40-18472-8-15000",
@@ -6067,9 +6572,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 60.87,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "peneda-pego-escuro-40-15417-8-11194",
@@ -6079,9 +6585,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 63.92,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "zona-balnear-santa-cruz-calheta-39-08775-28-00856",
@@ -6091,9 +6598,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "baixa-da-areia-37-71722-25-51883",
@@ -6103,9 +6611,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-balnear-do-forno-da-cal-37-74456-25-64004",
@@ -6115,9 +6624,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ponta-da-ferraria-37-85838-25-85226",
@@ -6127,9 +6637,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "zona-balnear-das-po-as-da-ribeira-grande-37-82677-25-52218",
@@ -6139,9 +6650,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "almaceda-40-00758-7-66117",
@@ -6151,9 +6663,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 103.15,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "santiago-32-64640-16-89850",
@@ -6163,9 +6676,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "gorgulho-32-63630-16-93470",
@@ -6175,9 +6689,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-o-fernando-32-68570-16-79290",
@@ -6187,9 +6702,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "banda-d-al-m-32-71840-16-76190",
@@ -6199,9 +6715,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "boaventura-32-68250-16-79550",
@@ -6211,9 +6728,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-vig-rio-32-64830-16-97890",
@@ -6223,9 +6741,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "foz-do-sizandro-mar-39-10370-9-40125",
@@ -6235,9 +6754,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "foz-do-lizandro-rio-38-94044-9-41426",
@@ -6247,9 +6767,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.21,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "nsua-vale-das-guas-40-43549-7-02451",
@@ -6259,9 +6780,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 146.94,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "albufeira-de-vilar-40-96388-7-54372",
@@ -6271,9 +6793,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 92.68,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "albufeira-de-queimadela-41-50524-8-16276",
@@ -6283,9 +6806,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 61.19,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "lapa-dos-dinheiros-40-38539-7-69702",
@@ -6295,9 +6819,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 92.66,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cabedelo-sul-40-13841-8-86276",
@@ -6307,9 +6832,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vale-do-mondego-40-60830-7-29984",
@@ -6319,9 +6845,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 119.53,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "mamoa-40-92835-8-46721",
@@ -6331,9 +6858,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 16.11,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "molhe-leste-39-35001-9-36800",
@@ -6343,9 +6871,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "vimieiro-40-27686-8-19821",
@@ -6355,9 +6884,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 54.54,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "senhora-da-ribeira-40-34346-8-12401",
@@ -6367,9 +6897,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 58.8,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "coxos-39-00442-9-42584",
@@ -6379,9 +6910,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "caxias-38-69802-9-27383",
@@ -6391,9 +6923,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pa-o-d-arcos-38-68998-9-29708",
@@ -6403,9 +6936,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santo-amaro-38-68433-9-31195",
@@ -6415,9 +6949,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "sesmo-39-85978-7-74267",
@@ -6427,9 +6962,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 99.77,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "unhais-da-serra-40-25738-7-62294",
@@ -6439,9 +6975,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 102.25,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "praia-de-pampilhosa-da-serra-40-04717-7-94895",
@@ -6451,9 +6988,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 78.31,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cabril-39-92241-8-13308",
@@ -6463,9 +7001,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 65.95,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "marina-de-portim-o-37-11504-8-52807",
@@ -6475,9 +7014,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.25,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "morro-37-74623-25-24234",
@@ -6487,9 +7027,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "ribeira-dos-pelames-37-74692-25-24925",
@@ -6499,9 +7040,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "castelo-branco-38-51840-28-72611",
@@ -6511,9 +7053,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "furna-de-santo-ant-nio-38-53558-28-33561",
@@ -6523,9 +7066,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "portinho-do-faial-da-terra-37-73928-25-19649",
@@ -6535,9 +7079,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "santa-clara-37-51511-8-44294",
@@ -6547,9 +7092,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 22.13,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "vila-cova-coelheira-40-37857-7-73612",
@@ -6559,9 +7105,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 89.66,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cascata-da-cabreia-40-75264-8-39037",
@@ -6571,9 +7118,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 26.58,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cardigos-39-70905-8-01407",
@@ -6583,9 +7131,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 83.29,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "lvaro-39-97749-7-96163",
@@ -6595,9 +7144,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 78.46,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "complexo-balnear-das-salinas-32-64588-16-97321",
@@ -6607,9 +7157,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alagoa-32-77483-16-82855",
@@ -6619,9 +7170,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lugar-de-baixo-32-67954-17-08688",
@@ -6631,9 +7183,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "clube-naval-de-s-o-vicente-32-81315-17-03299",
@@ -6643,9 +7196,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "merelim-s-paio-41-59411-8-46458",
@@ -6655,9 +7209,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 27.73,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "pombal-41-57537-8-10829",
@@ -6667,9 +7222,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 56.71,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "porto-santo-porto-das-salemas-33-09320-16-34911",
@@ -6679,9 +7235,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": 10.8,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-da-ribeira-das-galinhas-32-76441-17-23506",
@@ -6691,9 +7248,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-porto-32-75230-17-22480",
@@ -6703,9 +7261,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-portinho-32-73479-17-20872",
@@ -6715,9 +7274,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "benfeita-40-27411-7-98421",
@@ -6727,9 +7287,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 72.17,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "an-40-27251-8-52482",
@@ -6739,9 +7300,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 27.87,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "praia-do-forte-40-14678-8-86782",
@@ -6751,9 +7313,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.54,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "clube-naval-do-seixal-32-82313-17-10252",
@@ -6763,9 +7326,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.05,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "alvares-40-01662-8-10046",
@@ -6775,9 +7339,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 66.03,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "baixas-38-41855-28-38513",
@@ -6787,9 +7352,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barca-38-54345-28-52084",
@@ -6799,9 +7365,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cais-mourato-38-55867-28-48142",
@@ -6811,9 +7378,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "cria-o-velha-38-50501-28-54132",
@@ -6823,9 +7391,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "pocinho-38-49559-28-53960",
@@ -6835,9 +7404,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-o-mateus-38-43078-28-46103",
@@ -6847,9 +7417,10 @@
     "zone_tags": [
       "acores"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.03,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "clube-n-utico-de-avis-39-05668-7-91341",
@@ -6859,9 +7430,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 86.31,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "zebreiros-41-07852-8-51732",
@@ -6871,9 +7443,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 11.71,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "melres-41-06595-8-40373",
@@ -6883,9 +7456,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 20.69,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "seg-es-40-86259-7-68160",
@@ -6895,9 +7469,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 82.3,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "bico-40-72993-8-64999",
@@ -6907,9 +7482,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 6.14,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lameira-quadrazais-40-31291-6-98684",
@@ -6919,9 +7495,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 152.97,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "po-o-do-lagar-40-28784-7-70788",
@@ -6931,9 +7508,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 94.44,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "praia-da-serra-de-gua-32-71643-17-16879",
@@ -6943,9 +7521,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.0,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "anjos-ponta-do-sol-32-69057-17-12048",
@@ -6955,9 +7534,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "lagoa-de-albufeira-38-50897-9-17670",
@@ -6967,9 +7547,10 @@
     "zone_tags": [
       "lisboa"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.57,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "barranco-37-04208-8-89473",
@@ -6979,9 +7560,10 @@
     "zone_tags": [
       "algarve"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "albufeira-de-alfaiates-40-38213-6-92679",
@@ -6991,9 +7573,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 156.49,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "cabreira-40-14159-8-06619",
@@ -7003,9 +7586,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 67.8,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "colmeal-40-13941-7-99830",
@@ -7015,9 +7599,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 73.57,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "ereira-40-14938-8-71236",
@@ -7027,9 +7612,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 12.85,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "carri-a-40-78804-8-25758",
@@ -7039,9 +7625,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 36.46,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "s-sebasti-o-da-feira-40-31472-7-86583",
@@ -7051,9 +7638,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 80.75,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "trabulo-40-77241-7-65212",
@@ -7063,9 +7651,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 86.51,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "alteirinhos-37-51835-8-78953",
@@ -7075,9 +7664,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.04,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "s-o-pedro-da-maceda-40-92042-8-66329",
@@ -7087,9 +7677,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 0.07,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "souto-do-rio-40-56137-8-42416",
@@ -7099,9 +7690,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 28.43,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "sete-fontes-40-35704-8-53766",
@@ -7111,9 +7703,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 24.46,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "jardim-de-oudinot-40-64049-8-72773",
@@ -7123,9 +7716,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 1.84,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "sabugueiro-40-40032-7-63952",
@@ -7135,9 +7729,10 @@
     "zone_tags": [
       "centro"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 96.99,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "azenhas-vilar-de-mouros-41-88889-8-78362",
@@ -7147,9 +7742,10 @@
     "zone_tags": [
       "norte"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 7.61,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "baixa-32-67966-17-10650",
@@ -7159,9 +7755,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-porto-do-seixal-32-82216-17-10280",
@@ -7171,9 +7768,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.01,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.0,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-da-t-bua-32-67693-17-07962",
@@ -7183,9 +7781,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.03,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.02,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-do-calhau-da-lapa-32-66167-17-03732",
@@ -7195,9 +7794,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
-    "dist_mar_km": 0.02,
-    "orientacao_graus": 270
+    "dist_mar_km": 0.01,
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "praia-da-faj-dos-padres-32-65428-17-02240",
@@ -7207,9 +7807,10 @@
     "zone_tags": [
       "madeira"
     ],
-    "tipo": "mar",
     "dist_mar_km": 0.04,
-    "orientacao_graus": 270
+    "orientacao_graus": 270,
+    "water_type": "mar",
+    "tipo": "mar"
   },
   {
     "id": "mour-o-38-36789-7-35465",
@@ -7219,9 +7820,10 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 102.11,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   },
   {
     "id": "praia-fluvial-de-monsaraz-38-43608-7-35100",
@@ -7231,8 +7833,9 @@
     "zone_tags": [
       "alentejo"
     ],
-    "tipo": "fluvial",
-    "dist_mar_km": null,
-    "orientacao_graus": null
+    "dist_mar_km": 102.72,
+    "orientacao_graus": null,
+    "water_type": "fluvial",
+    "tipo": "fluvial"
   }
 ]

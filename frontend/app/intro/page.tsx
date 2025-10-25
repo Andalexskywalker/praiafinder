@@ -80,9 +80,9 @@ export default function IntroPage() {
         <div className="mx-auto max-w-[1100px] px-4 py-16 sm:py-20">
           <div className="flex flex-col items-center text-center gap-6">
             <div className="rounded-2xl bg-white/10 ring-1 ring-white/20 p-3">
-              <Image src="/icon-512.png" alt="Praia Finder" width={64} height={64} priority />
+              <Image src="/icon-512.png" alt="PraiaFinder" width={64} height={64} priority />
             </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">Praia Finder</h1>
+            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">PraiaFinder</h1>
             <p className="max-w-[58ch] text-white/90">
               Encontra a praia ideal <span className="font-semibold">agora</span> — recomendações por localização ou zona, com
               nota 0–10 e fatores que importam.
@@ -128,7 +128,7 @@ export default function IntroPage() {
                         <Image src="/icon-512.png" alt="" width={40} height={40} />
                       </div>
                       <div>
-                        <div className="text-lg font-bold">Praia Finder</div>
+                        <div className="text-lg font-bold">PraiaFinder</div>
                         <div className="text-xs text-teal-50/90">Encontra a praia ideal agora</div>
                       </div>
                     </div>
@@ -144,7 +144,7 @@ export default function IntroPage() {
                         <div className="h-2 w-[62%] rounded bg-emerald-500" />
                       </div>
                       <div className="mt-3 grid gap-2">
-                        {["Praia da Lua", "Praia do Sol", "Praia Azul"].map((n, i) => (
+                        {["Nazaré", "São Martinho do Porto", "São Pedro de Moel"].map((n, i) => (
                           <div key={i} className="rounded-lg bg-white ring-1 ring-black/10 p-2 text-sm text-slate-700 flex items-center justify-between">
                             <span>{n}</span>
                             <span className="rounded px-2 py-0.5 text-xs bg-emerald-100 text-emerald-800">Nota {(7.8 - i * 0.6).toFixed(1)}/10</span>

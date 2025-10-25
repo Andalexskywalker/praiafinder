@@ -8,6 +8,7 @@ from collections import defaultdict
 from bisect import bisect_left
 from typing import Dict, List, Tuple
 import os, json, math, datetime as dt
+import re
 
 # boto3 é opcional; só usado se tiveres variáveis S3 definidas
 try:
@@ -56,19 +57,50 @@ def haversine_km(lat1, lon1, lat2, lon2):
     a = math.sin(dlat/2)**2 + math.cos(math.radians(lat1))*math.cos(math.radians(lat2))*math.sin(dlon/2)**2
     return R * 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
 
+import re
+# ...
+
 def classify_water_type(b: dict) -> str:
-    # prioridade a campos explícitos
+    """
+    Classifica 'mar' vs 'fluvial' com heurística segura.
+
+    Regras:
+    - Respeita campos explícitos (water_type/tipo/...).
+    - Fluvial SÓ com sinais fortes: 'praia fluvial', 'fluvial',
+      'barragem', 'lago' ou 'albufeira de|do|da ...'.
+    - NÃO usar 'interior', 'rio', 'ribeira' como gatilhos (muitos falsos positivos).
+    - 'Albufeira' (município) sozinho NÃO conta.
+    - Caso não haja sinais fortes → assume 'mar'.
+    """
+
+    # 1) Campos explícitos (prioridade)
     for key in ("water_type", "tipo", "tipo_agua", "water_body"):
         v = (b.get(key) or "").strip().lower()
-        if v in ("mar", "oceano", "ocean", "sea"): return "mar"
-        if v in ("rio", "ribeira", "albufeira", "lago", "fluvial", "interior", "fresh", "freshwater"): return "fluvial"
-    # por nome/tags
+        if v in {"mar", "oceano", "ocean", "sea"}:
+            return "mar"
+        if v in {"rio", "ribeira", "albufeira", "lago", "fluvial", "fresh", "freshwater"}:
+            return "fluvial"
+
+    # 2) Heurística por nome/tags
     name = (b.get("nome") or "").lower()
-    tags = [t.lower() for t in b.get("zone_tags", [])]
-    kw_fluv = ["praia fluvial", "fluvial", "rio", "ribeira", "albufeira", "barragem", "lago", "interior"]
-    if any(k in name for k in kw_fluv) or any(k in tags for k in kw_fluv):
+    tags = " ".join([(t or "").lower() for t in b.get("zone_tags", [])])
+    text = f"{name} {tags}"
+
+    # Sinais fortes de fluvial
+    if "praia fluvial" in text or re.search(r"\bfluvial\b", text):
         return "fluvial"
+    if re.search(r"\b(barragem|lago)\b", text):
+        return "fluvial"
+    if re.search(r"\balbufeira\s+(de|do|da)\b", text):
+        return "fluvial"
+
+    # (Opcional) Sinais de mar — ajudam a desfazer ambiguidades
+    if re.search(r"\b(litoral|costa|oceano|mar)\b", text):
+        return "mar"
+
+    # Caso contrário, assume mar
     return "mar"
+
 
 # ---- carregar scores (S3 → fallback local) ----
 def load_scores():
