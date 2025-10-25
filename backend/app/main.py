@@ -25,7 +25,7 @@ app = FastAPI(title="PraiaFinder API", version="0.5.0")
 # --- paths & S3 ---
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 BEACHES_PATH = DATA_DIR / "beaches.json"
-SCORES_PATH = DATA_DIR / "scores_demo.json"  # fallback local
+SCORES_PATH = DATA_DIR / "scores.json"  # fallback local
 
 S3_BUCKET = os.getenv("SCORES_S3_BUCKET")              # ex: praiafinder-prod
 S3_KEY    = os.getenv("SCORES_S3_KEY", "scores/scores.json")

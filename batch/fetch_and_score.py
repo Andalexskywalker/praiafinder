@@ -338,7 +338,7 @@ async def main_async(args):
 
     # saída local
     payload = json.dumps(results, ensure_ascii=False, indent=None if args.minify else 2)
-    out_path = Path(args.out or (DATA / "scores_demo.json"))
+    out_path = Path(args.out or (DATA / "scores.json"))
     out_path.write_text(payload, "utf-8")
     print(f"✓ Escrevi {len(results)} → {out_path}")
 
