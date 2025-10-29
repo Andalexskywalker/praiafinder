@@ -95,21 +95,24 @@ def wave_component(beach: Beach, hs: float | None, tp: float | None, wave_from: 
         ang_fac = 1.00 if diff <= 20 else 0.90 if diff <= 45 else 0.75 if diff <= 70 else 0.55 if diff <= 90 else 0.40
 
     if mode == "surf":
-        # mapa simples hs → score (0..10), reforçado por tp
+        # mais conservador + cap global
         if eff_hs < 0.4:
-            hs_score = 0 + (eff_hs / 0.4) * 2
+            hs_score = (eff_hs / 0.4) * 2.0
         elif eff_hs < 0.8:
-            hs_score = 2 + (eff_hs - 0.4) / 0.4 * 3
-        elif eff_hs <= 2.5:
-            hs_score = 5 + (eff_hs - 0.8) / 1.7 * 5
-        elif eff_hs <= 3.5:
-            hs_score = 10 - (eff_hs - 2.5) / 1.0 * 3
+            hs_score = 2.0 + (eff_hs - 0.4) / 0.4 * 3.0
+        elif eff_hs <= 2.2:
+            hs_score = 5.0 + (eff_hs - 0.8) / 1.4 * 4.5
+        elif eff_hs <= 3.0:
+            hs_score = 9.5 - (eff_hs - 2.2) / 0.8 * 3.0
         else:
-            hs_score = max(0, 7 - (eff_hs - 3.5) * 3)
+            hs_score = max(0.0, 6.5 - (eff_hs - 3.0) * 3.5)
+
         tp_fac = 1.0
         if tp is not None:
-            tp_fac = 0.4 if tp < 7 else 0.7 if tp < 9 else 1.0 if tp < 12 else 1.1 if tp < 15 else 1.2
-        return round(max(0.0, min(10.0, hs_score * tp_fac * ang_fac)), 1)
+            tp_fac = 0.6 if tp < 8 else 0.9 if tp < 10 else 1.0 if tp < 12 else 1.05
+
+        val = hs_score * tp_fac * ang_fac
+        return round(min(9.2, max(0.0, val)), 1)
 
     # família/snorkel: menos ondas melhor
     if eff_hs <= 0.25: val = 10.0
@@ -118,40 +121,46 @@ def wave_component(beach: Beach, hs: float | None, tp: float | None, wave_from: 
     elif eff_hs <= 1.2: val = 3.0
     elif eff_hs <= 1.6: val = 1.0
     else: val = 0.0
+
     if mode == "snorkel":
         val = max(0.0, val - 2.0)
+
     if wave_from is not None:
         wave_to = (wave_from + 180) % 360
         diff = ang_diff(wave_to, beach.orientation_deg)
         if diff >= 70:
-            val = min(10.0, val + 1.0)
-    return round(val, 1)
+            val = min(10.0, val + 0.8)
 
-def corrente_component(wind_ms: float, mode: str):
+    return round(val, 1)
+def corrente_component(wind_ms: float, precip_mm: float | None, mode: str):
     if mode == "surf":
         return None
     w = max(0.0, float(wind_ms))
-    if w <= 2: v = 9.5
-    elif w <= 4: v = 8.0
-    elif w <= 6: v = 6.0
-    elif w <= 9: v = 3.5
-    else: v = 1.5
-    return round(v, 1)
+    # base pela intensidade do vento (calmo é melhor, mas sem 9.5 constantes)
+    if w <= 1.0:  base = 8.5
+    elif w <= 3:  base = 7.5
+    elif w <= 6:  base = 6.0
+    elif w <= 9:  base = 4.0
+    else:         base = 2.0
+    # penalização por precipitação (mais chuva → pior corrente/segurança/visibilidade)
+    p = max(0.0, float(precip_mm or 0.0))
+    pen = min(3.0, p * 0.6)  # até -3.0
+    return round(max(0.0, base - pen), 1)
+
 
 # Pesos
-WEIGHTS_BASE = {
-    "familia": {"offshore": 0.25, "vento": 0.35, "meteo": 0.30, "ondas": 0.10},
-    "surf":    {"offshore": 0.35, "vento": 0.25, "meteo": 0.10, "ondas": 0.30},
-    "snorkel": {"offshore": 0.25, "vento": 0.25, "meteo": 0.35, "ondas": 0.15},
-}
-WEIGHTS_FLUVIAL = {
-    "familia": {"offshore": 0.25, "vento": 0.35, "meteo": 0.30, "corrente": 0.10},
-    "snorkel": {"offshore": 0.25, "vento": 0.25, "meteo": 0.40, "corrente": 0.10},
-    "surf":    {"offshore": 0.50, "vento": 0.40, "meteo": 0.10},  # sem ondas
+# Pesos (revisto)
+WEIGHTS_MAR = {
+    "score": {"vento": 0.35, "meteo": 0.55, "ondas": 0.10},
 }
 
+WEIGHTS_FLUVIAL = {
+    "score": {"vento": 0.35, "meteo": 0.50, "corrente": 0.15},
+}
+
+
 def combine_0_40(mode: str, br: dict, water_type: str) -> float:
-    weights = (WEIGHTS_FLUVIAL if water_type == "fluvial" else WEIGHTS_BASE).get(mode, WEIGHTS_BASE["familia"]).copy()
+    weights = (WEIGHTS_FLUVIAL if water_type == "fluvial" else WEIGHTS_MAR).get(mode, WEIGHTS_MAR["score"]).copy()
     vals = {}
     for k in list(weights.keys()):
         v = br.get(k)
@@ -262,20 +271,22 @@ async def process_cell(
             # Fallback simples para mar: estima ondas por vento se o marine falhou
             if water_type == "mar" and hs is None:
                 ws = max(0.0, float(cond.wind_speed_ms))
-                hs = round(0.06 * (ws ** 1.2), 2) if ws > 1.0 else 0.0  # metros
-                tp = 6.0 + min(6.0, ws * 0.6)                            # segundos
+                hs = round(0.05 * (ws ** 1.15), 2) if ws > 1.0 else 0.0  # metros
+                tp = 6.0 + min(5.0, ws * 0.5)                            # segundos
                 wdir = cond.wind_from_deg
 
-            for mode, fn in (("familia", score_family), ("surf", score_surf), ("snorkel", score_snorkel)):
+            for mode, fn in (("familia", score_family),):
                 _, br = fn(beach, cond)
                 br = br or {}
-
+                # limpar métricas não aplicáveis
+                if water_type == "fluvial":
+                    br.pop("offshore", None)
                 ondas = wave_component(beach, hs, tp, wdir, mode, water_type == "fluvial")
                 if ondas is not None:
                     br["ondas"] = ondas
 
                 if water_type == "fluvial":
-                    corr = corrente_component(cond.wind_speed_ms, mode)
+                    corr = corrente_component(cond.wind_speed_ms, cond.precip_mm, mode)
                     if corr is not None:
                         br["corrente"] = corr
 

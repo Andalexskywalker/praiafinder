@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 /** ================================= Types ================================= */
-type Mode = "familia" | "surf" | "snorkel";
 type Tab = "near" | "zone";
 type OrderBy = "nota" | "dist";
 type WaterType = "mar" | "fluvial";
@@ -63,17 +62,17 @@ function toIsoUtcFromLocal(y: number, m0: number, d: number, h: number) {
     .toISOString()
     .replace(/\.\d{3}Z$/, "Z");
 }
-function next7DaysLabels() {
+function next7DaysLabels(){
   const base = new Date();
-  base.setHours(0, 0, 0, 0);
-  const days = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
-  return Array.from({ length: 7 }, (_, i) => {
-    const dd = addDays(base, i);
-    let label = days[dd.getDay()];
-    if (i === 0) label = "Hoje";
-    if (i === 1) label = "Amanhã";
-    return { label, y: dd.getFullYear(), m0: dd.getMonth(), d: dd.getDate() };
-  });
+  const out: {label:string;y:number;m0:number;d:number}[] = [];
+  for(let i=0;i<7;i++){
+    const d = new Date(base);
+    d.setHours(0,0,0,0);
+    d.setDate(base.getDate()+i);
+    const label = i===0 ? "Hoje" : i===1 ? "Amanhã" : d.toLocaleDateString("pt-PT",{ weekday:"short" });
+    out.push({ label, y:d.getFullYear(), m0:d.getMonth(), d:d.getDate() });
+  }
+  return out;
 }
 function fmt(ts?: string) {
   return ts
@@ -138,7 +137,7 @@ function useCompactBreakdown(raw: Record<string, number> | undefined, water: Wat
     }
     let arr = Array.from(best.values());
     // regra: MAR → sem "corrente"; FLUVIAL → sem "ondas"
-    arr = arr.filter((x) => (water === "fluvial" ? x.id !== "ondas" : x.id !== "corrente"));
+    arr = arr.filter((x) => (water === "fluvial" ? (x.id !== "ondas" && x.id !== "offshore") : x.id !== "corrente"));
     arr.sort((a, b) => Math.abs(b.val) - Math.abs(a.val));
     return arr.slice(0, 4);
   }, [raw, water]);
@@ -187,8 +186,7 @@ function getPosition(): Promise<GeolocationPosition> {
 /** ================================ Página ================================= */
 export default function Page() {
   // Estado
-  const [mode, setMode] = useState<Mode>("familia");
-  const [tab, setTab] = useState<Tab>("zone");
+    const [tab, setTab] = useState<Tab>("zone");
   const [zone, setZone] = useState<Zona>("lisboa");
   const [radius, setRadius] = useState(50);
   const [order, setOrder] = useState<OrderBy>("nota");
@@ -247,7 +245,7 @@ export default function Page() {
         lat: String(pos.coords.latitude),
         lon: String(pos.coords.longitude),
         radius_km: String(radius),
-        mode,
+        mode: "familia",
         when,
         limit: "16",
       });
@@ -268,14 +266,14 @@ export default function Page() {
     abortRef.current = ctrl;
     try {
       const when = currentWhenISO();
-      let params = new URLSearchParams({ zone: z, mode, when, limit: "16" });
+      let params = new URLSearchParams({ zone: z, mode: "familia", when, limit: "16" });
       // tenta adicionar localização para mostrar distância também em "Zonas"
       if (typeof navigator !== "undefined" && navigator.geolocation) {
         try {
           const pos = await getPosition();
           params = new URLSearchParams({
             zone: z,
-            mode,
+            mode: "familia",
             when,
             limit: "16",
             lat: String(pos.coords.latitude),
@@ -298,7 +296,7 @@ export default function Page() {
     setCheck(null);
     try {
       const when = currentWhenISO();
-      const params = new URLSearchParams({ lat: String(b.lat), lon: String(b.lon), radius_km: "2", limit: "1", mode, when });
+      const params = new URLSearchParams({ lat: String(b.lat), lon: String(b.lon), radius_km: "2", limit: "1", mode: "familia", when });
       const { data } = await doFetch(`${API_BASE}/top?${params.toString()}`, new AbortController());
       setCheck(data[0] ?? null);
     } catch {
@@ -318,7 +316,7 @@ export default function Page() {
     if (tab === "near") fetchNearMe();
     if (tab === "zone") fetchByZone(zone);
     // eslint-disable-next-line
-  }, [mode, dayIdx, slot, radius, tab]);
+  }, [dayIdx, slot, radius, tab]);
   useEffect(() => {
     if (tab === "zone") fetchByZone(zone);
     // eslint-disable-next-line
@@ -392,13 +390,7 @@ export default function Page() {
         <button onClick={() => setTab("zone")} className={`px-2.5 py-1 rounded-md text-xs ${tab === "zone" ? "bg-white text-slate-900" : "text-white/90 hover:bg-white/10"}`}>Zonas</button>
       </div>
 
-      {/* Selects compactos */}
-      <select value={mode} onChange={(e)=>setMode(e.target.value as Mode)} className="rounded-md bg-white text-slate-900 text-xs px-2.5 py-1 ring-1 ring-white/20">
-        <option value="familia">Família</option>
-        <option value="surf">Surf</option>
-        <option value="snorkel">Snorkel</option>
-      </select>
-      <select value={waterFilter} onChange={(e)=>setWaterFilter(e.target.value as WaterFilter)} className="rounded-md bg-white text-slate-900 text-xs px-2.5 py-1 ring-1 ring-white/20">
+      {/* Selects compactos */}<select value={waterFilter} onChange={(e)=>setWaterFilter(e.target.value as WaterFilter)} className="rounded-md bg-white text-slate-900 text-xs px-2.5 py-1 ring-1 ring-white/20">
         <option value="all">Todas</option>
         <option value="mar">Mar</option>
         <option value="fluvial">Fluvial</option>
@@ -426,24 +418,6 @@ export default function Page() {
           {/* ===== Sidebar (Painel de Controlo) ===== */}
           <aside>
             <div className="rounded-r-3xl rounded-l-none bg-white/95 ring-1 ring-black/10 shadow-sm p-2 space-y-2.5 text-[13px]">
-              {/* Modo */}
-              <section>
-                <h3 className="text-sm font-semibold tracking-tight mb-2 text-slate-900">Modo</h3>
-                <div className="flex flex-wrap gap-2">
-                  {(["familia", "surf", "snorkel"] as const).map((m) => (
-                    <button
-                      key={m}
-                      onClick={() => setMode(m)}
-                      className={`px-2.5 py-1 rounded-lg border text-xs font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-500 ${
-                        mode === m ? "bg-teal-600 text-white border-teal-700" : "bg-white text-slate-900 hover:bg-slate-50"
-                      }`}
-                    >
-                      {m}
-                    </button>
-                  ))}
-                </div>
-              </section>
-
               {/* Janela */}
               <section className="space-y-3">
                 <h3 className="text-sm font-semibold tracking-tight text-slate-900">Janela</h3>
@@ -711,9 +685,6 @@ export default function Page() {
                               )}
                             </div>
                             <div className="flex items-center gap-2 shrink-0">
-                              {water === "fluvial" && mode === "surf" && (
-                                <span className="text-xs px-2 py-0.5 rounded bg-rose-100 text-rose-700">Surf não recomendado</span>
-                              )}
                               <span className={`text-xs px-2 py-0.5 rounded ${chip}`}>Nota {n.toFixed(1)}/10</span>
                               <span className={`text-slate-500 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
                             </div>

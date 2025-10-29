@@ -40,7 +40,7 @@ def tri(x: float, a: float, b: float, c: float) -> float:
 def clamp01(x: float) -> float:
     return max(0.0, min(1.0, x))
 
-def score_family(beach: Beach, c: Conditions):
+def score(beach: Beach, c: Conditions):
     off = offshore_factor(c.wind_from_deg, beach.orientation_deg)  # 0..1
     vento_ok = clamp01(tri(c.wind_speed_ms, 0, 3, 6) * (0.7*off + 0.3))
     onda_ok = 0.0 if c.wave_hs_m is None else tri(c.wave_hs_m, 0.1, 0.4, 0.8)
@@ -51,45 +51,11 @@ def score_family(beach: Beach, c: Conditions):
         meteo_ok += 0.3 * tri(c.water_temp_c, 17, 20, 23)
     if c.precip_mm is not None:
         meteo_ok += 0.2 * clamp01(1 - min(c.precip_mm/2.0, 1))
-    score = 100 * (0.5*vento_ok + 0.3*onda_ok + 0.2*meteo_ok)
+    score = 100 * (0.25*vento_ok + 0.25*onda_ok + 0.5*meteo_ok)
     # breakdown a 0..10; NÃO incluir "ondas" (o batch preenche isso)
     return score, {
         "vento": round(vento_ok*10, 1),
         "meteo": round(meteo_ok*10, 1),
         "offshore": round(off*10, 1),
         # "ondas" será adicionado no batch se houver mar
-    }
-
-def score_surf(beach: Beach, c: Conditions):
-    off = offshore_factor(c.wind_from_deg, beach.orientation_deg)
-    onda_ok = 0.7 * tri(c.wave_hs_m or 0, 1.0, 1.8, 2.5) + 0.3 * tri(c.wave_tp_s or 0, 8, 11, 15)
-    vento_ok = clamp01(tri(c.wind_speed_ms, 0, 5, 9) * (0.6*off + 0.4))
-    meteo_ok = 0.0
-    if c.cloud_pct is not None:
-        meteo_ok += 0.5 * tri(100 - c.cloud_pct, 0, 40, 70)
-    if c.precip_mm is not None:
-        meteo_ok += 0.5 * clamp01(1 - min(c.precip_mm/2.0, 1))
-    score = 100 * (0.2*vento_ok + 0.6*onda_ok + 0.2*meteo_ok)
-    return score, {
-        "vento": round(vento_ok*10, 1),
-        "meteo": round(meteo_ok*10, 1),
-        "offshore": round(off*10, 1),
-        # "ondas" virá do batch
-    }
-
-def score_snorkel(beach: Beach, c: Conditions):
-    off = offshore_factor(c.wind_from_deg, beach.orientation_deg)
-    vento_ok = clamp01(tri(c.wind_speed_ms, 0, 2, 4) * (0.8*off + 0.2))
-    onda_ok = 0.0 if c.wave_hs_m is None else tri(c.wave_hs_m, 0.0, 0.3, 0.5)
-    meteo_ok = 0.0
-    if c.cloud_pct is not None:
-        meteo_ok += 0.6 * tri(100 - c.cloud_pct, 0, 30, 60)
-    if c.precip_mm is not None:
-        meteo_ok += 0.4 * clamp01(1 - min(c.precip_mm/2.0, 1))
-    score = 100 * (0.4*vento_ok + 0.3*onda_ok + 0.3*meteo_ok)
-    return score, {
-        "vento": round(vento_ok*10, 1),
-        "meteo": round(meteo_ok*10, 1),
-        "offshore": round(off*10, 1),
-        # sem "ondas" aqui
     }

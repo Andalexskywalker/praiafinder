@@ -18,7 +18,7 @@ except Exception:  # ambiente local sem boto3
     boto3 = None
     BotoCoreError = ClientError = Exception  # type: ignore
 
-from .scoring import Beach, Conditions, score_family, score_surf, score_snorkel
+from .scoring import Beach, Conditions, score
 
 app = FastAPI(title="PraiaFinder API", version="0.5.0")
 
@@ -166,11 +166,12 @@ def top(
     response: Response,
     lat: float | None = None, lon: float | None = None, radius_km: int = 40,
     zone: str | None = None, when: str | None = None,
-    mode: str = Query("familia", pattern="^(familia|surf|snorkel)$"),
+    mode_in: str | None = Query(None, pattern="^(familia|surf|snorkel)$"),
     water: str = Query("all", pattern="^(all|mar|fluvial)$"),
     order: str = Query("nota", pattern="^(nota|dist)$"),
     limit: int = 5,
 ):
+    mode = 'familia'
     beaches = load_json(BEACHES_PATH, [])
     scores  = SCORES_CACHE  # cache (S3 ou local)
 
@@ -220,14 +221,26 @@ def top(
                 except Exception:
                     nota = None
             breakdown = item.get("breakdown", {})
+            # limpeza por tipo de água (não mostrar métricas que não fazem sentido)
+            if wt == 'fluvial':
+                breakdown.pop('offshore', None)
+                breakdown.pop('ondas', None)
+            else:
+                breakdown.pop('corrente', None)
             used_ts = to_iso_z(used_dt) if used_dt else None
             reasons = ["batch"]
         else:      # fallback leve
             beach_obj = Beach(orientation_deg=b.get("orientacao_graus", 270), shelter=b.get("abrigo", 0.0))
             # condições neutras
             cond = Conditions(3.0, (beach_obj.orientation_deg + 180) % 360, 0.6, 10.0, 30.0, 0.0, 19.0)
-            fn = {"familia": score_family, "surf": score_surf, "snorkel": score_snorkel}[mode]
+            fn = score
             score100, breakdown = fn(beach_obj, cond)  # 0..100
+            # limpeza por tipo de água
+            if wt == 'fluvial':
+                breakdown.pop('offshore', None)
+                breakdown.pop('ondas', None)
+            else:
+                breakdown.pop('corrente', None)
             nota = round(float(score100) / 10.0, 1)
             score_compat = None
             used_ts = to_iso_z(target_ts)
