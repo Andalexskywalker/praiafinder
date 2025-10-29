@@ -112,7 +112,7 @@ export default function IntroPage() {
             <div className="grid gap-3">
               <StepCard icon={<GeoIcon />} title="Permitir localização" desc="Toca em Perto de mim (ou escolhe a zona). Define o dia e a janela (manhã/tarde)." />
               <StepCard icon={<Navigation size={18} />} title="Recebe recomendações com nota" desc="Ordena por nota (0–10) ou distância. Em fluvial, mostramos Corrente; em mar, Ondas." delay={0.05} />
-              <StepCard icon={<Filter size={18} />} title="Filtra por tipo de praia e modo" desc="Família, Surf ou Snorkel. E decide: Todas, Mar ou Fluvial." delay={0.1} />
+              <StepCard icon={<Filter size={18} />} title="Filtra por tipo de praia" desc="Escolhe: Todas, Mar ou Fluvial. Ordena por Nota ou Distância." delay={0.1} />
               <StepCard icon={<Stars size={18} />} title="Abre o cartão e vê o detalhe" desc="Breakdown dos fatores, previsão e distância. Tudo o que interessa para escolher bem." delay={0.15} />
             </div>
           </div>
