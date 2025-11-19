@@ -1,25 +1,31 @@
 "use client";
 
 // app/page.tsx
-// app/page.tsx
-import Image from "next/image";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { 
+  Search, MapPin, Filter, ChevronDown, 
+  Calendar, Clock, Info, Waves, Wind, 
+  CloudRain, Thermometer, Droplets, Navigation,
+  ArrowUpDown, X, Users, Compass
+} from "lucide-react";
 
 /** ================================= Types ================================= */
 type Tab = "near" | "zone";
 type OrderBy = "nota" | "dist";
 type WaterType = "mar" | "fluvial";
 type WaterFilter = "all" | "mar" | "fluvial";
+type Mode = "familia" | "surf"; // <--- NOVO TIPO
 
 type TopItem = {
   beach_id: string;
   nome: string;
-  nota?: number; // 0..10
-  score?: number; // 0..40 (compat)
+  nota?: number;
+  score?: number;
   distancia_km?: number | null;
   used_timestamp?: string;
   breakdown?: Record<string, number>;
-  water_type?: WaterType; // "mar" | "fluvial"
+  water_type?: WaterType;
 };
 
 type Beach = {
@@ -30,18 +36,9 @@ type Beach = {
   zone_tags?: string[];
 };
 
-const ZONAS = [
-  "norte",
-  "centro",
-  "lisboa",
-  "alentejo",
-  "algarve",
-  "acores",
-  "madeira",
-] as const;
+const ZONAS = ["norte", "centro", "lisboa", "alentejo", "algarve", "acores", "madeira"] as const;
 type Zona = (typeof ZONAS)[number];
 
-/** ============================== Time helpers ============================== */
 const SLOTS = [
   { id: "06-09", label: "06–09", hour: 7 },
   { id: "09-12", label: "09–12", hour: 10 },
@@ -51,17 +48,14 @@ const SLOTS = [
 ] as const;
 type SlotId = (typeof SLOTS)[number]["id"];
 
-function addDays(d: Date, days: number) {
-  const x = new Date(d);
-  x.setDate(x.getDate() + days);
-  return x;
-}
+/** ============================== Helpers ============================== */
 function toIsoUtcFromLocal(y: number, m0: number, d: number, h: number) {
   const local = new Date(y, m0, d, h, 0, 0, 0);
   return new Date(local.getTime() - local.getTimezoneOffset() * 60000)
     .toISOString()
     .replace(/\.\d{3}Z$/, "Z");
 }
+
 function next7DaysLabels(){
   const base = new Date();
   const out: {label:string;y:number;m0:number;d:number}[] = [];
@@ -69,65 +63,79 @@ function next7DaysLabels(){
     const d = new Date(base);
     d.setHours(0,0,0,0);
     d.setDate(base.getDate()+i);
-    const label = i===0 ? "Hoje" : i===1 ? "Amanhã" : d.toLocaleDateString("pt-PT",{ weekday:"short" });
+    const label = i===0 ? "Hoje" : i===1 ? "Amanhã" : d.toLocaleDateString("pt-PT",{ weekday:"short", day:"numeric" });
     out.push({ label, y:d.getFullYear(), m0:d.getMonth(), d:d.getDate() });
   }
   return out;
 }
+
 function fmt(ts?: string) {
-  return ts
-    ? new Date(ts).toLocaleString("pt-PT", {
-        dateStyle: "short",
-        timeStyle: "short",
-      })
-    : "";
+  return ts ? new Date(ts).toLocaleString("pt-PT", { dateStyle: "short", timeStyle: "short" }) : "";
 }
 
-/** =========================== Nota & UI helpers =========================== */
+/** =========================== UI Helpers =========================== */
 function getNota(i: TopItem) {
   if (typeof i.nota === "number") return Math.max(0, Math.min(10, i.nota));
   const s = typeof i.score === "number" ? i.score : 0;
   return Math.max(0, Math.min(10, Math.round((s / 4) * 10) / 10));
 }
-function notaClasses(n: number) {
-  if (n < 4.5)
-    return { chip: "bg-red-100 text-red-800", bar: "bg-red-500", ring: "ring-red-200" };
-  if (n < 6.5)
-    return { chip: "bg-amber-100 text-amber-800", bar: "bg-amber-500", ring: "ring-amber-200" };
-  if (n < 8.5)
-    return {
-      chip: "bg-emerald-100 text-emerald-800",
-      bar: "bg-emerald-500",
-      ring: "ring-emerald-200",
-    };
-  return { chip: "bg-green-200 text-green-900", bar: "bg-green-600", ring: "ring-green-200" };
+
+function notaColors(n: number) {
+  if (n < 4.5) return { bg: "bg-rose-500", text: "text-rose-600", bgSoft: "bg-rose-100", border: "border-rose-200" };
+  if (n < 6.5) return { bg: "bg-amber-500", text: "text-amber-600", bgSoft: "bg-amber-100", border: "border-amber-200" };
+  if (n < 8.5) return { bg: "bg-emerald-500", text: "text-emerald-600", bgSoft: "bg-emerald-100", border: "border-emerald-200" };
+  return { bg: "bg-teal-600", text: "text-teal-700", bgSoft: "bg-teal-100", border: "border-teal-200" };
 }
-function NotaBar({ nota }: { nota: number }) {
-  const pct = Math.round((nota / 10) * 100);
-  const { bar } = notaClasses(nota);
+
+function NotaBadge({ nota }: { nota: number }) {
+  const { bg, text, bgSoft } = notaColors(nota);
   return (
-    <div className="h-2 w-full rounded bg-slate-200/80">
-      <div className={`h-2 rounded ${bar}`} style={{ width: `${pct}%` }} />
+    <div className={`flex flex-col items-center justify-center w-12 h-12 rounded-2xl ${bgSoft} ${text} font-bold text-sm shadow-sm`}>
+      <span>{nota.toFixed(1)}</span>
     </div>
   );
 }
 
-/** ================================ Breakdown =============================== */
+function ProgressBar({ val, colorClass }: { val: number; colorClass?: string }) {
+  const pct = Math.min(100, Math.max(0, val * 10)); 
+  return (
+    <div className="h-1.5 w-full rounded-full bg-slate-100 overflow-hidden">
+      <motion.div 
+        initial={{ width: 0 }} 
+        animate={{ width: `${pct}%` }} 
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className={`h-full rounded-full ${colorClass || "bg-slate-400"}`} 
+      />
+    </div>
+  );
+}
+
+function BackgroundBlobs() {
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-slate-50/50">
+      <div className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] rounded-full bg-teal-400/10 blur-[100px]" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-sky-400/10 blur-[100px]" />
+    </div>
+  );
+}
+
+/** =========================== Breakdown Logic =========================== */
 function normalizeKey(k: string) {
   const s = k.toLowerCase();
-  if (/offshore|cross|onshore/.test(s)) return { id: "offshore", label: "Offshore", emoji: "🧭" };
-  if (/vento|wind/.test(s)) return { id: "vento", label: "Vento", emoji: "🌬️" };
-  if (/onda|wave|swell|mar/.test(s)) return { id: "ondas", label: "Ondas", emoji: "🌊" };
-  if (/meteo|wx|tempo|cloud|nuv|precip/.test(s)) return { id: "meteo", label: "Meteo", emoji: "📈" };
-  if (/corrente|agita|current/.test(s)) return { id: "corrente", label: "Corrente", emoji: "💧" };
-  if (/agua|água|sst|sea.*temp/.test(s)) return { id: "agua", label: "Temp. água", emoji: "🌡️" };
-  return { id: s.replace(/\W+/g, "_"), label: k.replace(/_/g, " "), emoji: "•" };
+  // Adicionei ícone Compass para Offshore
+  if (/offshore/.test(s)) return { id: "offshore", label: "Offshore", icon: Compass };
+  if (/vento|wind/.test(s)) return { id: "vento", label: "Vento", icon: Wind };
+  if (/onda|wave|swell|mar/.test(s)) return { id: "ondas", label: "Ondas", icon: Waves };
+  if (/meteo|wx|tempo|cloud|nuv|precip/.test(s)) return { id: "meteo", label: "Meteo", icon: CloudRain };
+  if (/corrente|agita|current/.test(s)) return { id: "corrente", label: "Corrente", icon: Droplets };
+  if (/agua|água|sst|sea.*temp/.test(s)) return { id: "agua", label: "Temp. Água", icon: Thermometer };
+  return { id: s.replace(/\W+/g, "_"), label: k, icon: Info };
 }
-/** Compacta + força regra fluvial/mar e remove duplicados */
+
 function useCompactBreakdown(raw: Record<string, number> | undefined, water: WaterType) {
   return useMemo(() => {
-    if (!raw) return [] as { id: string; label: string; emoji: string; val: number }[];
-    const best = new Map<string, { id: string; label: string; emoji: string; val: number }>();
+    if (!raw) return [];
+    const best = new Map<string, any>();
     for (const [k, v0] of Object.entries(raw)) {
       const v = Number(v0);
       if (!isFinite(v)) continue;
@@ -136,61 +144,76 @@ function useCompactBreakdown(raw: Record<string, number> | undefined, water: Wat
       if (!prev || Math.abs(v) > Math.abs(prev.val)) best.set(info.id, { ...info, val: Math.max(-10, Math.min(10, v)) });
     }
     let arr = Array.from(best.values());
-    // regra: MAR → sem "corrente"; FLUVIAL → sem "ondas"
+    // Se for fluvial remove ondas/offshore. Se for Mar, remove corrente.
     arr = arr.filter((x) => (water === "fluvial" ? (x.id !== "ondas" && x.id !== "offshore") : x.id !== "corrente"));
     arr.sort((a, b) => Math.abs(b.val) - Math.abs(a.val));
     return arr.slice(0, 4);
   }, [raw, water]);
 }
+
 function Breakdown({ data, water }: { data?: Record<string, number>; water: WaterType }) {
   const compact = useCompactBreakdown(data, water);
   if (!compact.length) return null;
+  
   return (
-    <div className="mt-4 grid gap-3">
-      {compact.map(({ id, label, emoji, val }) => {
+    <motion.div 
+      initial={{ opacity: 0, height: 0 }} 
+      animate={{ opacity: 1, height: "auto" }} 
+      exit={{ opacity: 0, height: 0 }}
+      className="mt-4 grid grid-cols-2 gap-3 pt-3 border-t border-slate-100"
+    >
+      {compact.map(({ id, label, icon: Icon, val }) => {
         const isNeg = val < 0;
-        const pct = Math.round(Math.abs(val) * 10);
+        // Se for Offshore (valor positivo), damos cor azul/roxa diferente
+        let colorClass = isNeg ? "bg-rose-400" : "bg-teal-500";
+        if (id === "offshore" && !isNeg) colorClass = "bg-indigo-500";
+        if (id === "ondas" && !isNeg) colorClass = "bg-blue-500";
+
         return (
-          <div key={id}>
-            <div className="text-xs text-slate-600 mb-1 flex items-center gap-1">
-              <span>{emoji}</span>
-              <span>
-                {label} <span className="opacity-60">({val.toFixed(1)}/10{isNeg ? " penal." : ""})</span>
+          <div key={id} className="flex flex-col gap-1">
+            <div className="flex items-center justify-between text-xs text-slate-500">
+              <div className="flex items-center gap-1.5">
+                <Icon size={12} className="text-slate-400"/>
+                <span>{label}</span>
+              </div>
+              <span className={`font-medium ${isNeg ? "text-rose-600" : "text-slate-700"}`}>
+                {val > 0 ? "+" : ""}{val.toFixed(1)}
               </span>
             </div>
-            <div className="h-2 w-full rounded bg-slate-200/80 overflow-hidden">
-              <div className={`h-2 ${isNeg ? "bg-red-500" : "bg-slate-900"}`} style={{ width: `${pct}%` }} />
-            </div>
+            <ProgressBar val={Math.abs(val)} colorClass={colorClass} />
           </div>
         );
       })}
-    </div>
+    </motion.div>
   );
 }
 
-/** ============================== Fetch helpers ============================= */
+/** ============================== Fetch Logic ============================= */
 const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? "/api";
 
 async function doFetch(url: string, ctrl: AbortController) {
   const res = await fetch(url, { signal: ctrl.signal });
   if (!res.ok) throw new Error(String(res.status));
   const json = await res.json();
-  const data: TopItem[] = Array.isArray(json) ? json : json.data ?? [];
-  const availableUntil = res.headers.get("x-available-until") ?? json.availableUntil ?? null;
-  return { data, availableUntil };
+  return { 
+    data: Array.isArray(json) ? json : json.data ?? [], 
+    availableUntil: res.headers.get("x-available-until") ?? json.availableUntil ?? null 
+  };
 }
+
 function getPosition(): Promise<GeolocationPosition> {
   return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject));
 }
 
-/** ================================ Página ================================= */
+/** ================================ Main Page ================================= */
 export default function Page() {
-  // Estado
-    const [tab, setTab] = useState<Tab>("zone");
+  // State
+  const [tab, setTab] = useState<Tab>("zone");
   const [zone, setZone] = useState<Zona>("lisboa");
   const [radius, setRadius] = useState(50);
   const [order, setOrder] = useState<OrderBy>("nota");
   const [waterFilter, setWaterFilter] = useState<WaterFilter>("all");
+  const [mode, setMode] = useState<Mode>("familia"); // <--- NOVO STATE
 
   const days = next7DaysLabels();
   const [dayIdx, setDayIdx] = useState(0);
@@ -209,504 +232,432 @@ export default function Page() {
 
   const [openId, setOpenId] = useState<string | null>(null);
   const [legendOpen, setLegendOpen] = useState(false);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false); 
 
   const abortRef = useRef<AbortController | null>(null);
 
+  // Logic
   function currentWhenISO() {
     const target = days[dayIdx];
     const s = SLOTS.find((x) => x.id === slot)!;
     return toIsoUtcFromLocal(target.y, target.m0, target.d, s.hour);
   }
 
-  // praias para pesquisa
   useEffect(() => {
-    (async () => {
-      try {
-        const r = await fetch(`${API_BASE}/beaches`);
-        setBeaches(await r.json());
-      } catch {}
-    })();
+    (async () => { try { const r = await fetch(`${API_BASE}/beaches`); setBeaches(await r.json()); } catch {} })();
   }, []);
 
-  async function fetchNearMe() {
-    if (!navigator.geolocation) {
-      setError("Geolocalização indisponível. Usa a aba 'Zonas'.");
-      return;
-    }
-    setLoading(true);
-    setError(null);
+  async function fetchItems(isNear: boolean) {
+    setLoading(true); setError(null);
     abortRef.current?.abort();
-    const ctrl = new AbortController();
-    abortRef.current = ctrl;
-    try {
-      const pos = await getPosition();
-      const when = currentWhenISO();
-      const params = new URLSearchParams({
-        lat: String(pos.coords.latitude),
-        lon: String(pos.coords.longitude),
-        radius_km: String(radius),
-        mode: "familia",
-        when,
-        limit: "16",
-      });
-      const { data, availableUntil } = await doFetch(`${API_BASE}/top?${params.toString()}`, ctrl);
-      setItems(data);
-      setAvailableUntil(availableUntil);
-    } catch (e: any) {
-      if (e?.name !== "AbortError") setError("Falha a carregar recomendações perto de ti.");
-    } finally {
-      setLoading(false);
-    }
-  }
-  async function fetchByZone(z: Zona) {
-    setLoading(true);
-    setError(null);
-    abortRef.current?.abort();
-    const ctrl = new AbortController();
-    abortRef.current = ctrl;
+    const ctrl = new AbortController(); abortRef.current = ctrl;
+
     try {
       const when = currentWhenISO();
-      let params = new URLSearchParams({ zone: z, mode: "familia", when, limit: "16" });
-      // tenta adicionar localização para mostrar distância também em "Zonas"
-      if (typeof navigator !== "undefined" && navigator.geolocation) {
+      // Adicionei 'mode' aqui
+      let params = new URLSearchParams({ mode, when, limit: "16" });
+
+      if (isNear) {
+        if (!navigator.geolocation) throw new Error("No Geo");
+        const pos = await getPosition();
+        params.append("lat", String(pos.coords.latitude));
+        params.append("lon", String(pos.coords.longitude));
+        params.append("radius_km", String(radius));
+      } else {
+        params.append("zone", zone);
         try {
-          const pos = await getPosition();
-          params = new URLSearchParams({
-            zone: z,
-            mode: "familia",
-            when,
-            limit: "16",
-            lat: String(pos.coords.latitude),
-            lon: String(pos.coords.longitude),
-            radius_km: "10000",
-          });
+            const pos = await getPosition();
+            params.append("lat", String(pos.coords.latitude));
+            params.append("lon", String(pos.coords.longitude));
+            params.append("radius_km", "10000");
         } catch {}
       }
-      const { data, availableUntil } = await doFetch(`${API_BASE}/top?${params.toString()}`, ctrl);
-      setItems(data);
-      setAvailableUntil(availableUntil);
+
+      const { data, availableUntil: u } = await doFetch(`${API_BASE}/top?${params.toString()}`, ctrl);
+      setItems(data); setAvailableUntil(u);
     } catch (e: any) {
-      if (e?.name !== "AbortError") setError("Falha a carregar recomendações por zona.");
+      if (e?.name !== "AbortError") setError(isNear ? "Localização indisponível ou erro." : "Erro a carregar zona.");
     } finally {
       setLoading(false);
     }
   }
+
   async function checkOne(b: Beach) {
-    setChecking(true);
-    setCheck(null);
+    setChecking(true); setCheck(null);
     try {
-      const when = currentWhenISO();
-      const params = new URLSearchParams({ lat: String(b.lat), lon: String(b.lon), radius_km: "2", limit: "1", mode: "familia", when });
+      // Adicionei 'mode' aqui também
+      const params = new URLSearchParams({ lat: String(b.lat), lon: String(b.lon), radius_km: "2", limit: "1", mode, when: currentWhenISO() });
       const { data } = await doFetch(`${API_BASE}/top?${params.toString()}`, new AbortController());
       setCheck(data[0] ?? null);
-    } catch {
-      setCheck(null);
-    } finally {
-      setChecking(false);
-    }
+    } catch { setCheck(null); } finally { setChecking(false); }
   }
 
-  // arranque
-  useEffect(() => {
-    fetchByZone(zone);
-    // eslint-disable-next-line
-  }, []);
-  // reload quando mudam controlos
-  useEffect(() => {
-    if (tab === "near") fetchNearMe();
-    if (tab === "zone") fetchByZone(zone);
-    // eslint-disable-next-line
-  }, [dayIdx, slot, radius, tab]);
-  useEffect(() => {
-    if (tab === "zone") fetchByZone(zone);
-    // eslint-disable-next-line
-  }, [zone]);
-  // cleanup
-  useEffect(() => () => abortRef.current?.abort(), []);
-
-  const hasDistance = useMemo(() => items.some((i) => i.distancia_km != null), [items]);
-  useEffect(() => {
-    if (tab === "near" && hasDistance) setOrder("dist");
-    else setOrder("nota");
-  }, [tab, hasDistance]);
-
-  // Filtro por tipo de praia
-  const filteredItems = useMemo(() => {
-    if (waterFilter === "all") return items;
-    return items.filter((i) => (i.water_type ?? "mar") === waterFilter);
-  }, [items, waterFilter]);
+  // Adicionei 'mode' nas dependências
+  useEffect(() => { fetchItems(tab === "near"); }, [tab, zone, radius, dayIdx, slot, mode]);
 
   const sortedItems = useMemo(() => {
-    const arr = filteredItems.slice();
-    return order === "dist"
+    let arr = waterFilter === "all" ? items : items.filter((i) => (i.water_type ?? "mar") === waterFilter);
+    return order === "dist" 
       ? arr.sort((a, b) => (a.distancia_km ?? Infinity) - (b.distancia_km ?? Infinity))
       : arr.sort((a, b) => getNota(b) - getNota(a));
-  }, [filteredItems, order]);
+  }, [items, waterFilter, order]);
 
-  const whenLabel = `${days[dayIdx].label} ${SLOTS.find((s) => s.id === slot)?.label ?? ""}`;
+  const hasDistance = items.some((i) => i.distancia_km != null);
 
-  const WATER_FILTERS: ReadonlyArray<{ value: WaterFilter; label: string; title: string }> = [
-    { value: "all", label: "Todas", title: "Mostrar todas as praias" },
-    { value: "mar", label: "Mar", title: "Mostra só praias costeiras" },
-    { value: "fluvial", label: "Fluvial", title: "Mostra só praias fluviais" },
-  ];
-
-  /* ================================ UI ================================= */
-  const Legend = () =>
-    !legendOpen ? null : (
-      <div className="fixed inset-0 z-50">
-        <div className="absolute inset-0 bg-slate-900/50 backdrop-blur-sm" onClick={() => setLegendOpen(false)} />
-        <div className="absolute inset-x-0 top-12 mx-auto w-[min(720px,94vw)]">
-          <div className="rounded-3xl ring-1 ring-black/10 bg-white p-5 shadow-xl">
-            <div className="flex items-center justify-between mb-2">
-              <h3 className="text-lg font-semibold tracking-tight">Legenda</h3>
-              <button onClick={() => setLegendOpen(false)} className="px-3 py-1 rounded-lg border hover:bg-slate-50">Fechar</button>
-            </div>
-            <ul className="text-sm space-y-2">
-              <li>• <b>Nota</b> 0–10 com cores: vermelho &lt;4.5, amarelo 4.5–6.5, verde-claro 6.5–8.5, verde-escuro 8.5–10.</li>
-              <li>• <b>Praia fluvial</b> mostra <b>Corrente</b> (sem Ondas). <b>Mar</b> mostra <b>Ondas</b>.</li>
-              <li>• Em <b>Zonas</b>, se autorizar a tua localização, mostramos também a <b>distância</b>.</li>
-            </ul>
-          </div>
-        </div>
+  // Componente Select Customizado
+  const Select = ({ value, onChange, options, icon: Icon }: any) => (
+    <div className="relative group">
+      <div className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 group-hover:text-teal-600 transition-colors">
+        {Icon && <Icon size={16} />}
       </div>
-    );
-
-  /** ============================= Layout ============================= */
-  return (
-    <div className="min-h-screen w-full bg-slate-100">
-      {/* ======= Cabeçalho ======= */}
-      <header className="sticky top-0 z-40 w-full bg-slate-900 text-white shadow-lg">
-  <div className="mx-auto w-full max-w-[1200px] px-3 sm:px-4">
-    <div className="flex flex-wrap items-center gap-2 py-2">
-      <div className="flex items-center gap-2 mr-2">
-        <Image src="/icon-512.png" alt="Praia Finder" width={28} height={28} priority className="rounded-md"/>
-        <span className="text-sm font-semibold tracking-tight">Praia Finder</span>
-      </div>
-
-      {/* Perto/Zonas */}
-      <div className="inline-flex rounded-lg bg-white/10 p-1 ring-1 ring-white/15">
-        <button onClick={() => setTab("near")} className={`px-2.5 py-1 rounded-md text-xs ${tab === "near" ? "bg-white text-slate-900" : "text-white/90 hover:bg-white/10"}`}>Perto</button>
-        <button onClick={() => setTab("zone")} className={`px-2.5 py-1 rounded-md text-xs ${tab === "zone" ? "bg-white text-slate-900" : "text-white/90 hover:bg-white/10"}`}>Zonas</button>
-      </div>
-
-      {/* Selects compactos */}<select value={waterFilter} onChange={(e)=>setWaterFilter(e.target.value as WaterFilter)} className="rounded-md bg-white text-slate-900 text-xs px-2.5 py-1 ring-1 ring-white/20">
-        <option value="all">Todas</option>
-        <option value="mar">Mar</option>
-        <option value="fluvial">Fluvial</option>
+      <select 
+        value={value} 
+        onChange={onChange}
+        className="w-full appearance-none bg-white border border-slate-200 text-slate-700 text-sm rounded-xl py-2.5 pl-10 pr-8 focus:ring-2 focus:ring-teal-500 focus:border-teal-500 outline-none shadow-sm transition-all hover:border-teal-300 cursor-pointer"
+      >
+        {options.map((o: any) => (
+          <option key={o.value} value={o.value}>{o.label}</option>
+        ))}
       </select>
-      <select value={dayIdx} onChange={(e)=>setDayIdx(Number(e.target.value))} className="rounded-md bg-white text-slate-900 text-xs px-2.5 py-1 ring-1 ring-white/20">
-        {days.map((d,i)=> <option key={i} value={i}>{d.label}</option>)}
-      </select>
-      <select value={slot} onChange={(e)=>setSlot(e.target.value as SlotId)} className="rounded-md bg-white text-slate-900 text-xs px-2.5 py-1 ring-1 ring-white/20">
-        {SLOTS.map(s=> <option key={s.id} value={s.id}>{s.label}</option>)}
-      </select>
-
-      {/* Pesquisa e ações */}
-      <div className="ml-auto flex items-center gap-2">
-        <input value={q} onChange={(e)=>setQ(e.target.value)} onKeyDown={(e)=>{ if(e.key==="Enter"){ const s=q.trim().toLowerCase(); const b=beaches.find(x=>x.nome.toLowerCase()===s)||beaches.find(x=>x.nome.toLowerCase().includes(s)); if(b){ setPicked(b); checkOne(b);} } }} placeholder="Pesquisar praia" className="w-[160px] sm:w-[220px] rounded-md bg-white text-slate-900 text-xs px-3 py-1.5 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-400"/>
-        <button onClick={() => (tab === "near" ? fetchNearMe() : fetchByZone(zone))} className="rounded-md bg-teal-500 hover:bg-teal-400 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-teal-400/30" disabled={loading}>{loading?"A atualizar…":"Atualizar"}</button>
-        <button onClick={()=>setLegendOpen(true)} className="rounded-md px-2.5 py-1.5 text-xs ring-1 ring-white/30 hover:bg-white/10">?</button>
+      <div className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
+        <ChevronDown size={14} />
       </div>
     </div>
-  </div>
-</header>
+  );
 
-      {/* ======= Conteúdo ======= */}
-      <main className="w-full px-0 pb-12">
-        <div className="grid gap-4 lg:grid-cols-[minmax(260px,300px)_minmax(0,1fr)]">
-          {/* ===== Sidebar (Painel de Controlo) ===== */}
-          <aside>
-            <div className="rounded-r-3xl rounded-l-none bg-white/95 ring-1 ring-black/10 shadow-sm p-2 space-y-2.5 text-[13px]">
-              {/* Janela */}
-              <section className="space-y-3">
-                <h3 className="text-sm font-semibold tracking-tight text-slate-900">Janela</h3>
-                <div className="flex flex-wrap gap-2">
-                  {days.map((d, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setDayIdx(i)}
-                      className={`px-2.5 py-1 rounded-lg border text-xs font-medium ${
-                        dayIdx === i ? "bg-teal-600 text-white border-teal-700" : "bg-white hover:bg-slate-50"
-                      }`}
-                    >
-                      {d.label}
-                    </button>
-                  ))}
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {SLOTS.map((s) => (
-                    <button
-                      key={s.id}
-                      onClick={() => setSlot(s.id)}
-                      className={`px-2.5 py-1 rounded-lg border text-xs font-medium ${
-                        slot === s.id ? "bg-teal-600 text-white border-teal-700" : "bg-white hover:bg-slate-50"
-                      }`}
-                    >
-                      {s.label}
-                    </button>
-                  ))}
-                </div>
-                <p className="text-xs text-slate-600">Previsão até 6 dias; fiabilidade diminui nos dias distantes.</p>
-              </section>
+  return (
+    <div className="min-h-screen w-full text-slate-900 font-sans">
+      <BackgroundBlobs />
 
-              {/* Localização */}
-              <section className="space-y-3">
-                <h3 className="text-sm font-semibold tracking-tight text-slate-900">Localização</h3>
-                <div className="flex gap-2">
-                  <button
-                    onClick={() => setTab("near")}
-                    className={`px-2.5 py-1 rounded-lg border text-xs font-medium ${
-                      tab === "near" ? "bg-teal-600 text-white border-teal-700" : "bg-white hover:bg-slate-50"
-                    }`}
-                  >
-                    Perto de mim
-                  </button>
-                  <button
-                    onClick={() => setTab("zone")}
-                    className={`px-2.5 py-1 rounded-lg border text-xs font-medium ${
-                      tab === "zone" ? "bg-teal-600 text-white border-teal-700" : "bg-white hover:bg-slate-50"
-                    }`}
-                  >
-                    Zonas
-                  </button>
-                </div>
-                {tab === "near" ? (
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-sm text-slate-700">
-                      <span>Raio</span>
-                      <strong>{radius} km</strong>
-                    </div>
-                    <input type="range" min={10} max={120} value={radius} onChange={(e) => setRadius(parseInt(e.target.value))} className="w-full accent-teal-600" />
-                    <button onClick={fetchNearMe} className="w-full px-2.5 py-2 rounded-lg border bg-white hover:bg-slate-50" disabled={loading}>
-                      {loading ? "A carregar…" : "Atualizar"}
-                    </button>
+      {/* ======= Navbar / Header ======= */}
+      <header className="sticky top-0 z-40 w-full bg-white/80 backdrop-blur-lg border-b border-slate-200/60">
+        <div className="mx-auto w-full max-w-7xl px-4 py-3">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            
+            {/* Logo + Title */}
+            <div className="flex items-center gap-3">
+               <div className="bg-gradient-to-tr from-teal-500 to-sky-600 w-9 h-9 rounded-xl flex items-center justify-center text-white font-bold shadow-md shadow-teal-500/20">
+                  PF
+               </div>
+               <h1 className="text-lg font-bold tracking-tight text-slate-900 hidden sm:block">PraiaFinder</h1>
+            </div>
+
+            {/* Search Bar (Center) */}
+            <div className="flex-1 max-w-md relative">
+               <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={18} />
+               <input 
+                 value={q}
+                 onChange={(e) => setQ(e.target.value)}
+                 onKeyDown={(e) => {
+                    if(e.key === "Enter"){
+                        const s = q.trim().toLowerCase();
+                        const b = beaches.find(x=>x.nome.toLowerCase().includes(s));
+                        if(b){ setPicked(b); setQ(b.nome); checkOne(b); }
+                    }
+                 }}
+                 placeholder="Procurar praia..." 
+                 className="w-full bg-slate-100/50 border border-slate-200 rounded-full py-2 pl-10 pr-4 text-sm focus:bg-white focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
+               />
+               {q && (
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden z-50">
+                    {beaches.filter(b => b.nome.toLowerCase().includes(q.toLowerCase())).slice(0,5).map(b => (
+                       <button key={b.id} onClick={() => { setPicked(b); setQ(b.nome); checkOne(b); }} className="w-full text-left px-4 py-2 hover:bg-teal-50 text-sm flex items-center justify-between group">
+                          <span>{b.nome}</span>
+                          <span className="text-xs text-slate-400 group-hover:text-teal-600">Ver</span>
+                       </button>
+                    ))}
                   </div>
-                ) : (
-                  <div className="grid grid-cols-2 gap-2">
-                    {ZONAS.map((z) => (
-                      <button
-                        key={z}
-                        onClick={() => setZone(z)}
-                        className={`px-3 py-1 rounded-xl border capitalize text-sm font-medium ${
-                          zone === z ? "bg-teal-600 text-white border-teal-700" : "bg-white hover:bg-slate-50"
+               )}
+            </div>
+
+            {/* Actions (Desktop) */}
+            <div className="hidden md:flex items-center gap-2">
+              <button onClick={() => setLegendOpen(true)} className="p-2 text-slate-500 hover:text-teal-600 hover:bg-teal-50 rounded-lg transition-colors"><Info size={20}/></button>
+              <button 
+                onClick={() => fetchItems(tab === "near")} 
+                className="bg-slate-900 hover:bg-slate-800 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all active:scale-95 shadow-lg shadow-slate-900/20"
+              >
+                {loading ? "A atualizar..." : "Atualizar Lista"}
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* ======= Conteúdo Principal ======= */}
+      <main className="mx-auto max-w-7xl px-4 py-6 md:py-10">
+        <div className="grid lg:grid-cols-[300px_1fr] gap-8 items-start">
+          
+          {/* === Sidebar de Filtros === */}
+          <aside className={`bg-white/60 backdrop-blur-xl rounded-3xl border border-white/40 shadow-sm p-6 space-y-6 sticky top-24 transition-all ${mobileFiltersOpen ? 'block' : 'hidden lg:block'}`}>
+             
+             {/* Mobile Toggle Label */}
+             <div className="lg:hidden flex justify-between items-center mb-4">
+                <h3 className="font-bold">Filtros</h3>
+                <button onClick={() => setMobileFiltersOpen(false)}><X size={20}/></button>
+             </div>
+
+             {/* NOVO: Seletor de Modo (Família vs Surf) */}
+             <section className="space-y-3">
+               <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">O que procuras?</label>
+               <div className="grid grid-cols-2 gap-3">
+                 <button 
+                   onClick={() => setMode("familia")}
+                   className={`flex flex-col items-center justify-center gap-2 py-3 rounded-xl border transition-all ${
+                     mode === "familia" 
+                     ? "bg-teal-50 border-teal-500 text-teal-700 ring-1 ring-teal-500/20" 
+                     : "bg-white border-slate-200 text-slate-500 hover:border-slate-300 hover:bg-slate-50"
+                   }`}
+                 >
+                   <Users size={24} />
+                   <span className="text-xs font-bold">Família</span>
+                 </button>
+
+                 <button 
+                   onClick={() => setMode("surf")}
+                   className={`flex flex-col items-center justify-center gap-2 py-3 rounded-xl border transition-all ${
+                     mode === "surf" 
+                     ? "bg-indigo-50 border-indigo-500 text-indigo-700 ring-1 ring-indigo-500/20" 
+                     : "bg-white border-slate-200 text-slate-500 hover:border-slate-300 hover:bg-slate-50"
+                   }`}
+                 >
+                   <Waves size={24} />
+                   <span className="text-xs font-bold">Surf</span>
+                 </button>
+               </div>
+               <p className="text-[10px] text-slate-400 px-1 leading-tight text-center">
+                 {mode === "familia" 
+                   ? "Privilegia calor, pouco vento e segurança." 
+                   : "Procura ondulação, período e vento offshore."}
+               </p>
+             </section>
+
+             <hr className="border-slate-200/50" />
+
+             {/* Onde */}
+             <section className="space-y-3">
+               <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Onde</label>
+               <div className="grid grid-cols-2 gap-2 p-1 bg-slate-100/80 rounded-xl">
+                  <button onClick={() => setTab("near")} className={`py-2 rounded-lg text-sm font-medium transition-all ${tab === "near" ? "bg-white text-teal-700 shadow-sm" : "text-slate-500 hover:text-slate-700"}`}>Perto de mim</button>
+                  <button onClick={() => setTab("zone")} className={`py-2 rounded-lg text-sm font-medium transition-all ${tab === "zone" ? "bg-white text-teal-700 shadow-sm" : "text-slate-500 hover:text-slate-700"}`}>Zonas</button>
+               </div>
+
+               {tab === "zone" ? (
+                  <Select 
+                    value={zone} 
+                    onChange={(e:any) => setZone(e.target.value)} 
+                    options={ZONAS.map(z => ({ value: z, label: z.charAt(0).toUpperCase() + z.slice(1) }))}
+                    icon={MapPin}
+                  />
+               ) : (
+                  <div className="space-y-2">
+                     <div className="flex justify-between text-xs text-slate-600">
+                        <span>Raio de procura</span>
+                        <span className="font-bold">{radius} km</span>
+                     </div>
+                     <input 
+                       type="range" min="10" max="100" step="10" 
+                       value={radius} onChange={(e) => setRadius(Number(e.target.value))}
+                       className="w-full accent-teal-600 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer"
+                     />
+                  </div>
+               )}
+             </section>
+
+             {/* Quando */}
+             <section className="space-y-3">
+                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Quando</label>
+                <Select 
+                  value={dayIdx} 
+                  onChange={(e:any) => setDayIdx(Number(e.target.value))} 
+                  options={days.map((d, i) => ({ value: i, label: d.label }))}
+                  icon={Calendar}
+                />
+                <Select 
+                  value={slot} 
+                  onChange={(e:any) => setSlot(e.target.value)} 
+                  options={SLOTS.map(s => ({ value: s.id, label: s.label }))}
+                  icon={Clock}
+                />
+             </section>
+
+             {/* Tipo */}
+             <section className="space-y-3">
+                <label className="text-xs font-bold text-slate-400 uppercase tracking-wider">Tipo de água</label>
+                <div className="flex gap-2">
+                   {[
+                     { id: "all", label: "Todas" }, { id: "mar", label: "Mar" }, { id: "fluvial", label: "Rio" }
+                   ].map((opt) => (
+                      <button 
+                        key={opt.id} 
+                        onClick={() => setWaterFilter(opt.id as any)}
+                        className={`flex-1 py-1.5 rounded-lg text-xs font-medium border transition-all ${
+                           waterFilter === opt.id 
+                           ? "bg-teal-50 border-teal-200 text-teal-700" 
+                           : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
                         }`}
                       >
-                        {z}
+                        {opt.label}
                       </button>
-                    ))}
-                    <button onClick={() => fetchByZone(zone)} className="col-span-2 px-2.5 py-2 rounded-lg border bg-white hover:bg-slate-50" disabled={loading}>
-                      {loading ? "A carregar…" : "Atualizar"}
-                    </button>
-                  </div>
-                )}
-              </section>
-
-              {/* Tipo de praia (Filtro) */}
-              <section className="space-y-2">
-                <h3 className="text-sm font-semibold tracking-tight text-slate-900">Tipo de praia</h3>
-                <div className="flex flex-wrap gap-2">
-                  {WATER_FILTERS.map(({ value, label, title }) => (
-                    <button
-                      key={value}
-                      onClick={() => setWaterFilter(value)}
-                      className={`px-2.5 py-1 rounded-lg border text-xs font-medium ${
-                        waterFilter === value ? "bg-teal-600 text-white border-teal-700" : "bg-white hover:bg-slate-50"
-                      }`}
-                      title={title}
-                    >
-                      {label}
-                    </button>
-                  ))}
+                   ))}
                 </div>
-              </section>
+             </section>
 
-              {/* Pesquisa */}
-              <section className="space-y-2">
-                <h3 className="text-sm font-semibold tracking-tight text-slate-900">Pesquisar praia</h3>
-                <div className="flex gap-2">
-                  <input
-                    value={q}
-                    onChange={(e) => setQ(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        const s = q.trim().toLowerCase();
-                        const b = beaches.find((x) => x.nome.toLowerCase() === s) || beaches.find((x) => x.nome.toLowerCase().includes(s));
-                        if (b) {
-                          setPicked(b);
-                          checkOne(b);
-                        }
-                      }
-                    }}
-                    placeholder="Escreve o nome…"
-                    className="w-full rounded-xl border border-slate-300 bg-white/90 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500"
-                  />
-                  {q && (
-                    <button onClick={() => setQ("")} className="px-2.5 py-2 rounded-lg border bg-white hover:bg-slate-50">
-                      Limpar
-                    </button>
-                  )}
-                </div>
-                {q && (
-                  <ul className="max-h-56 overflow-auto rounded-xl border border-slate-200 bg-white shadow-sm">
-                    {beaches
-                      .filter((b) => b.nome.toLowerCase().includes(q.trim().toLowerCase()))
-                      .slice(0, 8)
-                      .map((b) => (
-                        <li key={b.id}>
-                          <button
-                            onClick={() => {
-                              setPicked(b);
-                              setQ(b.nome);
-                              checkOne(b);
-                            }}
-                            className="w-full text-left px-3 py-2 hover:bg-slate-50"
-                          >
-                            {b.nome}
-                            {b.zone_tags?.length ? <span className="text-xs text-slate-500"> · {b.zone_tags[0]}</span> : null}
-                          </button>
-                        </li>
-                      ))}
-                  </ul>
-                )}
-              </section>
-            </div>
+             {/* Ordenação */}
+             <section className="pt-4 border-t border-slate-100">
+               <button 
+                  disabled={!hasDistance}
+                  onClick={() => setOrder(order === "nota" ? "dist" : "nota")}
+                  className="flex items-center justify-between w-full text-sm font-medium text-slate-600 hover:text-teal-600 disabled:opacity-50"
+               >
+                  <span className="flex items-center gap-2"><ArrowUpDown size={16}/> Ordenar por: {order === "nota" ? "Nota" : "Distância"}</span>
+               </button>
+             </section>
           </aside>
 
-          {/* ===== Lista principal ===== */}
-          <section className="space-y-6">
-            {/* Contexto */}
-            <div className="rounded-3xl bg-white/90 ring-1 ring-black/5 shadow-sm p-4">
-              <div className="flex flex-wrap items-center justify-between gap-3 text-sm text-slate-800">
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="inline-flex items-center gap-1 rounded-xl bg-teal-50 px-3 py-1 ring-1 ring-teal-200 text-teal-800">
-                    <span>🕓</span>
-                    <strong>{whenLabel}</strong>
-                  </span>
-                  {availableUntil && (
-                    <span className="inline-flex items-center gap-1 rounded-xl bg-amber-50 px-3 py-1 ring-1 ring-amber-200 text-amber-800">
-                      <span>📅</span>
-                      <span>horizonte: {fmt(availableUntil)}</span>
-                    </span>
-                  )}
-                </div>
-                <div className="flex items-center gap-2">
-                  <button
-                    className={`px-2.5 py-1 rounded-lg border text-xs ${order === "nota" ? "bg-slate-900 text-white border-slate-900" : "bg-white"}`}
-                    onClick={() => setOrder("nota")}
-                  >
-                    Nota
-                  </button>
-                  <button
-                    className={`px-2.5 py-1 rounded-lg border text-xs ${
-                      order === "dist" ? "bg-slate-900 text-white border-slate-900" : "bg-white"
-                    } ${!hasDistance ? "opacity-60 cursor-not-allowed" : ""}`}
-                    disabled={!hasDistance}
-                    onClick={() => setOrder("dist")}
-                    title={hasDistance ? "Ordenar por distância" : "Requer localização"}
-                  >
-                    Distância
-                  </button>
-                  <button onClick={() => setLegendOpen(true)} className="px-3 py-1 rounded-xl border bg-white">
-                    ?
-                  </button>
-                </div>
-              </div>
-              {error && (
-                <div role="alert" aria-live="polite" className="mt-3 rounded-xl bg-rose-50 text-rose-800 ring-1 ring-rose-200 px-3 py-2 text-sm">
-                  {error}
-                </div>
-              )}
-            </div>
+          {/* === Botão Mobile para abrir filtros === */}
+          <div className="lg:hidden mb-4">
+            <button 
+              onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+              className="w-full flex items-center justify-center gap-2 bg-white border border-slate-200 py-3 rounded-xl font-medium text-slate-700 shadow-sm"
+            >
+               <Filter size={18} /> {mobileFiltersOpen ? "Fechar Filtros" : "Filtrar & Localização"}
+            </button>
+          </div>
 
-            {/* Resultado da pesquisa */}
-            {picked && (
-              <div className="rounded-3xl bg-white/90 ring-1 ring-black/5 shadow-sm p-4">
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h2 className="text-base font-semibold tracking-tight text-slate-900">{picked.nome}</h2>
-                    <p className="text-xs text-slate-500 mt-1">Previsão: {check?.used_timestamp ? fmt(check.used_timestamp) : checking ? "a verificar…" : "—"}</p>
-                  </div>
-                  {check && (() => {
-                    const n = getNota(check);
-                    const { chip } = notaClasses(n);
-                    return <span className={`text-xs px-2 py-0.5 rounded ${chip}`}>Nota {n.toFixed(1)}/10</span>;
-                  })()}
+          {/* === Lista de Resultados === */}
+          <section>
+             {/* Info Contexto */}
+             <div className="mb-6 flex items-center justify-between">
+                <div>
+                   <h2 className="text-2xl font-bold text-slate-900">
+                      {tab === "near" ? "Praias perto de ti" : `Praias: ${zone.charAt(0).toUpperCase() + zone.slice(1)}`}
+                   </h2>
+                   <p className="text-slate-500 text-sm mt-1">
+                      A mostrar para <span className="font-semibold text-teal-600">{days[dayIdx].label}, {SLOTS.find(s=>s.id===slot)?.label}</span>
+                   </p>
                 </div>
-                <div className="mt-3">{check ? <NotaBar nota={getNota(check)} /> : <div className="h-2 rounded bg-slate-200/80" />}</div>
-                {check && <Breakdown data={check.breakdown} water={check.water_type ?? "mar"} />}
-              </div>
-            )}
+             </div>
 
-            {/* Lista */}
-            <div className="space-y-3">
-              <h2 className="text-lg font-semibold tracking-tight text-slate-900">
-                Recomendações {tab === "zone" ? <span className="lowercase">— {zone}</span> : null}
-              </h2>
+             {/* Erro */}
+             {error && (
+                <div className="p-4 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm mb-6 flex items-center gap-2">
+                   <Info size={16} /> {error}
+                </div>
+             )}
 
-              {loading ? (
-                <div className="columns-1 md:columns-2 xl:columns-3 gap-x-5">
-                  {[...Array(4)].map((_, i) => (
-                    <div key={i} className="mb-4 break-inside-avoid h-24 rounded-3xl bg-white/70 ring-1 ring-black/5 animate-pulse" />
-                  ))}
-                </div>
-              ) : sortedItems.length === 0 ? (
-                <div className="rounded-3xl bg-white/90 ring-1 ring-black/5 shadow-sm p-6 text-center">
-                  <div className="mx-auto mb-2 w-10 opacity-70">
-                    <Image src="/icon-512.png" alt="" width={40} height={40} />
-                  </div>
-                  <p className="text-sm text-slate-600">Sem dados para esta janela.</p>
-                </div>
-              ) : (
-                <ul className="columns-1 md:columns-2 xl:columns-3 gap-x-5">
-                  {sortedItems.map((i) => {
-                    const n = getNota(i);
-                    const { chip, ring } = notaClasses(n);
-                    const open = openId === i.beach_id;
-                    const water: WaterType = i.water_type ?? "mar";
-                    return (
-                      <li key={i.beach_id} className={`mb-4 inline-block w-full rounded-3xl bg-white/95 ring-1 ${ring} shadow-sm p-4 transition hover:shadow-md`} style={{ breakInside: 'avoid', WebkitColumnBreakInside: 'avoid', pageBreakInside: 'avoid' } as any}>
-                        <button className="w-full text-left" onClick={() => setOpenId(open ? null : i.beach_id)} aria-expanded={open}>
-                          <div className="flex items-start justify-between gap-4">
-                            <div className="min-w-0">
-                              <div className="text-base font-semibold tracking-tight flex items-center gap-2 flex-wrap text-slate-900">
-                                <span>{i.nome}</span>
-                                {typeof i.distancia_km === "number" && (
-                                  <span className="text-xs text-slate-500">• {i.distancia_km} km</span>
-                                )}
-                                <span className={`text-xs px-2 py-0.5 rounded ${
-                                  water === "fluvial" ? "bg-sky-100 text-sky-800" : "bg-teal-100 text-teal-800"
-                                }`}>
-                                  {water === "fluvial" ? "Praia fluvial" : "Praia de mar"}
-                                </span>
-                              </div>
-                              {i.used_timestamp && (
-                                <p className="text-xs text-slate-500 mt-1">Previsão: {fmt(i.used_timestamp)}</p>
-                              )}
+             {/* Card Pesquisado (Single) */}
+             {picked && (
+                <div className="mb-8">
+                   <h3 className="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">Resultado da pesquisa</h3>
+                   <div className="bg-white/80 backdrop-blur-md border border-teal-200 shadow-lg shadow-teal-900/5 rounded-3xl p-5 md:p-6 relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-400 to-sky-500" />
+                      <div className="flex justify-between items-start">
+                         <div>
+                            <h2 className="text-xl font-bold text-slate-900">{picked.nome}</h2>
+                            <div className="text-sm text-slate-500 mt-1 flex items-center gap-2">
+                               {checking ? <span className="animate-pulse">A carregar meteo...</span> : (check ? "Dados atualizados" : "Sem dados")}
                             </div>
-                            <div className="flex items-center gap-2 shrink-0">
-                              <span className={`text-xs px-2 py-0.5 rounded ${chip}`}>Nota {n.toFixed(1)}/10</span>
-                              <span className={`text-slate-500 transition-transform ${open ? "rotate-180" : ""}`}>▾</span>
-                            </div>
-                          </div>
-                          <div className="mt-3">
-                            <NotaBar nota={n} />
-                          </div>
-                        </button>
-                        {open && <Breakdown data={i.breakdown} water={water} />}
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+                         </div>
+                         {check && <NotaBadge nota={getNota(check)} />}
+                      </div>
+                      {check && <Breakdown data={check.breakdown} water={check.water_type ?? "mar"} />}
+                   </div>
+                </div>
+             )}
 
-              <p className="text-xs text-slate-500">Dados: previsão via Open‑Meteo (tempo + mar quando aplicável).</p>
-            </div>
+             {/* 1. Loading State */}
+             {loading && (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                   {[1, 2, 3, 4].map((i) => (
+                      <div key={i} className="h-32 rounded-3xl bg-white/50 animate-pulse" />
+                   ))}
+                </div>
+             )}
+
+             {/* 2. Empty State (Sem resultados) */}
+             {!loading && sortedItems.length === 0 && (
+                <div className="text-center py-20 bg-white/40 rounded-3xl border border-dashed border-slate-300">
+                   <Waves className="mx-auto text-slate-300 mb-3" size={48} />
+                   <p className="text-slate-500">Não encontrámos praias com estes filtros.</p>
+                </div>
+             )}
+
+             {/* 3. Lista de Resultados */}
+             {!loading && sortedItems.length > 0 && (
+                <div className="columns-1 md:columns-2 gap-4 space-y-4">
+                   <AnimatePresence>
+                      {sortedItems.map((item) => {
+                         const n = getNota(item);
+                         const water = item.water_type ?? "mar";
+                         const isOpen = openId === item.beach_id;
+                         
+                         return (
+                            <motion.div
+                               layout
+                               initial={{ opacity: 0, y: 20 }}
+                               animate={{ opacity: 1, y: 0 }}
+                               exit={{ opacity: 0, scale: 0.95 }}
+                               key={item.beach_id}
+                               className="break-inside-avoid bg-white/80 hover:bg-white backdrop-blur-md border border-white/60 hover:border-teal-200 shadow-sm hover:shadow-md rounded-3xl p-5 transition-all cursor-pointer group"
+                               onClick={() => setOpenId(isOpen ? null : item.beach_id)}
+                            >
+                               <div className="flex justify-between items-start gap-4">
+                                  <div>
+                                     <h3 className="font-bold text-slate-800 group-hover:text-teal-700 transition-colors">{item.nome}</h3>
+                                     <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500 mt-1.5">
+                                        {item.distancia_km != null && (
+                                           <span className="flex items-center gap-1"><Navigation size={10} /> {item.distancia_km} km</span>
+                                        )}
+                                        <span className={`px-2 py-0.5 rounded-md font-medium ${water === "fluvial" ? "bg-sky-100 text-sky-700" : "bg-teal-50 text-teal-700"}`}>
+                                           {water === "fluvial" ? "Rio" : "Mar"}
+                                        </span>
+                                     </div>
+                                  </div>
+                                  <NotaBadge nota={n} />
+                               </div>
+                               
+                               {/* Mini bar when closed */}
+                               {!isOpen && (
+                                  <div className="mt-3 h-1.5 w-full rounded-full bg-slate-100 overflow-hidden">
+                                     <div className={`h-full rounded-full ${notaColors(n).bg}`} style={{ width: `${n*10}%` }} />
+                                  </div>
+                               )}
+
+                               {isOpen && <Breakdown data={item.breakdown} water={water} />}
+                               
+                               <div className="mt-3 flex justify-center">
+                                  <ChevronDown size={16} className={`text-slate-300 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                               </div>
+                            </motion.div>
+                         );
+                      })}
+                   </AnimatePresence>
+                </div>
+             )}
           </section>
         </div>
       </main>
 
-      <Legend />
+      {/* Modal Legenda */}
+      {legendOpen && (
+         <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
+            <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setLegendOpen(false)} />
+            <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="bg-white rounded-3xl p-6 max-w-sm w-full relative z-10 shadow-2xl">
+               <h3 className="text-lg font-bold mb-4">Como funciona a nota?</h3>
+               <div className="space-y-3 text-sm text-slate-600">
+                  <div className="flex items-center gap-3"><div className="w-4 h-4 rounded bg-teal-500"/> <span><b>8.5 - 10:</b> Excelente. Vai já!</span></div>
+                  <div className="flex items-center gap-3"><div className="w-4 h-4 rounded bg-emerald-500"/> <span><b>6.5 - 8.5:</b> Muito boa.</span></div>
+                  <div className="flex items-center gap-3"><div className="w-4 h-4 rounded bg-amber-500"/> <span><b>4.5 - 6.5:</b> Aceitável / Ventosa.</span></div>
+                  <div className="flex items-center gap-3"><div className="w-4 h-4 rounded bg-rose-500"/> <span><b>&lt; 4.5:</b> Não recomendada.</span></div>
+               </div>
+               <p className="mt-4 text-xs text-slate-400 border-t pt-3">
+                  Consideramos vento, ondulação, temperatura e afluência. Praias fluviais penalizam mais a corrente; praias de mar penalizam ondas descontroladas.
+               </p>
+               <button onClick={() => setLegendOpen(false)} className="mt-6 w-full py-3 bg-slate-100 font-bold text-slate-700 rounded-xl hover:bg-slate-200">Entendido</button>
+            </motion.div>
+         </div>
+      )}
     </div>
   );
 }

@@ -1,34 +1,36 @@
 "use client";
 
 // app/intro/page.tsx
-// Página de introdução com hero + animações ao fazer scroll
-
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Navigation, Filter, Stars } from "lucide-react";
+import { MapPin, Navigation, Filter, Wind, ArrowRight, CheckCircle2, Waves } from "lucide-react";
 
-const APP_PATH = "/home"; // destino da app principal — altera aqui se necessário
+const APP_PATH = "/home";
+
+// Componente de Fundo com "Blobs" animados
+function BackgroundBlobs() {
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-slate-50">
+      <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full bg-teal-400/20 blur-[120px] animate-pulse" />
+      <div className="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] rounded-full bg-sky-400/20 blur-[120px]" />
+      <div className="absolute top-[40%] left-[30%] w-[30vw] h-[30vw] rounded-full bg-cyan-300/20 blur-[100px]" />
+    </div>
+  );
+}
 
 function GeoIcon() {
   return (
-    <div className="relative grid h-9 w-9 place-items-center rounded-xl bg-teal-600 text-white overflow-visible">
+    <div className="relative grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-teal-500 to-emerald-600 text-white shadow-lg shadow-teal-500/30">
       <motion.span
         aria-hidden
-        className="absolute inset-0 rounded-xl ring-2 ring-teal-300"
+        className="absolute inset-0 rounded-2xl ring-2 ring-teal-400"
         initial={{ opacity: 0.8, scale: 1 }}
         animate={{ opacity: 0, scale: 1.8 }}
         transition={{ duration: 1.5, repeat: Infinity, ease: "easeOut" }}
       />
-      <motion.span
-        aria-hidden
-        className="absolute inset-0 rounded-xl ring-2 ring-teal-300"
-        initial={{ opacity: 0.6, scale: 1 }}
-        animate={{ opacity: 0, scale: 2.4 }}
-        transition={{ duration: 2.2, repeat: Infinity, ease: "easeOut", delay: 0.4 }}
-      />
-      <MapPin size={18} />
+      <MapPin size={24} strokeWidth={2.5} />
     </div>
   );
 }
@@ -37,28 +39,28 @@ function StepCard({
   icon,
   title,
   desc,
-  delay = 0,
+  index,
 }: {
   icon: React.ReactNode;
   title: string;
   desc: string;
-  delay?: number;
+  index: number;
 }) {
   return (
     <motion.div
-      initial={{ y: 24, opacity: 0 }}
+      initial={{ y: 20, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, amount: 0.5 }}
-      transition={{ type: "spring", stiffness: 120, damping: 18, delay }}
-      className="rounded-2xl bg-white shadow-sm ring-1 ring-black/10 p-4 md:p-5"
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ delay: index * 0.1, duration: 0.5 }}
+      className="group relative overflow-hidden rounded-3xl border border-slate-200 bg-white/60 p-6 backdrop-blur-xl transition-all hover:shadow-xl hover:border-teal-200/50 hover:-translate-y-1"
     >
-      <div className="flex items-start gap-3">
-        <div className="grid h-9 w-9 place-items-center rounded-xl bg-teal-600 text-white">
+      <div className="flex items-start gap-4">
+        <div className="shrink-0 text-teal-600 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
           {icon}
         </div>
         <div>
-          <h3 className="font-semibold text-slate-900">{title}</h3>
-          <p className="text-sm text-slate-600 mt-1">{desc}</p>
+          <h3 className="text-lg font-bold text-slate-900 group-hover:text-teal-700 transition-colors">{title}</h3>
+          <p className="text-sm leading-relaxed text-slate-600 mt-2">{desc}</p>
         </div>
       </div>
     </motion.div>
@@ -68,112 +70,252 @@ function StepCard({
 export default function IntroPage() {
   const stickyRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: stickyRef, offset: ["start end", "end start"] });
-  const y = useSpring(useTransform(scrollYProgress, [0, 1], [0, -120]), { stiffness: 100, damping: 20 });
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, -6]);
-  const glow = useTransform(scrollYProgress, [0, 1], [0.3, 0.7]);
+  
+  const y = useSpring(useTransform(scrollYProgress, [0, 1], [50, -100]), { stiffness: 60, damping: 20 });
+  const rotate = useTransform(scrollYProgress, [0, 1], [2, -2]);
+  const scale = useTransform(scrollYProgress, [0.2, 0.8], [0.95, 1]);
 
   return (
-    <div className="min-h-screen w-full bg-slate-100">
-      {/* HERO */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-teal-800 via-cyan-800 to-sky-900 text-white">
-        <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(60%_60%_at_20%_0%,rgba(45,212,191,.35),transparent_60%)]" />
-        <div className="mx-auto max-w-[1100px] px-4 py-16 sm:py-20">
-          <div className="flex flex-col items-center text-center gap-6">
-            <div className="rounded-2xl bg-white/10 ring-1 ring-white/20 p-3">
-              <Image src="/icon-512.png" alt="PraiaFinder" width={64} height={64} priority />
-            </div>
-            <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">PraiaFinder</h1>
-            <p className="max-w-[58ch] text-white/90">
-              Encontra a praia ideal <span className="font-semibold">agora</span> — recomendações por localização ou zona, com
-              nota 0–10 e fatores que importam.
-            </p>
-            <div className="flex flex-wrap items-center gap-3">
-              <Link
-                href={APP_PATH}
-                className="inline-flex items-center justify-center rounded-xl bg-teal-500 px-5 py-3 text-white font-semibold shadow-sm ring-1 ring-teal-400/30 hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-white/70"
-              >
-                Começar
-              </Link>
-              <a href="#como-funciona" className="text-white/90 hover:text-white">Como funciona</a>
-            </div>
-            <div className="mt-10 text-white/80 text-sm">Desliza para perceber em 20 segundos.</div>
-          </div>
+    <div className="relative min-h-screen w-full text-slate-900 selection:bg-teal-200 selection:text-teal-900">
+      <BackgroundBlobs />
+
+      {/* NAV SIMPLES - Removido Login, agora é só Branding e botão de ação */}
+      <nav className="absolute top-0 left-0 right-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto">
+        <div className="flex items-center gap-2 font-bold text-xl tracking-tight text-slate-900">
+           <div className="w-8 h-8 bg-gradient-to-tr from-teal-500 to-sky-600 rounded-lg flex items-center justify-center text-white text-xs font-bold">PF</div>
+           PraiaFinder
         </div>
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/70 animate-bounce pointer-events-none">↓</div>
+        <Link href={APP_PATH} className="text-sm font-semibold text-slate-600 hover:text-teal-600 transition-colors">
+          Abrir App
+        </Link>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 overflow-hidden">
+        <div className="mx-auto max-w-5xl text-center">
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-1.5 text-sm font-medium text-teal-700 ring-1 ring-teal-500/20 shadow-sm backdrop-blur-md mb-8"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+            </span>
+            Previsões atualizadas a cada hora
+          </motion.div>
+
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-5xl sm:text-7xl font-extrabold tracking-tight text-slate-900 mb-6"
+          >
+            A tua praia perfeita <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-500 via-cyan-500 to-sky-600">
+              sem surpresas.
+            </span>
+          </motion.h1>
+
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mx-auto max-w-2xl text-lg sm:text-xl text-slate-600 mb-10 leading-relaxed"
+          >
+            O tempo em Portugal é instável. Nós analisamos o <span className="font-semibold text-slate-900">vento, ondulação e temperatura</span> para te dizer exatamente onde estender a toalha.
+          </motion.p>
+
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          >
+            <Link
+              href={APP_PATH}
+              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-slate-900 px-8 font-medium text-white shadow-xl shadow-slate-900/20 transition-all hover:bg-slate-800 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2"
+            >
+              <span className="mr-2">Começar Agora</span>
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <a 
+              href="#como-funciona" 
+              className="inline-flex h-12 items-center justify-center rounded-full px-8 font-medium text-slate-600 ring-1 ring-slate-200 bg-white/50 hover:bg-white hover:ring-slate-300 transition-all backdrop-blur-sm"
+            >
+              Como funciona
+            </a>
+          </motion.div>
+        </div>
       </section>
 
-      {/* SCROLL ANIMATION / COMO FUNCIONA */}
-      <section id="como-funciona" className="relative">
-        <div className="mx-auto max-w-[1100px] px-4 py-14 grid gap-10 lg:grid-cols-[minmax(0,1fr)_420px]">
-          {/* Texto + passos */}
-          <div className="space-y-4 lg:order-1">
-            <h2 className="text-2xl font-bold tracking-tight text-slate-900">Como funciona</h2>
-            <p className="text-slate-600">Simples e rápido — 4 passos e já estás com o pé na areia.</p>
-            <div className="grid gap-3">
-              <StepCard icon={<GeoIcon />} title="Permitir localização" desc="Toca em Perto de mim (ou escolhe a zona). Define o dia e a janela (manhã/tarde)." />
-              <StepCard icon={<Navigation size={18} />} title="Recebe recomendações com nota" desc="Ordena por nota (0–10) ou distância. Em fluvial, mostramos Corrente; em mar, Ondas." delay={0.05} />
-              <StepCard icon={<Filter size={18} />} title="Filtra por tipo de praia" desc="Escolhe: Todas, Mar ou Fluvial. Ordena por Nota ou Distância." delay={0.1} />
-              <StepCard icon={<Stars size={18} />} title="Abre o cartão e vê o detalhe" desc="Breakdown dos fatores, previsão e distância. Tudo o que interessa para escolher bem." delay={0.15} />
+      {/* COMO FUNCIONA */}
+      <section id="como-funciona" className="relative py-24 lg:py-32">
+        <div className="mx-auto max-w-6xl px-4 grid gap-16 lg:grid-cols-2 items-start">
+          
+          {/* Coluna Esquerda: Texto Realista */}
+          <div className="space-y-8 lg:sticky lg:top-32">
+            <div>
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 mb-4">
+                Adeus, vento na cara. <br/>
+                <span className="text-teal-600">Olá, dia perfeito.</span>
+              </h2>
+              <p className="text-lg text-slate-600">
+                Escolhe o teu modo (Família ou Surf) e nós tratamos da matemática meteorológica complexa.
+              </p>
+            </div>
+
+            <div className="grid gap-4">
+              <StepCard 
+                index={0}
+                icon={<GeoIcon />} 
+                title="Perto ou Longe" 
+                desc="Vê as melhores praias à tua volta ou planeia uma viagem para o Algarve ou Norte." 
+              />
+              <StepCard 
+                index={1}
+                icon={<div className="p-3 rounded-xl bg-sky-100 text-sky-600"><Navigation size={24} /></div>} 
+                title="Score Inteligente (0-10)" 
+                desc="Um número simples que resume tudo. Se estiver verde, vai. Se estiver vermelho, fica em casa." 
+              />
+              <StepCard 
+                index={2}
+                icon={<div className="p-3 rounded-xl bg-indigo-100 text-indigo-600"><Filter size={24} /></div>} 
+                title="Modo Surf vs Família" 
+                desc="Ondas grandes são más para crianças, mas ótimas para surfistas. Nós distinguimos os dois." 
+              />
+              <StepCard 
+                index={3}
+                icon={<div className="p-3 rounded-xl bg-amber-100 text-amber-600"><Wind size={24} /></div>} 
+                title="Fator Vento Offshore" 
+                desc="Sabemos se a praia está protegida do vento. Nunca mais comas areia sem necessidade." 
+              />
             </div>
           </div>
 
-          {/* Mockup sticky animado (também em mobile) */}
-          <div ref={stickyRef} className="relative lg:order-2">
-            <div className="sticky top-16">
-              <motion.div style={{ y, rotate }} className="relative mx-auto w-[min(92%,420px)]">
-                <div className="rounded-[28px] bg-white shadow-xl ring-1 ring-black/10 p-4">
-                  <div className="rounded-2xl bg-gradient-to-br from-teal-600 to-sky-700 p-6 text-white">
-                    <div className="flex items-center gap-3">
-                      <div className="rounded-xl bg-white/10 ring-1 ring-white/20 p-2">
-                        <Image src="/icon-512.png" alt="" width={40} height={40} />
-                      </div>
-                      <div>
-                        <div className="text-lg font-bold">PraiaFinder</div>
-                        <div className="text-xs text-teal-50/90">Encontra a praia ideal agora</div>
-                      </div>
-                    </div>
-                    <div className="mt-5 grid grid-cols-3 gap-2 text-xs">
-                      <div className="rounded-lg bg-white/10 px-2 py-1 text-center">Perto</div>
-                      <div className="rounded-lg bg-white/10 px-2 py-1 text-center">Zonas</div>
-                      <div className="rounded-lg bg-white/10 px-2 py-1 text-center">Hoje · 09–12</div>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <div className="rounded-xl bg-slate-50 ring-1 ring-black/5 p-3">
-                      <div className="h-2 w-full rounded bg-slate-200">
-                        <div className="h-2 w-[62%] rounded bg-emerald-500" />
-                      </div>
-                      <div className="mt-3 grid gap-2">
-                        {["Nazaré", "São Martinho do Porto", "São Pedro de Moel"].map((n, i) => (
-                          <div key={i} className="rounded-lg bg-white ring-1 ring-black/10 p-2 text-sm text-slate-700 flex items-center justify-between">
-                            <span>{n}</span>
-                            <span className="rounded px-2 py-0.5 text-xs bg-emerald-100 text-emerald-800">Nota {(7.8 - i * 0.6).toFixed(1)}/10</span>
+          {/* Coluna Direita: Mockup Atualizado */}
+          <div ref={stickyRef} className="relative lg:h-[120vh] flex items-start justify-center lg:justify-end pt-10 lg:pt-0">
+            <div className="sticky top-24 w-full max-w-[380px]">
+              <motion.div 
+                style={{ y, rotate, scale }} 
+                className="relative z-10 mx-auto"
+              >
+                <div className="relative rounded-[3rem] bg-slate-900 p-3 shadow-2xl shadow-teal-900/20 ring-1 ring-black">
+                  <div className="absolute top-0 left-1/2 h-6 w-1/3 -translate-x-1/2 rounded-b-xl bg-black z-20"></div>
+                  
+                  <div className="relative h-[720px] w-full overflow-hidden rounded-[2.25rem] bg-slate-50 flex flex-col">
+                    
+                    {/* Header App Mockup */}
+                    <div className="bg-gradient-to-b from-teal-600 to-teal-700 px-6 pt-12 pb-6 text-white rounded-b-[2rem] shadow-lg z-10">
+                      <div className="flex justify-between items-center mb-6">
+                        <div className="flex items-center gap-3">
+                          <div className="h-10 w-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center font-bold text-lg border border-white/30">
+                            PF
                           </div>
-                        ))}
+                          <div>
+                            <div className="text-xs font-medium text-teal-100 uppercase tracking-wider">Modo Família</div>
+                            <div className="font-bold text-lg">Melhores praias hoje</div>
+                          </div>
+                        </div>
                       </div>
+                      
+                      <div className="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+                        <div className="shrink-0 bg-white text-teal-800 px-4 py-1.5 rounded-full text-xs font-bold shadow-sm">Zona Centro</div>
+                        <div className="shrink-0 bg-teal-800/50 text-white px-4 py-1.5 rounded-full text-xs border border-white/10">Lisboa</div>
+                      </div>
+                    </div>
+
+                    {/* Lista Mockup - Dados Realistas */}
+                    <div className="flex-1 overflow-hidden p-4 space-y-3 relative">
+                      <div className="absolute top-0 left-0 right-0 h-6 bg-gradient-to-b from-slate-50 to-transparent z-10" />
+                      
+                      {[
+                        { name: "São Martinho", score: 9.2, dist: "12km", tag: "Baía Protegida" },
+                        { name: "Nazaré", score: 6.5, dist: "2km", tag: "Vento Forte" },
+                        { name: "Foz do Arelho", score: 8.1, dist: "18km", tag: "Lagoa Quente" },
+                        { name: "Baleal Norte", score: 4.2, dist: "22km", tag: "Muito Vento" },
+                      ].map((beach, i) => (
+                        <motion.div 
+                          key={i}
+                          initial={{ opacity: 0, x: 20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ delay: i * 0.1 }}
+                          className="bg-white p-4 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between group"
+                        >
+                          <div>
+                            <div className="font-bold text-slate-800">{beach.name}</div>
+                            <div className="text-xs text-slate-400 mt-1 flex items-center gap-2">
+                              <span>{beach.dist}</span> • <span className="text-teal-600 font-medium">{beach.tag}</span>
+                            </div>
+                          </div>
+                          <div className={`h-10 w-10 rounded-xl flex items-center justify-center font-bold text-sm ${beach.score > 8 ? 'bg-teal-100 text-teal-700' : beach.score > 5 ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-700'}`}>
+                            {beach.score}
+                          </div>
+                        </motion.div>
+                      ))}
+
+                      {/* Card Destaque: Condições */}
+                      <div className="mt-6 p-4 rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 text-white shadow-xl">
+                        <div className="flex justify-between items-start mb-6">
+                           <span className="bg-white/20 px-2 py-1 rounded-lg text-[10px] font-bold backdrop-blur-sm">DETALHE</span>
+                           <Wind size={16} className="text-sky-400" />
+                        </div>
+                        <div className="text-xl font-bold">Vento Offshore</div>
+                        <p className="text-slate-400 text-xs mt-1">O vento sopra de terra para o mar, alisando a água e afastando a areia.</p>
+                        
+                        <div className="mt-4 flex gap-2 text-xs">
+                           <div className="bg-white/10 px-2 py-1 rounded">💨 15km/h</div>
+                           <div className="bg-white/10 px-2 py-1 rounded">🌊 0.5m</div>
+                           <div className="bg-white/10 px-2 py-1 rounded">🌡️ 22ºC</div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    {/* Bottom Bar simples */}
+                    <div className="absolute bottom-0 left-0 right-0 bg-white border-t border-slate-100 p-4 pb-8 flex justify-around text-slate-400">
+                       <div className="text-teal-600"><MapPin size={24} /></div>
+                       <div className="hover:text-teal-600"><Waves size={24} /></div>
                     </div>
                   </div>
                 </div>
-                <motion.div style={{ opacity: glow }} className="pointer-events-none absolute -inset-4 rounded-[32px] bg-teal-500/10 blur-2xl" />
+                <div className="absolute -inset-4 -z-10 bg-gradient-to-tr from-teal-500 to-sky-500 opacity-20 blur-3xl rounded-full" />
               </motion.div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA final */}
-      <section className="py-16">
-        <div className="mx-auto max-w-[1100px] px-4">
-          <div className="rounded-3xl bg-gradient-to-br from-teal-600 to-sky-700 text-white p-6 md:p-8 ring-1 ring-black/10 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <div>
-                <h3 className="text-2xl font-bold tracking-tight">Pronto para escolher a praia?</h3>
-                <p className="text-white/85">Abre a app e vê as recomendações para já.</p>
+      {/* CTA FINAL */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="mx-auto max-w-4xl relative z-10">
+          <div className="rounded-[3rem] bg-slate-900 p-8 md:p-12 md:text-center overflow-hidden relative shadow-2xl shadow-slate-900/30">
+             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-teal-900/50 via-slate-900 to-slate-900 z-0" />
+             
+             <div className="relative z-10 flex flex-col md:items-center gap-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+                Pronto para ir à praia?
+              </h3>
+              <p className="text-slate-400 max-w-lg mx-auto text-lg">
+                Sem registos, sem complicações. Apenas os melhores spots para hoje.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-4">
+                <Link href={APP_PATH} className="inline-flex items-center justify-center rounded-full bg-teal-500 px-8 py-4 text-white font-bold hover:bg-teal-400 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-teal-500/25">
+                  Ver Praias Agora
+                </Link>
               </div>
-              <Link href={APP_PATH} className="inline-flex items-center justify-center rounded-xl bg-white text-teal-700 px-5 py-3 font-semibold ring-1 ring-white/60 hover:bg-white/90">
-                Começar agora
-              </Link>
-            </div>
+              
+              <div className="pt-8 flex items-center gap-4 text-sm text-slate-500">
+                 <div className="flex items-center gap-1">
+                   <CheckCircle2 size={16} className="text-teal-500" /> 100% Grátis
+                 </div>
+                 <div className="flex items-center gap-1">
+                   <CheckCircle2 size={16} className="text-teal-500" /> Open Source
+                 </div>
+              </div>
+             </div>
           </div>
         </div>
       </section>
