@@ -6,7 +6,7 @@ import httpx
 
 # Hack para importar scoring sem instalar pacote
 import sys
-sys.path.append(str(Path(__file__).resolve().parents[2]))
+sys.path.append(str(Path(__file__).resolve().parents[1]))
 from backend.app.scoring import calculate_score, BeachInfo, Conditions
 
 # ---------- Constantes ----------
